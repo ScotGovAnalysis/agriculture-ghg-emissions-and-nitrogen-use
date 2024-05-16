@@ -1,0 +1,264 @@
+---
+title: "Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-2023"
+author: no
+published: "`r Sys.Date()`"
+sgtemplates:
+  datatables:
+    features:
+      info: yes
+      ordering: yes
+      paging: yes
+      searching: no
+  footer:
+    link:
+    - href: privacy.html
+      text: Privacy
+    - href: cookies.html
+      text: Cookies
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
+  header:
+    phase_banner:
+      tag: WIP
+      text: This is a work in progress.
+    site_branding: Scottish Government
+  metadata:
+    label: Publication - Statistics
+  navigation:
+    breadcrumb_trail:
+    - href: index.html
+      text: Home
+    - text: Main report
+    toc:
+      sticky: yes
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("scripts/national_charts.R")
+
+```
+
+# Key Points
+
+-   National level KP - first to set context for agri-emissions against Scotland total
+
+-   National level KP - sub-sector source/pollutant?
+
+-   Farm level GHG KP (average - gross/ intensity)
+
+-   Farm level GHG KP (interesting point for farm type)
+
+-   Farm level N KP (average - N balance or NUE)
+
+-   Farm level GHG KP (interesting point for farm type)
+
+# Introduction
+
+## What you need to know
+
+## About the national agriculture estimates in this publication
+
+-   Info about data source -- GHG inventory
+
+-   Summary of differences between agriculture estimates in this publication and GHG inventory
+
+-   Sub-sectors overview
+
+-   Emission sources overview
+
+## About the farm-level estimates in this publication
+
+-   Purpose of farm-level estimates
+
+-   Summary of differences between national level estimates and farm level (and note of non-comparability)
+
+-   Info about FBS data source -- coverage, new method for 2022
+
+-   Farm types
+
+## Measuring farm-level greenhouse gas emissions
+
+Greenhouse gas (GHG) emissions are measured by:
+
+-   Absolute gross GHG emissions (tonnes CO2 equivalent per hectare)
+
+-   Emissions intensity (kg CO2 equivalent per kg of output)
+
+Absolute gross emissions measures the GHG emissions from a unit area of agriculture land (hectare).
+
+Emissions intensity measures the carbon footprint of a unit of product up to the farm gate. It includes all types of agricultural products produced on the farm. Data collected through the Farm Business Survey provide a consistent and high quality input data set about farm activities. GHG emissions are then estimated using a carbon footprint calculator tool ([Agrecalc](https://www.agrecalc.com/)). It is based on the life cycle assessment (LCA) framework for estimating emissions from products and processes. The LCA accounts for emissions up to when product leaves the farm. The tool uses the latest IPCC Tier I and Tier II as well as national figures from the UK National Greenhouse Gas Inventory in its calculations. It is PAS2050:2011 certified. Different results may be obtained using different carbon calculators or different methods, for example using an inventory approach.
+
+## Measuring farm-level nitrogen use
+
+Nitrogen use is measured by:
+
+-   Nitrogen balance (kg N surplus per hectare)
+
+-   Nitrogen use efficiency NUE (% N output / N input)
+
+Nitrogen balance is the difference between total nitrogen input and ouput. A higher balance indicates less efficient use of nitrogen. It provides an estimate of the size of the nitrogen surplus not being captured in agricultural products that is potentially available for losses.
+
+Nitrogen use efficiency (NUE) is the ratio of nitrogen outputs to inputs. It indicates the proportion of nitrogen used in the farm system. This measure allows for better comparison across farms. NUE values should always be interpreted in relation to nitrogen surpluses and nitrogen outputs.
+
+A higher NUE typically indicates a more efficient use of nitrogen but very high values may indicate unsustainable "soil mining". The best range of NUE values depends on the type of farming activity as well as environmental conditions, livestock types and feed types.
+
+Nitrogen estimates are based on standard estimates of nitrogen content in farm inputs and outputs. The amount of nitrogen is estimated for all farm inputs and outputs up to farm gate, where possible. Limited information is available for some inputs and outputs.
+
+## An Official Statistics in Development Publication for Scotland
+
+These statistics are official statistics in development. Official statistics in development may be new or existing statistics, and will be tested with users, in line with the standards of trustworthiness, quality, and value in the [Code of Practice for Statistics](https://code.statisticsauthority.gov.uk/the-code/).
+
+[Include information about the nature of the development, your plan for improving or evaluating the statistics, the expected time frame, and how users can be involved].
+
+Scottish Government statistics are regulated by the Office for Statistics Regulation (OSR). OSR sets the standards of trustworthiness, quality and value in the [Code of Practice for Statistics](https://code.statisticsauthority.gov.uk/the-code/) that all producers of official statistics should adhere to.
+
+# Agriculture whole-industry greenhouse gas emissions
+
+-   Note about methodology
+
+-   Commentary about total agriculture emissions set against total Scotland GHG emissions
+
+-   Interactive charts: Line chart time series agri and total
+
+# Agriculture sub-sector greenhouse gas emissions
+
+Brief description of methodology (note difference to GHG inventory).
+
+The agricultural sub-sectors are: suckler beef, dairy beef, dairy, sheep, arable and other.
+
+## Total agriculture greenhouse gas emissions by sub-sector {.tabset}
+
+-   Short commentary (brief description of need to know information and then brief comment on trends)
+
+-   Interactive chart: stacked bar chart (hover to get values), as report for timeseries and/or line chart -- click to add plot for subsectors. Hover to get values. Include total on chart.
+
+-   Show/hide data tables
+
+```{r fig2, echo = FALSE}
+fig2
+
+
+```
+
+## Composition of agriculture greenhouse gas emissions by sub-sector
+
+-   Short commentary (brief description of need to know information and then brief comment on trends) e.g. There are three main greenhouse gases produced in agriculture. These are carbon dioxide, methane and nitrous oxide. Total emissions are presented in carbon dioxide equivalent (CO2-e) units. This takes into account the different effects that the different gases have on climate change, known as their global warming potential (GWP). Over a 100-year period, methane's GWP is considered to be 25 times stronger than that of carbon dioxide, while nitrous oxide's GWP is considered to be 298 times stronger than carbon dioxide.
+
+-   Interactive chart:
+
+-   Stacked bar as report for just 2022 results
+
+-   (Line charts -- timeseries for each gas for each subsector  - in data tables)
+
+-   Show/hide data tables
+
+```{r fig3, echo = FALSE}
+fig3
+
+```
+
+## Sources of agriculture greenhouse gas emissions by sub-sector
+
+-   Short commentary (brief description of need to know information and then brief comment on trends)
+
+-   Interactive chart -- bar chart as report. If timeseries available bar chart timeseries?
+
+-   Show/hide data tables
+
+# Farm-level greenhouse gas emissions
+
+## Farm-level gross GHG emissions
+
+-   Short commentary - include note of methdology change for 2022, comment on average farm 2022 results.
+
+-   Interactive charts: Bar chart with panel to select different farm types. Time series Optional line chart -- plot median -- add plots of other farm types to chart.
+
+## Farm level emissions intensity
+
+# Agriculture nitrogen use efficiency?
+
+Link to N balance sheet and comment on latest data (2020 for now).
+
+# Farm-level nitrogen use
+
+## Farm-level nitrogen balance
+
+## Farm-level nitrogen use efficiency
+
+# Glossary
+
+# Data and Methodology
+
+# Tell us what you think
+
+We are always interested to hear from our users about how our statistics are used, and how they can be improved.
+
+## Feedback survey
+
+We'd appreciate it if you would complete our short feedback survey on this publication.
+
+## Enquiries
+
+For enquiries about this publication please contact:
+
+[Name(s) of lead statistician(s)]
+
+[Department name]
+
+E-mail: [e-mail address]
+
+Telephone: [Phone number]
+
+For general enquiries about Scottish Government statistics please contact:
+
+Office of the Chief Statistician
+
+e-mail: statistics.enquiries\@gov.scot
+
+## Join our mailing list
+
+If you would like to receive notification about statistical publications, or find out about consultations on our statistics please join the [ScotStat mailing list](http://www.gov.scot/scotstat).
+
+## Future publications
+
+Details of future publications can be found on our [forthcoming publications](https://www.gov.scot/publications/official-statistics-forthcoming-publications/) page.
+
+You can embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Mathematics (MathJax)
+
+This template uses MathJax to render mathematical notation in-browser.
+
+Use dollar signs as your delimiter for maths. A single dollar sign renders your maths inline.
+
+$c^2 = a^2 + b^2$
+
+Two dollar signs center-aligns your maths.
+
+$$ax^2 + bx + c = 0$$
+
+Complex mathematics is supported, too.
+
+$$\mathbf{P}((X,Y) \in B) = \iint\limits_{(x,y) \in B} f_{X,Y}(x,y) \,dx \,dy$$
+
+## DataTables
+
+Support for [DataTables](https://www.datatables.net/) is included. DataTables allows for the creation of advanced tables with greater user interaction.
+
+```{r kable, echo = FALSE}
+knitr::kable(
+  x = iris,
+  format = "html",
+  caption = "An example table, generated using the Kable library.",
+  caption.short = "A short caption."
+)
+```
