@@ -3,14 +3,19 @@
 #load libraries ----
 library(readxl) 
 library(tidyverse)
+library(data.table)
 
 # set parameters ----
-
+CurrentYear = 2021
 sectors <- c("Arable", "Dairy", "Dairy beef", "Other", "Sheep", "Suckler beef"
 #, "Total"
 )
 
 #load data----
+#read in national totals
+nat_tot <- read_excel("Data/national_data.xlsx", sheet = "national_total")
+
+
 #read in sector totals
 sec_tot <- read_excel("Data/national_data.xlsx", sheet = "subsector_total")
 #names(sec_tot) <- gsub("X", "", names(sec_tot))
@@ -18,17 +23,52 @@ sec_tot <- read_excel("Data/national_data.xlsx", sheet = "subsector_total")
 # read in subsector gas compostion for latest year bar chart
 sec_comp_latest <- read_excel("Data/national_data.xlsx", sheet = "subsector_comp_latest")
 
+# read in subsector gas compostion for latest year bar chart
+sec_source <- read_excel("Data/national_data.xlsx", sheet = "subsector_source")
+
+
+
 #sort data----
+# industry gross totals
+# pivot longer
+nat_tot <- nat_tot %>% pivot_longer(cols = where(is.numeric), names_to = "Year", values_to = "ghg_emiss")
+nat_tot <- nat_tot %>% filter(Industry != "TOTAL") 
+nat_tot$Year <- as.numeric(nat_tot$Year)
+
+
+# Industry in cols - pivot wider
+nat_tot <- nat_tot %>% pivot_wider(names_from = Industry, values_from = c(ghg_emiss))
+industry_names <- colnames(nat_tot[-1]  )
+
+# current year sort for barchart
+nat_tot_current <- nat_tot %>% filter(Year == CurrentYear) %>% select(-Year, - `Total (RHS)`) 
+#%>% rename(`Total Emissions`= `Total (RHS)`)
+nat_tot_current <- nat_tot_current %>% pivot_longer(cols = everything(), names_to = "Industry", values_to = "ghg_emiss") 
+
 
 # sect totals
-#pivot longer
+# pivot longer
 sec_tot <- sec_tot %>% pivot_longer(cols = where(is.numeric), names_to = "Year", values_to = "ghg_emiss")
 sec_tot <- sec_tot %>% filter(Sector != "Total") 
 sec_tot$Year <- as.numeric(sec_tot$Year)
 
 
-#sector in cols - pivot wider
+# sector in cols - pivot wider
 sec_tot <- sec_tot %>% pivot_wider(names_from = Sector, values_from = c(ghg_emiss))
 
 
-# sect composition 
+# sector source - transpose to get y values as source 
+# reorder cols
+sec_source <- sec_source %>% select(Source, all_of(sectors))
+
+# first remember the names
+source_names <- sec_source$Source
+
+# transpose all but the first column (name)
+sec_source<- as.data.frame(t(sec_source[,-1]))
+colnames(sec_source) <- source_names
+
+# create sector column for x and reorder
+sec_source$Sector <- rownames(sec_source)
+sec_source <- sec_source %>% select(Sector, everything())
+
