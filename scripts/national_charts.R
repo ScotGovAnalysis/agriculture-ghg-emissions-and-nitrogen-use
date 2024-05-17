@@ -61,17 +61,10 @@ margin <-  list(
   pad = 0
 )
 
-# data_sort-----
-sec_tot_98 <- sec_tot %>% filter(Year > 1995)
-latest_year_data <- sec_tot_98 %>% filter(Year %in% CurrentYear)
-nineties_data <- sec_tot %>% filter(Year == 1990)
-
-nat_tot_98 <- nat_tot %>% filter(Year > 1995)
-latest_year_gross_data <- nat_tot_98 %>% filter(Year %in% CurrentYear)
-nineties_gross_data <- nat_tot %>% filter(Year == 1990)
 
 # build plots----
-# National - NCC/industry gross emissions
+
+# National - CCP industry gross emissions - fig 1 ----
 fig <- plot_ly(nat_tot_98, x = ~Year)
 
 # add lines to chart
@@ -184,32 +177,38 @@ fig <- fig %>% add_annotations(
 fig1 <- fig
 fig1
 
-#National - current year industry/NCC gross emissions
+# National - current year climate change plan sectors gross emissions - fig 1b ----
 
-fig <-plot_ly(nat_tot_current, x = ~Industry,
-              y =~ ghg_emiss,
+fig <-plot_ly(nat_tot_current, x = ~ghg_emiss,
+              y =~Industry,
     type = 'bar',
-    marker = list(color = sg_colour_values),
-    hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e'<extra></extra>'",
-    hovertext = "none"
+    orientation = 'h',
+    # may need to change depending on where agriculture comes in order
+    marker = list(color = c(rep(sg_colour_palettes$focus[2], times=3), 
+                            sg_colour_palettes$focus[1],
+                            rep(sg_colour_palettes$focus[2],times =3)
+    )),
+    hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e<extra></extra>"
   )
 
 
-fig <- fig %>% layout(yaxis = list(title = list(text = 'MtCO<sub>2</sub>e', font = t1),
+fig <- fig %>% layout(yaxis = list(title = list(font = t1),
                                    tickfont = t1),
-                      xaxis = list(title = list(font = t1),
+                      xaxis = list(title = list(text = 'MtCO<sub>2</sub>e', font = t1),
                                    tickfont = t1),
                       barmode = 'stack',
                       legend = list(font = t1,
                                     text = source_names),
-                      hoverlabel =list(font = list(color  = "white")))
+                      hoverlabel =list(font = list(color  = "white",
+                                                   font = t1))
+                      )
 fig1b <- fig
+
 fig1b
 
 
 
-
-# National - ghg by subsector ----
+# National - ghg by agri subsector - fig 2 ----
 fig <- plot_ly(sec_tot_98, x = ~Year)
 
 
@@ -517,43 +516,43 @@ fig2 <-  fig
 
 fig2
 
-# emissions by pollutant ----
+# National - agri sub sector - emissions by pollutant fig 3 ----
 
-fig <-plot_ly(sec_comp_latest, x = ~Sector)
-
-fig <-
-  fig %>%  add_trace(
-    y = ~Methane,
+fig <-plot_ly(sec_comp_latest, x = ~Methane, y = ~Sector,
     type = 'bar',
-    name = 'Methane',
-    marker = list(color = "#002d54"),
-    hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e of methane'<extra></extra>'",
-    hovertext = "none"
+    orientation = 'h',
+    name = ~'Methane',
+    marker = list(color = sg_colour_values[1]),
+    hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e of methane <extra></extra>"
+    
   )
 
-fig <- fig %>% add_trace(y = ~`Carbon Dioxide`, type = 'bar', 
+fig <- fig %>% add_trace(x = ~`Carbon Dioxide`, y = ~Sector, type = 'bar',
+                         orientation = 'h',
                          name = 'Carbon Dioxide',
-                         marker = list(color = "#2b9c93"),
-                         hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e of carbon dioxide'<extra></extra>'",
+                         marker = list(color = sg_colour_values[2]),
+                         hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e of carbon dioxide <extra></extra>",
                          text = "")
 
-fig <- fig %>% add_trace(y = ~`Nitrous Oxide`, type = 'bar', 
-                         name = 'Nitrous Oxide', marker = list(color = "#6a2063"),
-                         hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e of nitrous oxide'<extra></extra>'",
+fig <- fig %>% add_trace(x = ~`Nitrous Oxide`,y = ~Sector, type = 'bar',
+                         orientation = 'h',
+                         name = 'Nitrous Oxide', marker = list(color = sg_colour_values[3]),
+                         hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e of nitrous oxide <extra></extra>",
                          text = "")
 
 
 
 
-fig <- fig %>% layout(yaxis = list(title = list(text = 'MtCO<sub>2</sub>e', font = t1),
+fig <- fig %>% layout(yaxis = list(title = list(font = t1),
                                    tickfont = t1),
-                      xaxis = list(title = list(font = t1),
+                      xaxis = list(title = list(text = 'MtCO<sub>2</sub>e', font = t1),
                                    tickfont = t1),
                       barmode = 'stack',
-                      legend = list(font = t1))
+                      legend = list(font = t1),
+                      hovermode = 'y unified')
 fig3 <- fig
-
-# emissions by source ----
+fig3
+# National - agri sub sector - emissions by source fig 4----
 
 fig <-plot_ly(sec_source, x = ~Sector)
 

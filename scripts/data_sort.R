@@ -31,24 +31,30 @@ sec_source <- read_excel(national_data, sheet = "subsector_source")
 
 
 #sort data----
-# industry gross totals
+# industry gross totals - fig 1
 # pivot longer
 nat_tot <- nat_tot %>% pivot_longer(cols = where(is.numeric), names_to = "Year", values_to = "ghg_emiss")
 nat_tot <- nat_tot %>% filter(Industry != "TOTAL") 
 nat_tot$Year <- as.numeric(nat_tot$Year)
 
 
-# Industry in cols - pivot wider
+# fig 1b ----
+# Industry in cols - pivot wider - fig 1b
 nat_tot <- nat_tot %>% pivot_wider(names_from = Industry, values_from = c(ghg_emiss))
 industry_names <- colnames(nat_tot[-1]  )
 
-# current year sort for barchart
+# current year sort for bar chart
 nat_tot_current <- nat_tot %>% filter(Year == CurrentYear) %>% select(-Year, - `Total (RHS)`) 
 #%>% rename(`Total Emissions`= `Total (RHS)`)
 nat_tot_current <- nat_tot_current %>% pivot_longer(cols = everything(), names_to = "Industry", values_to = "ghg_emiss") 
+# sort by ascending order
+nat_tot_current <- nat_tot_current %>% dplyr::arrange(ghg_emiss)
+#for plotly- it ignores order of dataset - need to get order and then set Industry as factor
+nat_order <- nat_tot_current$Industry
+nat_tot_current$Industry <- factor(nat_tot_current$Industry, levels = nat_order)
 
-
-# sect totals
+# fig 2----
+# sect totals - fig 2
 # pivot longer
 sec_tot <- sec_tot %>% pivot_longer(cols = where(is.numeric), names_to = "Year", values_to = "ghg_emiss")
 sec_tot <- sec_tot %>% filter(Sector != "Total") 
@@ -59,7 +65,21 @@ sec_tot$Year <- as.numeric(sec_tot$Year)
 sec_tot <- sec_tot %>% pivot_wider(names_from = Sector, values_from = c(ghg_emiss))
 
 
-# sector source - transpose to get y values as source 
+
+
+# fig 3----
+
+# order sector latest data for bar chart - fig 3
+# create total first
+sec_comp_latest$total <- rowSums(sec_comp_latest[-1])
+sec_comp_latest <- sec_comp_latest %>% dplyr::arrange(total)
+#for plotly- it ignores order of dataset - need to get order and then set Industry as factor
+sec_order <- sec_comp_latest$Sector
+sec_comp_latest$Sector<- factor(sec_comp_latest$Sector, levels = sec_order)
+
+
+# fig 4 ----
+# sector source - transpose to get y values as source  - fig 4
 # reorder cols
 sec_source <- sec_source %>% select(Source, all_of(sectors))
 
@@ -73,4 +93,3 @@ colnames(sec_source) <- source_names
 # create sector column for x and reorder
 sec_source$Sector <- rownames(sec_source)
 sec_source <- sec_source %>% select(Sector, everything())
-
