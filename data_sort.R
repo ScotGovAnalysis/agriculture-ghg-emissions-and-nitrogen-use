@@ -11,20 +11,22 @@ sectors <- c("Arable", "Dairy", "Dairy beef", "Other", "Sheep", "Suckler beef"
 #, "Total"
 )
 
+national_data <- "//s0177a/datashare/seerad/fas/emissions_pub/national_data.xlsx"
+
 #load data----
 #read in national totals
-nat_tot <- read_excel("Data/national_data.xlsx", sheet = "national_total")
+nat_tot <- read_excel(national_data, sheet = "national_total")
 
 
 #read in sector totals
-sec_tot <- read_excel("Data/national_data.xlsx", sheet = "subsector_total")
+sec_tot <- read_excel(national_data, sheet = "subsector_total")
 #names(sec_tot) <- gsub("X", "", names(sec_tot))
 
 # read in subsector gas compostion for latest year bar chart
-sec_comp_latest <- read_excel("Data/national_data.xlsx", sheet = "subsector_comp_latest")
+sec_comp_latest <- read_excel(national_data, sheet = "subsector_comp_latest")
 
 # read in subsector gas compostion for latest year bar chart
-sec_source <- read_excel("Data/national_data.xlsx", sheet = "subsector_source")
+sec_source <- read_excel(national_data, sheet = "subsector_source")
 
 
 
