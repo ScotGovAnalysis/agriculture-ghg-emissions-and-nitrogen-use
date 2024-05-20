@@ -115,7 +115,7 @@ These statistics are official statistics in development. Official statistics in 
 
 Scottish Government statistics are regulated by the Office for Statistics Regulation (OSR). OSR sets the standards of trustworthiness, quality and value in the [Code of Practice for Statistics](https://code.statisticsauthority.gov.uk/the-code/) that all producers of official statistics should adhere to.
 
-# Agriculture whole-industry greenhouse gas emissions
+# Agriculture whole-sector greenhouse gas emissions
 
 -   Note about methodology
 
@@ -123,13 +123,29 @@ Scottish Government statistics are regulated by the Office for Statistics Regula
 
 -   Interactive charts: Line chart time series agri and total
 
+### Total gross greenhouse gas emissions in Scotland {.tabset}
+
+#### Agriculture greenhouse gas emissions
+
+```{r fig1, echo = FALSE}
+fig1
+
+```
+
+#### Emissions by sector in 2022
+
+```{r fig1b, echo = FALSE}
+fig1b
+
+```
+
 # Agriculture sub-sector greenhouse gas emissions
 
 Brief description of methodology (note difference to GHG inventory).
 
 The agricultural sub-sectors are: suckler beef, dairy beef, dairy, sheep, arable and other.
 
-## Total agriculture greenhouse gas emissions by sub-sector {.tabset}
+## Total agriculture greenhouse gas emissions by sub-sector
 
 -   Short commentary (brief description of need to know information and then brief comment on trends)
 
@@ -151,7 +167,7 @@ fig2
 
 -   Stacked bar as report for just 2022 results
 
--   (Line charts -- timeseries for each gas for each subsector  - in data tables)
+-   (Line charts -- timeseries for each gas for each subsector - in data tables)
 
 -   Show/hide data tables
 
@@ -167,6 +183,11 @@ fig3
 -   Interactive chart -- bar chart as report. If timeseries available bar chart timeseries?
 
 -   Show/hide data tables
+
+```{r fig4, echo = FALSE}
+fig4
+
+```
 
 # Farm-level greenhouse gas emissions
 
