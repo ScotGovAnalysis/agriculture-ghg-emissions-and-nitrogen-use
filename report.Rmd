@@ -1,7 +1,5 @@
 ---
 title: "Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-2023"
-author: no
-published: "`r Sys.Date()`"
 sgtemplates:
   datatables:
     features:
@@ -25,7 +23,7 @@ sgtemplates:
       text: This is a work in progress.
     site_branding: Scottish Government
   metadata:
-    label: Publication - Statistics
+    label: "Publication - Statistics"
   navigation:
     breadcrumb_trail:
     - href: index.html
@@ -38,6 +36,7 @@ sgtemplates:
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 source("scripts/national_charts.R")
+source("scripts/CN_analysis_build.R")
 
 ```
 
@@ -191,11 +190,59 @@ fig4
 
 # Farm-level greenhouse gas emissions
 
-## Farm-level gross GHG emissions
+## Farm-level gross GHG emissions {.tabset}
 
 -   Short commentary - include note of methdology change for 2022, comment on average farm 2022 results.
 
 -   Interactive charts: Bar chart with panel to select different farm types. Time series Optional line chart -- plot median -- add plots of other farm types to chart.
+
+### Average farm
+
+```{r fig5a, echo = FALSE}
+fig5a
+
+```
+
+
+### Average cereal farm
+
+```{r fig5b, echo = FALSE}
+fig5b
+
+```
+
+
+### Average general cropping farm
+
+```{r fig5c, echo = FALSE}
+fig5c
+
+```
+
+
+### Average dairy farm
+
+```{r fig5d, echo = FALSE}
+fig5d
+
+```
+
+
+### Average less favoured area (LFA) livestock farm
+
+```{r fig5e, echo = FALSE}
+fig5e
+
+```
+
+
+### Average mixed farm
+
+```{r fig5f, echo = FALSE}
+fig5f
+
+```
+
 
 ## Farm level emissions intensity
 
