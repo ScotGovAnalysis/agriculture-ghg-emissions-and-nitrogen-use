@@ -37,12 +37,15 @@ nat_tot <- nat_tot %>% pivot_longer(cols = where(is.numeric), names_to = "Year",
 nat_tot <- nat_tot %>% filter(Industry != "TOTAL") 
 nat_tot$Year <- as.numeric(nat_tot$Year)
 
-
-# fig 1b ----
-# Industry in cols - pivot wider - fig 1b
+# Industry in cols - pivot wider 
 nat_tot <- nat_tot %>% pivot_wider(names_from = Industry, values_from = c(ghg_emiss))
 industry_names <- colnames(nat_tot[-1]  )
 
+nat_tot_98 <- nat_tot %>% filter(Year >1995)
+latest_year_gross_data <- nat_tot_98 %>% filter(Year %in% CurrentYear)
+nineties_gross_data <- nat_tot %>% filter(Year == 1990)
+  
+# fig 1b ----
 # current year sort for bar chart
 nat_tot_current <- nat_tot %>% filter(Year == CurrentYear) %>% select(-Year, - `Total (RHS)`) 
 #%>% rename(`Total Emissions`= `Total (RHS)`)
@@ -64,7 +67,9 @@ sec_tot$Year <- as.numeric(sec_tot$Year)
 # sector in cols - pivot wider
 sec_tot <- sec_tot %>% pivot_wider(names_from = Sector, values_from = c(ghg_emiss))
 
-
+sec_tot_98 <- sec_tot %>% filter(Year > 1995)
+latest_year_data <- sec_tot_98 %>% filter(Year %in% CurrentYear)
+nineties_data <- sec_tot %>% filter(Year == 1990)
 
 
 # fig 3----
