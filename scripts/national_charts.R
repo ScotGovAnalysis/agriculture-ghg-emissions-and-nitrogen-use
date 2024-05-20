@@ -79,14 +79,14 @@ fig <-
   )
 fig <-
   fig %>%  add_trace(
-    y = ~ get(industry_names[8]),
+    y = ~get(industry_names[8]),
     type = 'scatter',
     name = "Total emissions" ,
     mode = 'lines',
     line = list(color = sg_colour_palettes$focus[2], width = 4),
     hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
   )
-
+fig
 # add axis settings 
 fig <- fig %>% layout( xaxis = xaxis, yaxis = yaxis,
                        autosize = TRUE,
@@ -123,7 +123,7 @@ fig <-
 fig <-
   fig %>%  add_markers(
     x = ~ 1990 ,
-    y = ~ get(industry_names[1]),
+    y = ~get(industry_names[1]),
     data = nineties_gross_data,
     name = industry_names[1],
     marker = list(color = sg_colour_palettes$focus[1], size = 12),
@@ -147,7 +147,7 @@ fig <- fig %>% add_annotations(
   x = 0.93,
   y = ~ get(industry_names[1]),
   data = latest_year_gross_data,
-  text = industry_names[1],
+  text = "Agriculture",
   xref = 'paper',
   yref = 'y',
   xanchor = 'left',
