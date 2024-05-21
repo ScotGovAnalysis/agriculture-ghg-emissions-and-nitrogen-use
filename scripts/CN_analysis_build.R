@@ -8,7 +8,7 @@ cropyear_range <- c(2019:2022)
 #1: Cereal, 2: General cropping, 3: Dairy,
 #4: LFA Sheep, 5: LFA Cattle, 6: LFA Cattle & Sheep, 7: Lowland livestock, 8: Mixed
 #9: All farm types, 10: All LFA livestock types
-Output_types = c(9,1,2,3,10,8)
+Output_types = c(9,1,2,3,10,8,4,5,6,7)
 
 #Use cropyears to determine sampyears
 sampyear_range <- cropyear_range + 1
@@ -30,8 +30,8 @@ documents_url <- paste0(publication_url,"documents/")
 
 
 ##Run the two R scripts and the Rmarkdown document
-source('CN_analysis.R')
-source('Plots.R')
-#rmarkdown::render('CN_analysis_md.Rmd', output_file = html_filename)
+source('scripts/CN_analysis.R')
+source('scripts/Plots.R')
+rmarkdown::render('scripts/CN_analysis_md.Rmd', output_file = html_filename)
 # rmarkdown::render('CN_slides.Rmd')
 # rmarkdown::render('CN_ppt.Rmd')

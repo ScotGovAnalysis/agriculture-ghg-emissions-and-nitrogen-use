@@ -143,57 +143,75 @@ output_plotv3<- function(i, title_label, quantity_label, y_label, colour_code=te
 }
 
 
-output_plotv4<- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code="#d2eaff", NUE_flag=F){
+output_plotv4<- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code="#d2eaff", limits=c(0, NA), NUE_flag=F){
   output_plot_box <- ggplot(filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)) +
     geom_boxplot(aes(x=Year, lower = Q1, upper = Q3,
                      middle = Median, ymin = Q1, ymax = Q3, group=Year),
                  stat = "identity", colour=colour_code, fill=fill_code, width=0.75)+
     theme(panel.grid.minor.y = element_blank(),
-          axis.ticks.y = element_blank())+
-    ggExtra::removeGrid(x=TRUE, y=TRUE)
-  # +
-  #   ylab(bquote(.(y_label)))
+          axis.ticks.y = element_blank(),
+          panel.background = element_rect(fill = 'white', colour="white"))+
+    scale_y_continuous(expand = c(0, 0), limits = limits)+
+    ggExtra::removeGrid(x=TRUE, y=TRUE)+
+    ylab(bquote(.(y_label)))
   return(output_plot_box)
 }
 
+testplot<-output_plotv4(9, "Absolute emissions", "t CO2-e per ha", "t CO"[2]~"-e / ha")
+testplot
+
+lightteal<-"#86ded7"
 
 # Plotly plots for markdown -----------------------------------------------
 
-  
-
-figtest<-output_plotv4(9, "Absolute emissions", "t CO2-e per ha", "t CO"[2]~"-e / ha")
-
-fig6<-ggplot(filter(Master_plots, `Farm type`==9, Quantity == "t CO2-e per ha")) +
-  geom_boxplot(aes(x=Year, lower = Q1, upper = Q3,
-                   middle = Median, ymin = Q1, ymax = Q3, group=Year),
-               stat = "identity", colour=darkblue, fill="#d2eaff", width=0.75)
-# +
-#   theme(panel.grid.minor.y = element_blank(),
-#         axis.ticks.y = element_blank())+
-#   ggExtra::removeGrid(x=TRUE, y=TRUE)
-
-figtest
-
-
-
-test<-Master_plots %>% 
-  filter(`Farm type`=="All Types", Quantity == "t CO2-e per ha")
+t1<-list(family = 'Arial',
+         size = 16,
+         color = 'rgb(82, 82, 82)')
 
 # Make plotly function for figures
 
 
-# Separate figures for each of the four measures and each farmtype
+plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code="#7fc4ff", NUE_flag=F){
+  plotlybox <- plot_ly(filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label),
+                             x = ~Year, type = "box", boxpoints = "all", 
+                             q1 = ~Q1, 
+                             median = ~Median, 
+                             q3 = ~Q3,
+                             lowerfence = ~Q1, 
+                             upperfence = ~Q3,
+                             fillcolor=fill_code,
+                             line = list(color = colour_code)) %>% 
+    layout(yaxis = list(title = list(text = y_label, font = t1),
+                        rangemode="tozero",
+                               tickfont = t1),
+                  xaxis = list(title = list(font = t1),
+                               tickfont = t1))
+}
 
+# Absolute emissions
+# Separate figures for each farmtype
 
-fig5 <- plot_ly(test,
-                      x = ~Year, type = "box", boxpoints = "all", 
-                      q1 = ~Q1, 
-                      median = ~Median, 
-                      q3 = ~Q3,
-                      lowerfence = ~Q1, 
-                      upperfence = ~Q3,
-               fillcolor="#d2eaff",
-               line = list(color = darkblue))
-                      # marker = list(color = 'rgb(7,40,89)'),
-                      # line = list(color = 'rgb(7,40,89)'))
-fig
+# All
+
+fig5a <- plotlybox(9, "Absolute emissions", "t CO2-e per ha", "t CO<sup>2</sup>-e / ha")
+fig5a
+
+# Cereal
+
+fig5b <- plotlybox(1, "Absolute emissions", "t CO2-e per ha", "t CO<sup>2</sup>-e / ha")
+
+# General cropping
+
+fig5c <- plotlybox(2, "Absolute emissions", "t CO2-e per ha", "t CO<sup>2</sup>-e / ha")
+
+# Dairy
+
+fig5d <- plotlybox(3, "Absolute emissions", "t CO2-e per ha", "t CO<sup>2</sup>-e / ha")
+  
+# Mixed
+
+fig5e <- plotlybox(10, "Absolute emissions", "t CO2-e per ha", "t CO<sup>2</sup>-e / ha")
+
+# LFA Livestock 
+
+fig5f <- plotlybox(8, "Absolute emissions", "t CO2-e per ha", "t CO<sup>2</sup>-e / ha")
