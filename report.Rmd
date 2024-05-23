@@ -1,7 +1,7 @@
 ---
 title: "Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-2023"
-author: no
-published: "`r Sys.Date()`"
+author: 'no'
+published: r Sys.Date()
 sgtemplates:
   datatables:
     features:
@@ -25,7 +25,7 @@ sgtemplates:
       text: This is a work in progress.
     site_branding: Scottish Government
   metadata:
-    label: Publication - Statistics
+    label: "Publication - Statistics"
   navigation:
     breadcrumb_trail:
     - href: index.html
@@ -36,8 +36,9 @@ sgtemplates:
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
 source("scripts/national_charts.R")
+source("scripts/CN_analysis_build.R")
 
 ```
 
@@ -191,13 +192,131 @@ fig4
 
 # Farm-level greenhouse gas emissions
 
-## Farm-level gross GHG emissions
+## Farm-level gross GHG emissions {.tabset}
 
 -   Short commentary - include note of methdology change for 2022, comment on average farm 2022 results.
 
 -   Interactive charts: Bar chart with panel to select different farm types. Time series Optional line chart -- plot median -- add plots of other farm types to chart.
 
-## Farm level emissions intensity
+### Average farm
+
+**Average farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+ 
+```{r fig5a, echo = FALSE, fig.height= 6}
+fig5a
+
+```
+
+
+### Average cereal farm
+
+**Average cereal farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5b, echo = FALSE, fig.height= 6}
+fig5b
+
+```
+
+
+### Average general cropping farm
+
+**Average general farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5c, echo = FALSE, fig.height= 6}
+fig5c
+
+```
+
+
+### Average dairy farm
+
+**Average dairy farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5d, echo = FALSE, fig.height= 6}
+fig5d
+
+```
+
+
+### Average LFA livestock farm
+
+**Average LFA (less favoured area) livestock farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5e, echo = FALSE, fig.height= 6}
+fig5e
+
+```
+
+
+### Average mixed farm
+
+**Average mixed farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5f, echo = FALSE, fig.height= 6}
+fig5f
+
+```
+
+
+## Farm level emissions intensity {.tabset}
+### Average farm
+
+**Average farm emissions intensity from GHG, 2019-20 to 2022-23**
+ 
+```{r fig6a, echo = FALSE, fig.height= 6}
+fig6a
+
+```
+
+
+### Average cereal farm
+
+**Average cereal farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6b, echo = FALSE, fig.height= 6}
+fig6b
+
+```
+
+
+### Average general cropping farm
+
+**Average general cropping farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6c, echo = FALSE, fig.height= 6}
+fig6c
+
+```
+
+
+### Average dairy farm
+
+**Average dairy farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6d, echo = FALSE, fig.height= 6}
+fig6d
+
+```
+
+
+### Average LFA livestock farm
+
+**Average LFA (less favoured area) farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6e, echo = FALSE, fig.height= 6}
+fig6e
+
+```
+
+
+### Average mixed farm
+
+**Average mixed farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6f, echo = FALSE, fig.height= 6}
+fig6f
+
+```
 
 # Agriculture nitrogen use efficiency?
 
@@ -205,9 +324,130 @@ Link to N balance sheet and comment on latest data (2020 for now).
 
 # Farm-level nitrogen use
 
-## Farm-level nitrogen balance
+## Farm-level nitrogen balance {.tabset}
 
-## Farm-level nitrogen use efficiency
+### Average farm
+
+**Average farm nitrogen balance, 2019-20 to 2022-23**
+ 
+```{r fig7a, echo = FALSE, fig.height= 6}
+fig7a
+
+```
+
+
+### Average cereal farm
+
+**Average cereal farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7b, echo = FALSE, fig.height= 6}
+fig7b
+
+```
+
+
+### Average general cropping farm
+
+**Average general cropping farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7c, echo = FALSE, fig.height= 6}
+fig7c
+
+```
+
+
+### Average dairy farm
+
+**Average dairy farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7d, echo = FALSE, fig.height= 6}
+fig7d
+
+```
+
+
+### Average LFA livestock farm
+
+**Average less favoured area (LFA) farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7e, echo = FALSE, fig.height= 6}
+fig7e
+
+```
+
+
+### Average mixed farm
+
+**Average mixed farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7f, echo = FALSE, fig.height= 6}
+fig7f
+
+```
+
+
+
+## Farm-level nitrogen use efficiency {.tabset}
+
+### Average farm
+
+**Average farm nitrogen use efficiency, 2019-20 to 2022-23**
+ 
+```{r fig8a, echo = FALSE, fig.height= 6}
+fig8a
+
+```
+
+
+### Average cereal farm
+
+**Average cereal farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8b, echo = FALSE, fig.height= 6}
+fig8b
+
+```
+
+
+### Average general cropping farm
+
+**Average general cropping farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8c, echo = FALSE, fig.height= 6}
+fig8c
+
+```
+
+
+### Average dairy farm
+
+**Average dairy farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8d, echo = FALSE, fig.height= 6}
+fig8d
+
+```
+
+
+### Average LFA livestock farm
+
+**Average less favoured area (LFA) farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8e, echo = FALSE, fig.height= 6}
+fig8e
+
+```
+
+
+### Average mixed farm
+
+**Average mixed farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8f, echo = FALSE, fig.height= 6}
+fig8f
+
+```
+
 
 # Glossary
 
