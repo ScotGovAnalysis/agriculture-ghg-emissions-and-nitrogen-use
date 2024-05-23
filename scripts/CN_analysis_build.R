@@ -32,6 +32,6 @@ documents_url <- paste0(publication_url,"documents/")
 ##Run the two R scripts and the Rmarkdown document
 source('scripts/CN_analysis.R')
 source('scripts/Plots.R')
-rmarkdown::render('scripts/CN_analysis_md.Rmd', output_file = html_filename)
+#rmarkdown::render('scripts/CN_analysis_md.Rmd', output_file = html_filename)
 # rmarkdown::render('CN_slides.Rmd')
 # rmarkdown::render('CN_ppt.Rmd')
