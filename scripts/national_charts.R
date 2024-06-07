@@ -142,6 +142,28 @@ fig <-
     hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
   )
 
+# add marker to 1995
+fig <-
+  fig %>%  add_markers(
+    x = ~ 1995 ,
+    y = ~get(industry_names[1]),
+    data = nat_tot_95,
+    name = industry_names[1],
+    marker = list(color = sg_colour_palettes$focus[1], size = 12),
+    inherit = TRUE,
+    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
+  )
+
+fig <-
+  fig %>%  add_markers(
+    x = ~ 1995 ,
+    y = ~ get(industry_names[8]),
+    data = nat_tot_95,
+    name = "Total emissions",
+    marker = list(color = sg_colour_palettes$focus[2], size = 12),
+    inherit = TRUE,
+    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
+  )
 #add annotations to latest year marker
 fig <- fig %>% add_annotations(
   x = 0.93,
@@ -177,19 +199,18 @@ fig <- fig %>% add_annotations(
 fig1 <- fig
 fig1
 
-# National - current year climate change plan sectors gross emissions - fig 1b ----
 
-fig <-plot_ly(nat_tot_current, x = ~ghg_emiss,
-              y =~Industry,
-    type = 'bar',
-    orientation = 'h',
-    # may need to change depending on where agriculture comes in order
-    marker = list(color = c(rep(sg_colour_palettes$focus[2], times=3), 
-                            sg_colour_palettes$focus[1],
-                            rep(sg_colour_palettes$focus[2],times =3)
-    )),
-    hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e<extra></extra>"
-  )
+
+# National - agri subsector - emissions fig 2 ----
+
+fig <-plot_ly(sec_tot, x = ~Year,
+                            y =~Subsector,
+                  type = 'bar',
+                  orientation = 'h',
+                  # may need to change depending on where agriculture comes in order
+                  marker = list(color = sg_colour_values[1:6]
+                  ),
+                  hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e<extra></extra>"  )
 
 
 fig <- fig %>% layout(yaxis = list(title = list(font = t1),
@@ -202,441 +223,95 @@ fig <- fig %>% layout(yaxis = list(title = list(font = t1),
                       hoverlabel =list(font = list(color  = "white",
                                                    font = t1))
                       )
-fig1b <- fig
 
-fig1b
-
-
-
-# National - ghg by agri subsector - fig 2 ----
-fig <- plot_ly(sec_tot_98, x = ~Year)
-
-
-# add lines to chart
-fig <-
-  fig %>%  add_trace(
-    y = ~ get(sectors[1]),
-    type = 'scatter',
-    name = sectors[1],
-    mode = 'lines',
-    line = list(color = sg_colour_values[1], width = 4),
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-fig <-
-  fig %>%  add_trace(
-    y = ~ get(sectors[2]),
-    type = 'scatter',
-    name = sectors[2],
-    mode = 'lines',
-    line = list(color = sg_colour_values[2], width = 4),
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-fig <-
-  fig %>%  add_trace(
-    y = ~ get(sectors[3]),
-    type = 'scatter',
-    name = sectors[3],
-    mode = 'lines',
-    line = list(color = sg_colour_values[3], width = 4),
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-fig <-
-  fig %>%  add_trace(
-    y = ~ get(sectors[4]),
-    type = 'scatter',
-    name = sectors[4],
-    mode = 'lines',
-    line = list(color = sg_colour_values[4], width = 4),
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-fig <-
-  fig %>%  add_trace(
-    y = ~ get(sectors[5]),
-    type = 'scatter',
-    name = sectors[5],
-    mode = 'lines',
-    line = list(color = sg_colour_values[5], width = 4),
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-fig <-
-  fig %>%  add_trace(
-    y = ~ get(sectors[6]),
-    type = 'scatter',
-    name = sectors[6],
-    mode = 'lines',
-    line = list(color = sg_colour_values[6], width = 4),
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-
-# add axis settings 
-fig <- fig %>% layout( xaxis = xaxis, yaxis = yaxis,
-                      autosize = TRUE,
-                      showlegend = FALSE,
-                      margin = margin,
-                      hovermode= "x unified"
-                      )  
-
-
-#add marker to latest year
-fig <-
-  fig %>%  add_markers(
-    x = ~ CurrentYear ,
-    y = ~ get(sectors[1]),
-    data = latest_year_data,
-    name = sectors[1],
-    marker = list(color = sg_colour_values[1], size = 12),
-    inherit = TRUE,
-    hoverinfo = "none"
-  )
-fig <-
-  fig %>%  add_markers(
-    x = ~ CurrentYear ,
-    y = ~ get(sectors[2]),
-    data = latest_year_data,
-    name = sectors[2],
-    marker = list(color = sg_colour_values[2], size = 12),
-    inherit = TRUE,
-    hoverinfo = "none"
-  )
-fig <-
-  fig %>%  add_markers(
-    x = ~ CurrentYear ,
-    y = ~ get(sectors[3]),
-    data = latest_year_data,
-    name = sectors[3],
-    marker = list(color = sg_colour_values[3], size = 12),
-    inherit = TRUE,
-    hoverinfo = "none"
-  )
-fig <-
-  fig %>%  add_markers(
-    x = ~ CurrentYear ,
-    y = ~ get(sectors[4]),
-    data = latest_year_data,
-    name = sectors[4],
-    marker = list(color = sg_colour_values[4], size = 12),
-    inherit = TRUE,
-    hoverinfo = "none"
-  )
-fig <-
-  fig %>%  add_markers(
-    x = ~ CurrentYear ,
-    y = ~ get(sectors[5]),
-    data = latest_year_data,
-    name = sectors[5],
-    marker = list(color = sg_colour_values[5], size = 12),
-    inherit = TRUE,
-    hoverinfo = "none"
-  )
-fig <-
-  fig %>%  add_markers(
-    x = ~ CurrentYear ,
-    y = ~ get(sectors[6]),
-    data = latest_year_data,
-    name = sectors[6],
-    marker = list(color = sg_colour_values[6], size = 12),
-    inherit = TRUE,
-    hoverinfo = "none"
-  )
-
-
-#add marker to 1990
-fig <-
-  fig %>%  add_markers(
-    x = ~ 1990 ,
-    y = ~ get(sectors[1]),
-    data = nineties_data,
-    name = sectors[1],
-    marker = list(color = sg_colour_values[1], size = 12),
-    inherit = TRUE,
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-fig <-
-  fig %>%  add_markers(
-    x = ~ 1990 ,
-    y = ~ get(sectors[2]),
-    data = nineties_data,
-    name = sectors[2],
-    marker = list(color = sg_colour_values[2], size = 12),
-    inherit = TRUE,
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-fig <-
-  fig %>%  add_markers(
-    x = ~ 1990 ,
-    y = ~ get(sectors[3]),
-    data = nineties_data,
-    name = sectors[3],
-    marker = list(color = sg_colour_values[3], size = 12),
-    inherit = TRUE,
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-fig <-
-  fig %>%  add_markers(
-    x = ~ 1990 ,
-    y = ~ get(sectors[4]),
-    data = nineties_data,
-    name = sectors[4],
-    marker = list(color = sg_colour_values[4], size = 12),
-    inherit = TRUE,
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-fig <-
-  fig %>%  add_markers(
-    x = ~ 1990 ,
-    y = ~ get(sectors[5]),
-    data = nineties_data,
-    name = sectors[5],
-    marker = list(color = sg_colour_values[5], size = 12),
-    inherit = TRUE,
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-  )
-fig <-
-  fig %>%  add_markers(
-    x = ~ 1990 ,
-    y = ~ get(sectors[6]),
-    data = nineties_data,
-    name = sectors[6],
-    marker = list(color = sg_colour_values[6], size = 12),
-    inherit = TRUE,
-    hovertemplate = "%{y:.2f} MtCO<sub>2</sub>e"
-   
-  )
-
-
-#add annotations to latest year marker
-fig <- fig %>% add_annotations(
-  x = 0.93,
-  y = ~ get(sectors[1]),
-  data = latest_year_data,
-  text = sectors[1],
-  xref = 'paper',
-  yref = 'y',
-  xanchor = 'left',
-  font = list(
-    family = 'Arial',
-    size = 16,
-    color = sg_colour_values[1]
-  ),
-  showarrow = FALSE
-)
-
-
-fig <- fig %>% add_annotations(
-  x = 0.93,
-  y = ~ get(sectors[2]),
-  data = latest_year_data,
-  text = sectors[2],
-  xref = 'paper',
-  yref = 'y',
-  xanchor = 'left',
-  font = list(
-    family = 'Arial',
-    size = 16,
-    color = sg_colour_values[2]
-  ),
-  showarrow = FALSE
-)
-
-fig <- fig %>% add_annotations(
-  x = 0.93,
-  y = ~ get(sectors[3]),
-  data = latest_year_data,
-  text = sectors[3],
-  xref = 'paper',
-  yref = 'y',
-  xanchor = 'left',
-  font = list(
-    family = 'Arial',
-    size = 16,
-    color = sg_colour_values[3]
-  ),
-  showarrow = FALSE
-)
-
-#to do: try to add data label for latest year
-fig <- fig %>% add_annotations(
-  x = 0.93,
-  y = ~ get(sectors[6]),
-  data = latest_year_data,
-  text = sectors[6],
-  # text = paste(
-  #   sectors[6],
-  #   ":",
-  #   CurrentYear,
-  #   round(latest_year_data[sectors[6]], 2),
-  #   "MtCO<sub>2</sub>"
-  #),
-  xref = 'paper',
-  yref = 'y',
-  xanchor = 'left',
-  font = list(
-    family = 'Arial',
-    size = 16,
-    color = sg_colour_values[6]
-  ),
-  showarrow = FALSE
-)
-
-fig <-
-  fig %>% add_annotations(
-    x = 0.93,
-    y = ~ get(sectors[4]) + 0.1,
-    data = latest_year_data,
-    text = sectors[4],
-    xref = 'paper',
-    yref = 'y',
-    xanchor = 'left',
-    font = list(
-      family = 'Arial',
-      size = 16,
-      color = sg_colour_values[4]
-    ),
-    showarrow = FALSE
-  )
-
-fig <- fig %>% add_annotations(
-  x = 0.93,
-  y = ~ get(sectors[5]),
-  data = latest_year_data,
-  #xshift = 3,
-  text = sectors[5],
-  xref = 'paper',
-  yref = 'y',
-  xanchor = 'left',
-  font = list(
-    family = 'Arial',
-    size = 16,
-    color = sg_colour_values[5]
-  ),
-  showarrow = FALSE
-)
-
-fig2 <-  fig
-
+fig2 <- fig
 fig2
 
-# National - agri sub sector - emissions by pollutant fig 3 ----
+# National - agri sub sector - emissions by source fig 3----
 
-fig <-plot_ly(sec_comp_latest, x = ~Methane, y = ~Sector,
+fig <-plot_ly(sec_source, 
+              x =~get(source_names[1]) , 
+              y = ~Sector,
     type = 'bar',
     orientation = 'h',
-    name = ~'Methane',
-    marker = list(color = sg_colour_values[1]),
-    hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e of methane <extra></extra>"
-    
-  )
-
-fig <- fig %>% add_trace(x = ~`Carbon Dioxide`, y = ~Sector, type = 'bar',
-                         orientation = 'h',
-                         name = 'Carbon Dioxide',
-                         marker = list(color = sg_colour_values[2]),
-                         hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e of carbon dioxide <extra></extra>",
-                         text = "")
-
-fig <- fig %>% add_trace(x = ~`Nitrous Oxide`,y = ~Sector, type = 'bar',
-                         orientation = 'h',
-                         name = 'Nitrous Oxide', marker = list(color = sg_colour_values[3]),
-                         hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e of nitrous oxide <extra></extra>",
-                         text = "")
-
-
-
-
-fig <- fig %>% layout(yaxis = list(title = list(font = t1),
-                                   tickfont = t1),
-                      xaxis = list(title = list(text = 'MtCO<sub>2</sub>e', font = t1),
-                                   tickfont = t1),
-                      barmode = 'stack',
-                      legend = list(font = t1),
-                      hovermode = 'y unified')
-fig3 <- fig
-fig3
-# National - agri sub sector - emissions by source fig 4----
-
-fig <-plot_ly(sec_source, x = ~Sector)
-
-fig <-
-  fig %>%  add_trace(
-    y = ~get(source_names[1]),
-    type = 'bar',
     name = source_names[1],
     marker = list(color = sg_colour_values[1]),
-    hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e from enteric fermentation'<extra></extra>'",
+    hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e from enteric fermentation'<extra></extra>'",
     hovertext = "none"
   )
 
 fig <-
   fig %>%  add_trace(
-    y = ~get(source_names[2]),
+    x = ~get(source_names[2]),
+    y =  ~Sector,
     type = 'bar',
+    orientation = 'h',
     name = source_names[2],
     marker = list(color = sg_colour_values[2]),
-    hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e from manure management'<extra></extra>'",
+    hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e from manure management'<extra></extra>'",
     hovertext = "none"
   )
 
 fig <-
   fig %>%  add_trace(
-    y = ~get(source_names[3]),
-    type = 'bar',
+    x = ~get(source_names[3]),
+    y = ~Sector,
+    type = 'bar',  
+    orientation = 'h',
     name = source_names[3],
     marker = list(color = sg_colour_values[3]),
-    hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e from agricultural soils'<extra></extra>'",
+    hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e from agricultural soils'<extra></extra>'",
     hovertext = "none"
   )
 
 fig <-
   fig %>%  add_trace(
-    y = ~get(source_names[4]),
+    x = ~get(source_names[4]),
+    y = ~Sector,
     type = 'bar',
+    orientation = 'h',
     name = source_names[4],
     marker = list(color = sg_colour_values[4]),
-    hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e from fuel combustion'<extra></extra>'",
+    hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e from fuel combustion'<extra></extra>'",
     hoverlabel = list(color = "white")
   )
 
 fig <-
   fig %>%  add_trace(
-    y = ~get(source_names[5]),
+    x = ~get(source_names[5]),
+    y = ~Sector,
     type = 'bar',
+    orientation = 'h',
     name = source_names[5],
     marker = list(color = sg_colour_values[5]),
-    hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e from liming'<extra></extra>'",
+    hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e from liming'<extra></extra>'",
     hovertext = "none"
   )
 
 fig <-
   fig %>%  add_trace(
-    y = ~get(source_names[6]),
+    x = ~get(source_names[8]),
+    y = ~Sector,
     type = 'bar',
-    name = source_names[6],
+    orientation = 'h',
+    name = source_names[8],
     marker = list(color = sg_colour_values[6]),
-    hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e from urea application'<extra></extra>'",
+    hovertemplate = "%{y}: %{x:.2f} MtCO<sub>2</sub>e from other emission sources'<extra></extra>'",
     hovertext = "none"
   )
 
-fig <-
-  fig %>%  add_trace(
-    y = ~get(source_names[7]),
-    type = 'bar',
-    name ="Non-energy products <br>from fuels and solvent use</br>",
-    marker = list(color = sg_colour_values[7]),
-    hovertemplate = "%{x}: %{y:.2f} MtCO<sub>2</sub>e from non-energy products <br>from fuels and solvent use</br>'<extra></extra>'",
-    hovertext = "none"
-  )
 fig
 
 
-fig <- fig %>% layout(yaxis = list(title = list(text = 'MtCO<sub>2</sub>e', font = t1),
+fig <- fig %>% layout(xaxis = list(title = list(text = 'MtCO<sub>2</sub>e', font = t1),
                                    tickfont = t1),
-                      xaxis = list(title = list(font = t1),
+                      yaxis = list(title = list(font = t1),
                                    tickfont = t1),
                       barmode = 'stack',
                       legend = list(font = t1,
                                     text = source_names),
                       hoverlabel =list(font = list(color  = "white")))
-fig4 <- fig
-fig4
+fig3 <- fig
+fig3
 
 
