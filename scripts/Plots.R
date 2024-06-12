@@ -79,29 +79,179 @@ t1<-list(family = 'Arial',
 
 # Make plotly function for figures
 
-
 plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code=c("white","white","white",lightblue), yrange=c(0,24), NUE_flag=F){
+  
+  
   plotlybox <- plot_ly(filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label),
-                             x = ~Year, type = "box", boxpoints = "all", 
-                             q1 = ~round_half_up(Q1, 2), 
-                             median = ~round_half_up(Median, 2), 
-                             q3 = ~round_half_up(Q3, 2),
-                             lowerfence = ~round_half_up(Q1, 2), 
-                             upperfence = ~round_half_up(Q3, 2),
-                             fillcolor=fill_code,
-                             line = list(color = colour_code)) %>% 
+                       x = ~Year, type = "box", 
+                       q1 = ~round_half_up(Q1, 2), 
+                       median = ~round_half_up(Median, 2), 
+                       q3 = ~round_half_up(Q3, 2),
+                       lowerfence = ~round_half_up(Q1, 2), 
+                       upperfence = ~round_half_up(Q3, 2),
+                       line = list(color = colour_code),
+                       hoverinfo = "none",
+                       text=~Median
+                       
+  ) %>% 
+    add_text(
+      x=~Year,
+      y=~Median,
+      text=~round_half_up(Median,2),
+       textposition="top",
+       inherit=F,
+       textfont=list(colour="white"),
+       showlegend=FALSE,
+      hoverinfo="none",
+       colour="white"
+    ) %>%
     layout(yaxis = list(title = list(text = y_label, font = t1),
                         range = yrange,
-                               tickfont = t1),
-                  xaxis = list(title = list(font = t1),
-                               tickfont = t1), boxgroupgap=0, showlegend = FALSE
-           #,title = title
-           )
-  
+                        tickfont = t1),
+           xaxis = list(title = list(font = t1),
+                        tickfont = t1), boxgroupgap=0, showlegend = FALSE) 
+  # %>% 
+    # style(hoverinfo = "none")
+
 }
 
-# Absolute emissions
-# Separate figures for each farmtype
+# 
+# plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code=c("white","white","white",lightblue), yrange=c(0,24), NUE_flag=F){
+#   data<-filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)
+#   
+#   data<-data %>% mutate(hovertext=paste("Year:",Year, "Median:", Median))
+#  ggbox <-  ggplot(data, text=paste("Group:",Year, "\n",
+#                                              "Class:", Median)) +
+#     geom_boxplot(aes(x=Year, lower = Q1, upper = Q3,
+#                      middle = Median, ymin = Q1, ymax = Q3, group=Year),
+#                  stat = "identity")+
+#     
+#     #invisible layer of points
+#     geom_point(alpha = 0)
+#   
+#   ggbox %>% plot_ly(data,
+#                        x = ~Year, type = "box", 
+#                        q1 = ~round_half_up(Q1, 2), 
+#                        median = ~round_half_up(Median, 2), 
+#                        q3 = ~round_half_up(Q3, 2),
+#                        lowerfence = ~round_half_up(Q1, 2), 
+#                        upperfence = ~round_half_up(Q3, 2),
+#                        fillcolor=fill_code,
+#                        line = list(color = colour_code),
+#                        hoverinfo = "none"
+#                        
+#   ) %>% 
+#     add_text(
+#       x=~Year,
+#       y=~max(Q3)+1, 
+#       text=~round_half_up(Median,2),
+#       textposition="top",
+#       inherit=F,
+#       font=list(family=t1),
+#       showlegend=FALSE,
+#       hoverinfo="none"
+#     ) %>% 
+#     layout(yaxis = list(title = list(text = y_label, font = t1),
+#                         range = yrange,
+#                         tickfont = t1),
+#            xaxis = list(title = list(font = t1),
+#                         tickfont = t1), boxgroupgap=0, showlegend = FALSE) 
+#   # %>% 
+#   # style(hoverinfo = "none")
+#   
+# }
+# 
+# 
+# 
+# 
+# Master_plots<-Master_plots %>% 
+#   mutate(hovertext=paste("Year:",Year, "Median:", Median))
+# 
+# fig <- plot_ly(Master_plots, x = ~Year)
+# 
+# plotlybox1 <- function(i, title_label, quantity_label, y_label, colour_code=darkblue,  yrange=c(0,24), NUE_flag=F){
+#   data<-filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)
+#   
+#   data<-data %>% mutate(hovertext=paste("Year:",Year, "Median:", Median))
+#   
+#   fill_code<-ifelse(data$Year=="2022-23", lightblue, "white")
+#   
+#                             fig<-plot_ly(data, x = ~Year, type = "box", boxpoints = "all", 
+#                              q1 = ~round_half_up(Q1, 2), 
+#                              median = ~round_half_up(Median, 2), 
+#                              q3 = ~round_half_up(Q3, 2),
+#                              lowerfence = ~round_half_up(Q1, 2), 
+#                              upperfence = ~round_half_up(Q3, 2),
+#                              fillcolor=fill_code,
+#                              line = list(color = colour_code)
+#                        #  text=~hovertext,
+#                        # hoverinfo = "text"
+#                        # 
+#                        ) %>% 
+#     layout(yaxis = list(title = list(text = y_label, font = t1),
+#                         range = yrange,
+#                                tickfont = t1),
+#                   xaxis = list(title = list(font = t1),
+#                                tickfont = t1), boxgroupgap=0, showlegend = FALSE) %>% 
+#                               style(hoverinfo="none")
+#   
+# }
+# 
+# 
+# plotlybox2 <- function(i, title_label, quantity_label, y_label, colour_code=darkblue,  yrange=c(0,24), NUE_flag=F){
+#   data<-filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)
+#   
+#   data<-data %>% mutate(hovertext=paste("Year:",Year, "Median:", Median))
+#   
+#   fill_code<-ifelse(data$Year=="2022-23", lightblue, "white")
+#   
+#   fig<-plot_ly(data, x = ~Year, type = "box", boxpoints = "all", 
+#                q1 = ~round_half_up(Q1, 2), 
+#                median = ~round_half_up(Median, 2), 
+#                q3 = ~round_half_up(Q3, 2),
+#                lowerfence = ~round_half_up(Q1, 2), 
+#                upperfence = ~round_half_up(Q3, 2),
+#                fillcolor=fill_code,
+#                line = list(color = colour_code)
+#                #  text=~hovertext,
+#                # hoverinfo = "text"
+#                # 
+#   ) %>% 
+#     layout(yaxis = list(title = list(text = y_label, font = t1),
+#                         range = yrange,
+#                         tickfont = t1),
+#            xaxis = list(title = list(font = t1),
+#                         tickfont = t1), boxgroupgap=0, showlegend = FALSE)
+#   
+# }
+# 
+# 
+# 
+# Master_plots<-Master_plots %>% 
+#   mutate(hovertext=paste("Year:",Year, "Median:", Median))
+# 
+# fig <- plot_ly(Master_plots, x = ~Year)
+# 
+# plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code=c("white","white","white",lightblue), yrange=c(0,24), NUE_flag=F){
+#   data<-filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)
+#          
+#          data<-data %>% mutate(hovertext=paste("Year:",Year, "Median:", Median))
+#                        
+#          fig<-plot_ly() %>% 
+#            for(j in 1:row(data)){
+#              fig<-fig %>% 
+#                add_trace( type = "box", x = rep(stats$Year[j], 5), # Repeat year for each box parameter 
+#                           lowerfence = stats$Min[j], q1 = stats$Q1[j], median = stats$Median[j], q3 = stats$Q3[j], upperfence = stats$Max[j], name = as.character(stats$Year[j]), fillcolor = fill_code[j %% length(fill_code) + 1], line = list(color = colour_code), text = stats$hovertext[j], hoverinfo = "text")
+#            }
+#     fig<-fig %>% layout(yaxis = list(title = list(text = y_label, font = t1),
+#                         range = yrange,
+#                         tickfont = t1),
+#            xaxis = list(title = list(font = t1),
+#                         tickfont = t1), boxgroupgap=0, showlegend = FALSE)
+# }
+# # Absolute emissions
+# # Separate figures for each farmtype
+# 
 
 # All
 
@@ -168,46 +318,46 @@ fig6i <- plotlybox(8, "Emissions intensity", "kg CO2-e per kg output", "Emission
 
 # Nitrogen balance
 
-fig7a <- plotlybox(9, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+fig7a <- plotlybox(9, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(-50,390))
 fig7a
 
 
-fig7b <- plotlybox(1, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+fig7b <- plotlybox(1, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(-50,390))
 
-fig7c <- plotlybox(2, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+fig7c <- plotlybox(2, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(-50,390))
 
-fig7d <- plotlybox(3, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+fig7d <- plotlybox(3, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(-50,390))
 
-fig7e <- plotlybox(4, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+fig7e <- plotlybox(4, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(-50,390))
 
-fig7f <- plotlybox(5, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+fig7f <- plotlybox(5, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(-50,390))
 
-fig7g <- plotlybox(6, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+fig7g <- plotlybox(6, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(-50,390))
 
-fig7h <- plotlybox(7, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+fig7h <- plotlybox(7, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(-50,390))
 
-fig7i <- plotlybox(8, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+fig7i <- plotlybox(8, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(-50,390))
 # Nitrogen use efficiency
 
-fig8a <- plotlybox(9, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+fig8a <- plotlybox(9, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(0,130))
 fig8a
 
 
-fig8b <- plotlybox(1, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+fig8b <- plotlybox(1, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(0,130))
 
-fig8c <- plotlybox(2, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+fig8c <- plotlybox(2, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(0,130))
 
-fig8d <- plotlybox(3, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+fig8d <- plotlybox(3, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(0,130))
 
-fig8e <- plotlybox(4, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+fig8e <- plotlybox(4, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(0,130))
 
-fig8f <- plotlybox(5, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+fig8f <- plotlybox(5, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(0,130))
 
-fig8g <- plotlybox(6, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+fig8g <- plotlybox(6, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(0,130))
 
-fig8h <- plotlybox(7, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+fig8h <- plotlybox(7, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(0,130))
 
-fig8i <- plotlybox(8, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+fig8i <- plotlybox(8, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c(lightpurple,lightpurple,lightpurple,lightpurple), yrange=c(0,130))
 
 
 
