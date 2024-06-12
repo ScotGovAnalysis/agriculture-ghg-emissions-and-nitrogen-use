@@ -131,7 +131,7 @@ Scottish Government statistics are regulated by the Office for Statistics Regula
 
 #### Agriculture greenhouse gas emissions
 
-```{r fig1, echo = FALSE, fig.height=15, fig.width=10}
+```{r fig1, echo = FALSE}
 fig1
 
 ```
