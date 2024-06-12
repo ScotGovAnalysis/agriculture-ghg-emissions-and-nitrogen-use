@@ -1,3 +1,4 @@
+
 Table_1<-Table_1 %>% 
 filter(Measure=="Average (median)"| Measure=="Upper quartile"|Measure=="Lower quartile")
 
@@ -111,3 +112,4 @@ my_a11ytable <-
 library(openxlsx)
 my_wb <- a11ytables::generate_workbook(my_a11ytable)
 openxlsx::saveWorkbook(my_wb, "publication.xlsx",overwrite = TRUE)
+

@@ -1,5 +1,5 @@
 #Separate script for creating charts
-#source("resas_theme.R")
+library(janitor)
 # Defining a function which rounds in an expected way (rather than, eg,  rounding 53.2500 to 53.2).
 round2 <- function(x, n) {
   posneg = sign(x)
@@ -11,17 +11,19 @@ round2 <- function(x, n) {
 }
 
 
-
-
 ##Function for converting the tables created in CN_analysis.R into a format better for feeding into ggplot.
+
+
 Create_plot_df <- function(Input_table, variable){
   Output_table <- Input_table %>% 
     gather(all_of(financial_years), key = "Year", value = "Value") %>% 
     spread(key= "Measure", Value) %>% 
     mutate(Quantity = paste(variable))
-  colnames(Output_table) <- c("Farm type", "Year", "Median", "Q1", "Maximum", "Minimum", "NewMaximum", "NewMinimum", "Q3", "Quantity")
+  colnames(Output_table) <- c("Farm type", "Year", "Median", "Q1", "Q3", "Quantity")
   return(Output_table)
 }
+
+
 #Use the function to create dataframes for each Table
 Table_1_plot <- Create_plot_df(Table_1, "t CO2-e per ha")
 Table_2_plot <- Create_plot_df(Table_2, "kg CO2-e per kg output")
@@ -38,112 +40,22 @@ Master_plots$facet_order = factor(Master_plots$Quantity,
                                              "Nitrogen surplus (kg)", "Nitrogen use efficiency (%)"))
 
 
-# Function for creating the four plots for each type - for use in the visual summary
-# The input arguments are the type, quantity to be plotted, label for the y-axis and the rgb colour code.
-# A default colour code (#23A845, one of the standard Resas greens) is included.
-
-
-# A slightly modified function for creating the plots for use in the html publication.
-output_plot_pub <- function(i, title_label, quantity_label, y_label, colour_code="#002d54", NUE_flag=F){
-  output_plot_pub <- ggplot(filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)) +
-    geom_line(aes(x=`Year`, y=Median, group = 1), colour="#002d54") +
-    geom_point(aes(x=`Year`, y=Median), colour="#002d54") +
-    # labs(title = paste0(title_label))+
-    # {if(NUE_flag==T)geom_text(aes(x=`Year`, y=Median, vjust=-0.5, hjust=-0.08, label=paste0(format(round2(Median,0), nsmall=0),"%")), colour="Black", size=12, fontface="bold")}+
-    # {if(NUE_flag==F)geom_text(aes(x=`Year`, y=Median, vjust=-0.5, hjust=-0.08, label=format(round2(Median,1), nsmall=1)), colour="Black", size=12, fontface="bold")}+
-    theme(axis.text = element_text(size = 20),
-          axis.title = element_text(size = 24))+
-    ylab(bquote(.(y_label)))
-  return(output_plot_pub)
-}
-
-
-
-
-
-
-#Use the modified function to create plots for publication
-g_co2perha_pub <- output_plot_pub(9, "Absolute emissions", "t CO2-e per ha", "t CO"[2]~"-e / ha")
-# plot(g_co2perha_pub)
-g_co2perkg_pub <- output_plot_pub(9, "Emission intensity", "kg CO2-e per kg output", "kg CO"[2]~"-e / kg output")
-# plot(g_co2perkg_pub)
-g_Nsurplus_pub <- output_plot_pub(9, "Nitrogen balance", "Nitrogen surplus (kg)", "kg N surplus / ha", "#2b9c93")
-# plot(g_Nsurplus_pub)
-g_NUE_pub <- output_plot_pub(9, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "NUE (%)", "#2b9c93", NUE_flag = T)
-# plot(g_NUE_pub)
-#Save as SVG files
-SVGWidth <- 9
-SVGHeight <- SVGWidth * (5/9)
-# ggsave(file="co2perha_pub.svg", plot=g_co2perha_pub, width=SVGWidth, height=SVGHeight)
-# ggsave(file="co2perkg_pub.svg", plot=g_co2perkg_pub, width=SVGWidth, height=SVGHeight)
-# ggsave(file="Nsurplus_pub.svg", plot=g_Nsurplus_pub, width=SVGWidth, height=SVGHeight)
-# ggsave(file="NUE_pub.svg", plot=g_NUE_pub, width=SVGWidth, height=SVGHeight)
-
-new_outputs <- c("Cereal", "General Cropping", "Dairy", "Less favoured area (LFA) livestock", "Mixed")
-ggplot(filter(Master_plots, Quantity=="t CO2-e per ha", Year=="2021-22", `Farm type` %in% new_outputs))+
-  geom_point(aes(y=`Farm type`, x=`Median`))+
-  geom_errorbar(aes(y=`Farm type`, xmin=Q1, xmax = Q3))+
-  ylab(element_blank())+
-  xlab("Tonnes CO2-e per hectare")+
-  theme(panel.grid.major.y = element_blank(),
-        panel.grid.major.x = element_line(colour = "grey85"))+
-  geom_vline(xintercept=0, colour="grey85")
 
 darkblue<-"#002d54"
 teal<-"#2b9c93"
+
+
+lightteal<-"#86ded7"
+lightblue<-"#c3e3ff"
+lighterblue<-"#e6f3ff"
 purple<-"#6a2063"
+lightpurple<-"#f2d3ef"
+lighterpurple<-"#fbf0fa"
 
-# Boxplot for html publication 
-
-output_plotv1 <- function(i, title_label, quantity_label, y_label, colour_code=darkblue){
-  output_plot <- ggplot(filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)) +
-    geom_col(aes(x=`Year`, y=Median), fill=colour_code) +
-    geom_point(aes(x=`Year`, y=Median), colour="#6a6a6a") +
-    geom_linerange(aes(x=`Year`, ymin=Q1, ymax = Q3), linewidth=0.75, colour="#6a6a6a") +
-    # geom_hline(yintercept = 0,colour="grey90")+
-    xlab(element_blank())+
-    theme(panel.grid.minor.y = element_blank(),
-          axis.ticks.y = element_blank())+
-    labs(title = paste0(title_label))+
-    # facet_wrap(vars(facet_order), scales="free") +
-    # scale_x_discrete(guide = guide_axis(n.dodge=3))+
-    ggExtra::removeGrid(x=TRUE, y=TRUE)+
-    ylab(bquote(.(y_label)))
-  return(output_plot)
-}
-
-output_plotv2 <- function(i, title_label, quantity_label, y_label, colour_code=teal){
-  output_plot <- ggplot(filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)) +
-    geom_col(aes(x=`Year`, y=Median), fill=colour_code) +
-    geom_point(aes(x=`Year`, y=Median)) +
-    geom_linerange(aes(x=`Year`, ymin=Q1, ymax = Q3), linewidth=0.75) +
-    # geom_hline(yintercept = 0,colour="grey90")+
-    xlab(element_blank())+
-    theme(panel.grid.minor.y = element_blank(),
-          axis.ticks.y = element_blank())+
-    labs(title = paste0(title_label))+
-    ggExtra::removeGrid(x=TRUE, y=TRUE)+
-    # facet_wrap(vars(facet_order), scales="free") +
-    # scale_x_discrete(guide = guide_axis(n.dodge=3))+
-    ylab(bquote(.(y_label)))
-  return(output_plot)
-}
+# Boxplot for static  visual summary - CN_analysis_md.Rmd
 
 
-output_plotv3<- function(i, title_label, quantity_label, y_label, colour_code=teal, NUE_flag=F){
-  output_plot_box <- ggplot(filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)) +
-  geom_boxplot(aes(x=Year, lower = Q1, upper = Q3,
-                     middle = Median, ymin = Minimum, ymax = Maximum, group=Year),
-               stat = "identity", fill=colour_code, width=0.75)+
-    theme(panel.grid.minor.y = element_blank(),
-          axis.ticks.y = element_blank())+
-    ggExtra::removeGrid(x=TRUE, y=TRUE)+
-    ylab(bquote(.(y_label)))
-  return(output_plot_box)
-}
-
-
-output_plotv4<- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code="#d2eaff", limits=c(0, NA), NUE_flag=F){
+output_plotstatic<- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code=c(lighterblue,lighterblue,lighterblue,lightblue), limits=c(0, 23), NUE_flag=F){
   output_plot_box <- ggplot(filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)) +
     geom_boxplot(aes(x=Year, lower = Q1, upper = Q3,
                      middle = Median, ymin = Q1, ymax = Q3, group=Year),
@@ -157,15 +69,9 @@ output_plotv4<- function(i, title_label, quantity_label, y_label, colour_code=da
   return(output_plot_box)
 }
 
-testplot<-output_plotv4(9, "Absolute emissions", "t CO2-e per ha", "t CO"[2]~"-e / ha")
-testplot
 
-lightteal<-"#86ded7"
-lightblue<-"#c3e3ff"
-purple<-"#6a2063"
-lightpurple<-"#f5ddf3"
 
-# Plotly plots for markdown -----------------------------------------------
+# Plotly plots for markdown - report.Rmd -----------------------------------------------
 
 t1<-list(family = 'Arial',
          size = 16,
@@ -174,23 +80,24 @@ t1<-list(family = 'Arial',
 # Make plotly function for figures
 
 
-plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code=lightblue, yrange=c(0,23), NUE_flag=F){
+plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code=c("white","white","white",lightblue), yrange=c(0,24), NUE_flag=F){
   plotlybox <- plot_ly(filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label),
                              x = ~Year, type = "box", boxpoints = "all", 
-                             q1 = ~Q1, 
-                             median = ~Median, 
-                             q3 = ~Q3,
-                             lowerfence = ~Q1, 
-                             upperfence = ~Q3,
+                             q1 = ~round_half_up(Q1, 2), 
+                             median = ~round_half_up(Median, 2), 
+                             q3 = ~round_half_up(Q3, 2),
+                             lowerfence = ~round_half_up(Q1, 2), 
+                             upperfence = ~round_half_up(Q3, 2),
                              fillcolor=fill_code,
                              line = list(color = colour_code)) %>% 
     layout(yaxis = list(title = list(text = y_label, font = t1),
                         range = yrange,
                                tickfont = t1),
                   xaxis = list(title = list(font = t1),
-                               tickfont = t1), boxgroupgap=0
+                               tickfont = t1), boxgroupgap=0, showlegend = FALSE
            #,title = title
            )
+  
 }
 
 # Absolute emissions
@@ -198,74 +105,109 @@ plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkb
 
 # All
 
-fig5a <- plotlybox(9, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (t CO<sup>2</sup>-e / ha)")
+fig5a <- plotlybox(9, "Absolute emissions", "t CO2-e per ha", y_label="Absolute emissions (tCO<sub>2</sub>e/ha)")
 fig5a
 
 # Cereal
 
-fig5b <- plotlybox(1, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (t CO<sup>2</sup>-e / ha)")
+fig5b <- plotlybox(1, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (tCO<sub>2</sub>e/ha)")
 
 # General cropping
 
-fig5c <- plotlybox(2, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (t CO<sup>2</sup>-e / ha)")
+fig5c <- plotlybox(2, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (tCO<sub>2</sub>e/ha)")
 
 # Dairy
 
-fig5d <- plotlybox(3, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (t CO<sup>2</sup>-e / ha)")
+fig5d <- plotlybox(3, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (tCO<sub>2</sub>e/ha)")
+
+# Specialist sheep (LFA) 
+
+fig5e <- plotlybox(4, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (tCO<sub>2</sub>e/ha)")
+
+# Specialist cattle (LFA)
+
+fig5f <- plotlybox(5, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (tCO<sub>2</sub>e/ha)")
+
+# Cattle and sheep (LFA)
+
+fig5g <- plotlybox(6, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (tCO<sub>2</sub>e/ha)")
+
+# Lowland cattle and sheep
+
+fig5h <- plotlybox(7, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (tCO<sub>2</sub>e/ha)")
   
 # Mixed
 
-fig5e <- plotlybox(10, "Absolute emissions", "t CO2-e per ha","Absolute emissions (t CO<sup>2</sup>-e / ha)")
-fig5e
+fig5i <- plotlybox(8, "Absolute emissions", "t CO2-e per ha","Absolute emissions (tCO<sub>2</sub>e/ha)")
 
-# LFA Livestock 
 
-fig5f <- plotlybox(8, "Absolute emissions", "t CO2-e per ha", "Absolute emissions (t CO<sup>2</sup>-e / ha)")
 
 
 # Emissions intensity
 
-fig6a <- plotlybox(9, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO-e / kg output)", yrange=c(0,40))
+fig6a <- plotlybox(9, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 fig6a
 
-fig6b <- plotlybox(1, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO-e / kg output)", yrange=c(0,40))
 
-fig6c <- plotlybox(2, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO-e / kg output)", yrange=c(0,40))
+fig6b <- plotlybox(1, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
-fig6d <- plotlybox(3, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO-e / kg output)", yrange=c(0,40))
+fig6c <- plotlybox(2, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
-fig6e <- plotlybox(10, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO-e / kg output)", yrange=c(0,40))
+fig6d <- plotlybox(3, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
-fig6f <- plotlybox(8, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO-e / kg output)", yrange=c(0,40))
+fig6e <- plotlybox(4, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+
+fig6f <- plotlybox(5, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity ((kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+
+fig6g <- plotlybox(6, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+
+fig6h <- plotlybox(7, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+
+fig6i <- plotlybox(8, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
 
 # Nitrogen balance
 
-fig7a <- plotlybox(9, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus / ha)", purple, lightpurple, yrange=c(-50,390))
+fig7a <- plotlybox(9, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
 fig7a
 
-fig7b <- plotlybox(1, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus / ha)", purple, lightpurple, yrange=c(-50,390))
 
-fig7c <- plotlybox(2, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus / ha)", purple, lightpurple, yrange=c(-50,390))
+fig7b <- plotlybox(1, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
 
-fig7d <- plotlybox(3, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus / ha)", purple, lightpurple, yrange=c(-50,390))
+fig7c <- plotlybox(2, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
 
-fig7e <- plotlybox(10, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus / ha)", purple, lightpurple, yrange=c(-50,390))
+fig7d <- plotlybox(3, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
 
-fig7f <- plotlybox(8, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus / ha)", purple, lightpurple, yrange=c(-50,390))
+fig7e <- plotlybox(4, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
 
+fig7f <- plotlybox(5, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
 
+fig7g <- plotlybox(6, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+
+fig7h <- plotlybox(7, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
+
+fig7i <- plotlybox(8, "Nitrogen balance", "Nitrogen surplus (kg)", "Nitrogen balance (kg N surplus/ha)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(-50,390))
 # Nitrogen use efficiency
 
-fig8a <- plotlybox(9, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, lightpurple, yrange=c(0,130))
+fig8a <- plotlybox(9, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
 fig8a
 
-fig8b <- plotlybox(1, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, lightpurple, yrange=c(0,130))
 
-fig8c <- plotlybox(2, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, lightpurple, yrange=c(0,130))
+fig8b <- plotlybox(1, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
 
-fig8d <- plotlybox(3, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, lightpurple, yrange=c(0,130))
+fig8c <- plotlybox(2, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
 
-fig8e <- plotlybox(10, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, lightpurple, yrange=c(0,130))
+fig8d <- plotlybox(3, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
 
-fig8f <- plotlybox(8, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, lightpurple, yrange=c(0,130))
+fig8e <- plotlybox(4, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+
+fig8f <- plotlybox(5, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+
+fig8g <- plotlybox(6, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+
+fig8h <- plotlybox(7, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+
+fig8i <- plotlybox(8, "Nitrogen use efficiency", "Nitrogen use efficiency (%)", "Nitrogen use efficiency (%)", purple, fill_code=c("white","white","white",lightpurple), yrange=c(0,130))
+
+
+

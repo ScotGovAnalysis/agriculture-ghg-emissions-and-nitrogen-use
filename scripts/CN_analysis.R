@@ -68,7 +68,7 @@ for (sampyear in sampyear_range){
   #Process FA data.
   FBS_fa_data_tidy <- FBS_fa_data %>% 
     filter(fa_id%%10000==sampyear) %>% 
-    select(fa_id, type, fa_fbi) %>% 
+    select(fa_id, type, fa_fbi, fa_aaua, fa_aua) %>% 
     mutate(sampyear=fa_id%%10000)
   #Single year's carbon data
   FBS_carbon_data <- tryCatch(
@@ -144,7 +144,10 @@ for (x in colnames(FBS_weights)){
   attr(FBS_weights[[deparse(as.name(x))]],"format.sas")=NULL
 }
 
+
+
 #Join weights/farm account to carbon and nue datasets
+
 AllYears_carbon <- AllYears_carbon %>% 
   inner_join(FBS_weights, by="fa_id") %>% 
   inner_join(AllYears_fa, by="fa_id")
@@ -153,15 +156,61 @@ AllYears_nue <- AllYears_nue %>%
   inner_join(AllYears_fa, by="fa_id") %>% 
   left_join(select(AllYears_carbon, fa_id, farm_output_kg), by="fa_id")
 
+# Calculate CO2 per ha using fa_uaaa - added June 2024
+
+AllYears_carbon<-AllYears_carbon %>% 
+  mutate(total_ha_co2_sac=total_ha_co2,
+         total_ha_co2_calc=wf_co2/fa_aaua) %>% 
+  select(-total_ha_co2)
+
+# Save carbon and nue data as rdas before removing farm
+
+save(AllYears_carbon, file="AllYears_carbon_unfiltered.rda")
+save(AllYears_nue, file="AllYears_nue_unfiltered.rda")
+
+
+# Remove atypical farm based on SAC advice
+
+
+farm<-AllYears_carbon %>% 
+  filter(str_detect(fa_id, "13706"))
+
+AllYears_carbon<-AllYears_carbon %>% 
+  filter(!fa_id=="137062023")
+
+AllYears_nue<-AllYears_nue %>% 
+  filter(!fa_id=="137062023")
+
+
+# Export unrounded figures
+write.csv(AllYears_carbon, "carbon_check.csv")
+
+# Round figures
+
+AllYears_carbon<-AllYears_carbon %>% 
+  mutate(total_ha_co2_calc=round(total_ha_co2_calc,0))
+
+
+
+# Save carbon and nue data as rdas
+
+save(AllYears_carbon, file="AllYears_carbon.rda")
+save(AllYears_nue, file="AllYears_nue.rda")
+
+
+
+# can be run from rdas ----------------------------------------------------
+
+
 #Create carbon output table
 #Function to perform the summarising needed
 C_summarise <- function(df){
-  df <- summarise(df, CO2e_per_ha_mean = weighted.mean(total_ha_co2,fbswt),
-                  CO2e_per_ha_Q1 = weighted.quantile(total_ha_co2, fbswt, 0.25),
-                  CO2e_per_ha_Q3 = weighted.quantile(total_ha_co2, fbswt, 0.75),
-                  CO2e_per_ha_min = min(total_ha_co2),
-                  CO2e_per_ha_med = weighted.median(total_ha_co2, fbswt),
-                  CO2e_per_ha_max = max(total_ha_co2),
+  df <- summarise(df, CO2e_per_ha_mean = weighted.mean(total_ha_co2_calc,fbswt),
+                  CO2e_per_ha_Q1 = weighted.quantile(total_ha_co2_calc, fbswt, 0.25),
+                  CO2e_per_ha_Q3 = weighted.quantile(total_ha_co2_calc, fbswt, 0.75),
+                  CO2e_per_ha_min = min(total_ha_co2_calc),
+                  CO2e_per_ha_med = weighted.median(total_ha_co2_calc, fbswt),
+                  CO2e_per_ha_max = max(total_ha_co2_calc),
                   
                   CO2e_per_kg_mean = weighted.mean(total_wf_co2, fbswt),
                   CO2e_per_kg_Q1 = weighted.quantile(total_wf_co2, fbswt, 0.25),
@@ -180,49 +229,22 @@ C_summarise <- function(df){
   return(df)
 }
 
-C_summarisenew <- function(df){
-  df <- summarise(df, CO2e_per_ha_mean = weighted.mean(total_ha_co2,fbswt),
-                  CO2e_per_ha_Q1 = weighted.quantile(total_ha_co2, fbswt, 0.25),
-                  CO2e_per_ha_Q3 = weighted.quantile(total_ha_co2, fbswt, 0.75),
-                  CO2e_per_ha_min = min(total_ha_co2),
-                  CO2e_per_ha_newmin = weighted.quantile(total_ha_co2, fbswt, 0.05),
-                  CO2e_per_ha_med = weighted.median(total_ha_co2, fbswt),
-                  CO2e_per_ha_max = max(total_ha_co2),
-                  CO2e_per_ha_newmax = weighted.quantile(total_ha_co2, fbswt, 0.95),
-                  
-                  CO2e_per_kg_mean = weighted.mean(total_wf_co2, fbswt),
-                  CO2e_per_kg_Q1 = weighted.quantile(total_wf_co2, fbswt, 0.25),
-                  CO2e_per_kg_Q3 = weighted.quantile(total_wf_co2, fbswt, 0.75),
-                  CO2e_per_kg_min = min(total_wf_co2),
-                  CO2e_per_kg_newmin = weighted.quantile(total_wf_co2, fbswt, 0.05),
-                  CO2e_per_kg_med = weighted.median(total_wf_co2, fbswt),
-                  CO2e_per_kg_max = max(total_wf_co2),
-                  CO2e_per_kg_newmax = weighted.quantile(total_wf_co2, fbswt, 0.95),
-                  
-                  FBI_mean = weighted.mean(fa_fbi, fbswt),
-                  farm_output_kg_mean = weighted.mean(farm_output_kg, fbswt),
-                  farm_output_kg_med = weighted.median(farm_output_kg, fbswt),
-                  farm_output_kg_Q1 = weighted.quantile(farm_output_kg, fbswt, 0.25),
-                  farm_output_kg_Q3 = weighted.quantile(farm_output_kg, fbswt, 0.75),
-                  fbswt_sum = sum(fbswt),
-                  simple_count = n())
-  return(df)
-}
+
 
 ##Apply the summarising function to individual types
 Carbon_summary <- AllYears_carbon %>% 
   group_by(sampyear, type) %>% 
-  C_summarisenew()
+  C_summarise()
 ##Apply separately to "All farm types" (type=9)
 Carbon_summary_all <- AllYears_carbon %>% 
   group_by(sampyear) %>%
-  C_summarisenew() %>% 
+  C_summarise() %>% 
   mutate(type=9)
 ##And once more for "All LFA farms" (type=10)
 Carbon_summary_LFA <- AllYears_carbon %>%
   filter(type %in% 4:6) %>% 
   group_by(sampyear) %>%
-  C_summarisenew() %>% 
+  C_summarise() %>% 
   mutate(type=10)
 #Append the "All farm types" and "All LFA farms" mini-tables to the main table.
 #Also convert kg to tonnes for per hectare calculations
@@ -269,60 +291,19 @@ N_summary <- function(df){
                   simple_count = n())
 }
 
-N_summarynew <- function(df){
-  df <- summarise(df, N_surplus_mean = weighted.mean(farm_n_surplus, fbswt),
-                  N_surplus_Q1 = weighted.quantile(farm_n_surplus, fbswt, 0.25),
-                  N_surplus_Q3 = weighted.quantile(farm_n_surplus, fbswt, 0.75),
-                  N_surplus_min = min(farm_n_surplus),
-                  N_surplus_newmin = weighted.quantile(farm_n_surplus, fbswt, 0.05),
-                  N_surplus_med = weighted.median(farm_n_surplus, fbswt),
-                  N_surplus_max = max(farm_n_surplus, fbswt),
-                  N_surplus_newmax = weighted.quantile(farm_n_surplus, fbswt, 0.95),
-                  
-                  N_input_mean = weighted.mean(ninput_total, fbswt),
-                  N_input_Q1 = weighted.quantile(ninput_total, fbswt, 0.25),
-                  N_input_Q3 = weighted.quantile(ninput_total, fbswt, 0.75),
-                  N_input_min = min(ninput_total),
-                  N_input_newmin = weighted.quantile(ninput_total, fbswt, 0.05),
-                  N_input_med = weighted.median(ninput_total, fbswt),
-                  N_input_max = max(ninput_total, fbswt),
-                  N_input_newmax = weighted.quantile(ninput_total, fbswt, 0.95),
-                  
-                  N_output_mean = weighted.mean(noutput_total, fbswt),
-                  N_output_Q1 = weighted.quantile(noutput_total, fbswt, 0.25),
-                  N_output_Q3 = weighted.quantile(noutput_total, fbswt, 0.75),
-                  N_output_min = min(noutput_total),
-                  N_output_newmin = weighted.quantile(noutput_total, fbswt, 0.05),
-                  N_output_med = weighted.median(noutput_total, fbswt),
-                  N_output_max = max(noutput_total, fbswt),
-                  N_output_newmax = weighted.quantile(noutput_total, fbswt, 0.95),
-                  
-                  nue_mean = weighted.mean(nue, fbswt),
-                  nue_Q1 = weighted.quantile(nue, fbswt, 0.25),
-                  nue_Q3 = weighted.quantile(nue, fbswt, 0.75),
-                  nue_min = min(nue),
-                  nue_newmin = weighted.quantile(nue, fbswt, 0.05),
-                  nue_med = weighted.median(nue, fbswt),
-                  nue_max = max(nue),
-                  nue_newmax = weighted.quantile(nue, fbswt, 0.95),
-                  farm_output_kg_mean = weighted.mean(farm_output_kg, fbswt),
-                  farm_output_kg_med = weighted.median(farm_output_kg, fbswt),
-                  farm_output_kg_Q1 = weighted.quantile(farm_output_kg, fbswt, 0.25),
-                  farm_output_kg_Q3 = weighted.quantile(farm_output_kg, fbswt, 0.75),
-                  fbswt_sum = sum(fbswt),
-                  simple_count = n())
-}
+
+
 Nitrogen_summary <- AllYears_nue %>% 
   group_by(sampyear, type) %>%
-  N_summarynew()
+  N_summary()
 Nitrogen_summary_all <- AllYears_nue %>% 
   group_by(sampyear) %>%
-  N_summarynew() %>% 
+  N_summary() %>% 
   mutate(type=9)
 Nitrogen_summary_LFA <- AllYears_nue %>%
   filter(type %in% 4:6) %>% 
   group_by(sampyear) %>%
-  N_summarynew() %>% 
+  N_summary() %>% 
   mutate(type=10)
 Nitrogen_summary <- Nitrogen_summary %>% 
   bind_rows(Nitrogen_summary_all, Nitrogen_summary_LFA)
@@ -344,7 +325,7 @@ write.csv(Nitrogen_summary,
 
 
 #Create a combined summary table and csv for the open data platform
-# These haven't been updated for newmin and newmx
+
 Combined_summary <- Carbon_summary %>% 
   left_join(Nitrogen_summary, by=c("sampyear", "farmtype", "type")) %>% 
   filter(type %in% Output_types) %>% 
@@ -415,38 +396,36 @@ Create_output_table <- function(Input_table, variable, Output_table){
   return(Table_name)
 }
 
-# Alternative function to include newmin and newmax
-Create_output_table_more <- function(Input_table, variable, Output_table){
-  Table_name <- Input_table %>% 
-    filter(type %in% Output_types) %>% 
-    select("Average (median)"= paste0(variable,"_med"),
-           "Lower quartile" = paste0(variable,"_Q1"), 
-           "Upper quartile" = paste0(variable,"_Q3"),
-           "Minimum"= paste0(variable,"_min"),
-           "Maximum"= paste0(variable,"_max"),
-           "NewMinimum"= paste0(variable,"_newmin"),
-           "NewMaximum"= paste0(variable,"_newmax"),
-           everything()) %>% 
-    gather("Average (median)", "Lower quartile", "Upper quartile", "Minimum", "Maximum", "NewMinimum", "NewMaximum", key="Measure",value="Value") %>% 
-    select("Farm type"=farmtype,type,sampyear,Measure,Value) %>% 
-    spread(key=sampyear, Value)
-  Table_name$type <- factor(Table_name$type, levels = Output_types)
-  Table_name <- Table_name[order(Table_name$type),] %>% 
-    select(-type)
-  colnames(Table_name) <- Output_colnames
-  return(Table_name)
-}
+
 #Use the above function to create four output tables, one for each of  the four variables.
-Table_1 <- Create_output_table_more(Carbon_summary, "CO2e_per_ha", "Table_1")
-Table_2 <- Create_output_table_more(Carbon_summary, "CO2e_per_kg", "Table_2")
-Table_3 <- Create_output_table_more(Nitrogen_summary, "N_surplus", "Table_3")
-Table_4 <- Create_output_table_more(Nitrogen_summary, "nue", "Table_4")
+Table_1 <- Create_output_table(Carbon_summary, "CO2e_per_ha", "Table_1")
+Table_2 <- Create_output_table(Carbon_summary, "CO2e_per_kg", "Table_2")
+Table_3 <- Create_output_table(Nitrogen_summary, "N_surplus", "Table_3")
+Table_4 <- Create_output_table(Nitrogen_summary, "nue", "Table_4")
 #Write the four tables into an Excel file in a vaguely publishable format
 write_xlsx(list(CO2e_per_ha = Table_1, CO2e_per_kg = Table_2, N_surplus = Table_3, NUE = Table_4), 
            path=paste0(Output_directory,"/Farm Business Survey ",max(sampyear_range)-1,"-",max(sampyear_range)-2000," - Tables - Carbon and Nitrogen tables data.xlsx"))
 
 
+# Added in 2024 to create NUE csv file
+
+NUE<-FBS_nue_data %>% 
+  inner_join(FBS_weights, by="fa_id") %>% 
+  inner_join(AllYears_fa, by="fa_id") %>% 
+  apply_type_formats() %>% 
+  mutate(nue = nue*100) 
+
+names(NUE) <- toupper(names(NUE))
+
+NUE<-NUE %>% 
+  select(FA_ID:ORGANIC_CODE, TYPE)
+  
+NUE<-NUE %>% 
+  rename(FARM_TYPE=TYPE) %>% 
+  mutate(Variable=ifelse(AN_CODE=="NNKG", "Total_N_kg", "KG_per_ha")) %>% 
+  mutate(Comment="")
 
 
+write.csv(NUE, "C:/Users/u455049/Documents/R/repos/FBS_minor_projects_Lucy/FBS_CXC/CSV_Input/NUE_Data_NoOrganic.csv")
 
 

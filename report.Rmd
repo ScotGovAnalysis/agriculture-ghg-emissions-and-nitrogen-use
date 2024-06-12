@@ -1,11 +1,10 @@
 ---
 title: "Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-2023"
-<<<<<<< HEAD
-published: "`r Sys.Date()`"
+
 =======
 author: 'no'
 published: r Sys.Date()
->>>>>>> 7474b68fe302227a8620b36c1a2242f335c23055
+
 sgtemplates:
   datatables:
     features:
@@ -296,9 +295,9 @@ fig5d
 ```
 
 
-### Average LFA livestock farm
+### Average specialist sheep (LFA)
 
-**Average LFA (less favoured area) livestock farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+**Average specialist sheep LFA (less favoured area) farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
 
 ```{r fig5e, echo = FALSE, fig.height= 6}
 fig5e
@@ -306,12 +305,40 @@ fig5e
 ```
 
 
+### Average specialist cattle (LFA)
+
+**Average specialist cattle LFA farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5f, echo = FALSE, fig.height= 6}
+fig5f
+
+```
+
+### Average cattle and sheep (LFA)
+
+**Average cattle and sheep LFA farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5g, echo = FALSE, fig.height= 6}
+fig5g
+
+```
+
+
+### Average lowland cattle and sheep
+
+**Average lowland cattle and sheep farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5h, echo = FALSE, fig.height= 6}
+fig5h
+
+```
+
 ### Average mixed farm
 
 **Average mixed farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
 
-```{r fig5f, echo = FALSE, fig.height= 6}
-fig5f
+```{r fig5i, echo = FALSE, fig.height= 6}
+fig5i
 
 ```
 
@@ -357,9 +384,9 @@ fig6d
 ```
 
 
-### Average LFA livestock farm
+### Average specialist sheep (LFA)
 
-**Average LFA (less favoured area) farm emissions intensity from GHG, 2019-20 to 2022-23**
+**Average specialist sheep LFA (less favoured area) farm emissions intensity from GHG, 2019-20 to 2022-23**
 
 ```{r fig6e, echo = FALSE, fig.height= 6}
 fig6e
@@ -367,14 +394,44 @@ fig6e
 ```
 
 
-### Average mixed farm
+### Average specialist cattle (LFA)
 
-**Average mixed farm emissions intensity from GHG, 2019-20 to 2022-23**
+**Average specialist cattle LFA farm emissions intensity from GHG, 2019-20 to 2022-23**
 
 ```{r fig6f, echo = FALSE, fig.height= 6}
 fig6f
 
 ```
+
+### Average cattle and sheep (LFA)
+
+**Average cattle and sheep LFA farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6g, echo = FALSE, fig.height= 6}
+fig6g
+
+```
+
+
+### Average lowland cattle and sheep
+
+**Average lowland cattle and sheep farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6h, echo = FALSE, fig.height= 6}
+fig6h
+
+```
+
+### Average mixed farm
+
+**Average mixed farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6i, echo = FALSE, fig.height= 6}
+fig6i
+
+```
+
+
 
 # Agriculture nitrogen use efficiency?
 
@@ -424,9 +481,9 @@ fig7d
 ```
 
 
-### Average LFA livestock farm
+### Average specialist sheep (LFA)
 
-**Average less favoured area (LFA) farm nitrogen balance, 2019-20 to 2022-23**
+**Average specialist sheep LFA (less favoured area) farm nitrogen balance, 2019-20 to 2022-23**
 
 ```{r fig7e, echo = FALSE, fig.height= 6}
 fig7e
@@ -434,12 +491,40 @@ fig7e
 ```
 
 
+### Average specialist cattle (LFA)
+
+**Average specialist cattle LFA farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7f, echo = FALSE, fig.height= 6}
+fig7f
+
+```
+
+### Average cattle and sheep (LFA)
+
+**Average cattle and sheep LFA farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7g, echo = FALSE, fig.height= 6}
+fig7g
+
+```
+
+
+### Average lowland cattle and sheep
+
+**Average lowland cattle and sheep farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7h, echo = FALSE, fig.height= 6}
+fig7h
+
+```
+
 ### Average mixed farm
 
 **Average mixed farm nitrogen balance, 2019-20 to 2022-23**
 
-```{r fig7f, echo = FALSE, fig.height= 6}
-fig7f
+```{r fig7i, echo = FALSE, fig.height= 6}
+fig7i
 
 ```
 
@@ -487,9 +572,10 @@ fig8d
 ```
 
 
-### Average LFA livestock farm
 
-**Average less favoured area (LFA) farm nitrogen use efficiency, 2019-20 to 2022-23**
+### Average specialist sheep (LFA)
+
+**Average specialist sheep LFA (less favoured area) farm nitrogen use efficiency, 2019-20 to 2022-23**
 
 ```{r fig8e, echo = FALSE, fig.height= 6}
 fig8e
@@ -497,14 +583,43 @@ fig8e
 ```
 
 
-### Average mixed farm
+### Average specialist cattle (LFA)
 
-**Average mixed farm nitrogen use efficiency, 2019-20 to 2022-23**
+**Average specialist cattle LFA farm nitrogen use efficiency, 2019-20 to 2022-23**
 
 ```{r fig8f, echo = FALSE, fig.height= 6}
 fig8f
 
 ```
+
+### Average cattle and sheep (LFA)
+
+**Average cattle and sheep LFA farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8g, echo = FALSE, fig.height= 6}
+fig8g
+
+```
+
+
+### Average lowland cattle and sheep
+
+**Average lowland cattle and sheep farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8h, echo = FALSE, fig.height= 6}
+fig8h
+
+```
+
+### Average mixed farm
+
+**Average mixed farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8i, echo = FALSE, fig.height= 6}
+fig8i
+
+```
+
 
 
 # Glossary
