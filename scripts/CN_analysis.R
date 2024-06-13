@@ -27,175 +27,7 @@ apply_type_formats <- function(table_name) {
   return(table_name)
 }
 
-# #Loop to read in data
-# for (sampyear in sampyear_range){
-#   # Calculate datayear, given sampyear. For the most recently-available data, datayear=sampyear (provisional data). 
-#   # For older data, it will be datayear=sampyear+1 (final)
-#   if(sampyear==max(sampyear_range)){
-#     datayear=sampyear
-#   }  else {
-#     datayear=sampyear + 1
-#   }
-#   #Initialise dataframes (first year in sampyear range only)
-#   if(sampyear==min(sampyear_range)){
-#     
-#     AllYears_fa <- NULL
-#     AllYears_carbon <- NULL
-#     AllYears_nue <- NULL
-#   }
-#   ## Filenames for Farm account, carbon audit and NUE datasets
-#   # NB: sampyear rather than datayear in NUE filename
-#   FBS_fa_data_file <- paste0("so_y", datayear, "_fa",".sas7bdat")
-#   FBS_carbon_file <- paste0("so_y", datayear, "_carbon",".sas7bdat")
-#   FBS_nue_file <- paste0("so_y", sampyear, "_nue",".sas7bdat")
-# 
-#   #Single year's FA data
-#   FBS_fa_data <- tryCatch(
-#     {
-#       FBS_fa_data <- read_sas(FBS_fa_data_file)
-#     },
-#     error = function(e)
-#     {
-#       file.copy(paste0(FBS_directory_path, FBS_fa_data_file), getwd())
-#       return(read_sas(FBS_fa_data_file))
-#     }
-#   )
-#   ##Basic data cleaning - convert all column names to lower case and strip sas formatting
-#   names(FBS_fa_data) <- tolower(names(FBS_fa_data))
-#   for (x in colnames(FBS_fa_data)){
-#     attr(FBS_fa_data[[deparse(as.name(x))]],"format.sas")=NULL
-#   }
-#   #Process FA data.
-#   FBS_fa_data_tidy <- FBS_fa_data %>% 
-#     filter(fa_id%%10000==sampyear) %>% 
-#     select(fa_id, type, fa_fbi, fa_aaua, fa_aua) %>% 
-#     mutate(sampyear=fa_id%%10000)
-#   #Single year's carbon data
-#   FBS_carbon_data <- tryCatch(
-#     {
-#       FBS_carbon_data <- read_sas(FBS_carbon_file)
-#     },
-#     error = function(e)
-#     {
-#       file.copy(paste0(FBS_directory_path, FBS_carbon_file), getwd())
-#       return(read_sas(FBS_carbon_file))
-#     }
-#   )
-#   ##Basic data cleaning - convert all column names to lower case and strip sas formatting
-#   names(FBS_carbon_data) <- tolower(names(FBS_carbon_data))
-#   for (x in colnames(FBS_carbon_data)){
-#     attr(FBS_carbon_data[[deparse(as.name(x))]],"format.sas")=NULL
-#   }
-#   #Process carbon data
-#   FBS_carbon_data_tidy <- FBS_carbon_data %>% 
-#     filter(fa_id%%10000==sampyear)
-#   #Single year's NUE data
-#   FBS_nue_data <- tryCatch(
-#     {
-#       FBS_nue_data <- read_sas(FBS_nue_file)
-#     },
-#     error = function(e)
-#     {
-#       file.copy(paste0(FBS_directory_path, FBS_nue_file), getwd())
-#       return(read_sas(FBS_nue_file))
-#     }
-#   )
-#   ##Basic data cleaning - convert all column names to lower case and strip sas formatting
-#   names(FBS_nue_data) <- tolower(names(FBS_nue_data))
-#   for (x in colnames(FBS_nue_data)){
-#     attr(FBS_nue_data[[deparse(as.name(x))]],"format.sas")=NULL
-#   }
-#   
-#   #Process NUE data
-#   #The dataset contains two entries for each farm - we want the "NNKG" entry, which has the raw totals. 
-#   #The other entry (an_code=NNGH) has values per hectare.
-#   FBS_nue_data_tidy <- FBS_nue_data %>% 
-#     filter(fa_id%%10000==sampyear,
-#            an_code =="NNKG")
-#   
-#   #Append each year's data to All Years dataset
-#   AllYears_fa <- AllYears_fa %>% 
-#     bind_rows(FBS_fa_data_tidy)
-#   AllYears_carbon <- AllYears_carbon %>% 
-#     bind_rows(FBS_carbon_data_tidy)
-#   AllYears_nue <- AllYears_nue %>% 
-#     bind_rows(FBS_nue_data_tidy)
-# }
-# 
-# #Convert NUE ratio to percentage
-# AllYears_nue$nue <- AllYears_nue$nue*100
-# 
-# #Read in the FBS weights file
-# FBS_weights_file <- paste0("new_weights.sas7bdat")
-# FBS_weights <- tryCatch(
-#   {
-#     FBS_weights <- read_sas(FBS_weights_file)
-#   },
-#   error = function(e)
-#   {
-#     file.copy(paste0(FBS_directory_path, FBS_weights_file), getwd())
-#     return(read_sas(FBS_weights_file))
-#   }
-# )
-# 
-# ##Basic data cleaning - convert all column names to lower case and strip sas formatting
-# names(FBS_weights) <- tolower(names(FBS_weights))
-# for (x in colnames(FBS_weights)){
-#   attr(FBS_weights[[deparse(as.name(x))]],"format.sas")=NULL
-# }
-# 
-# 
-# 
-# #Join weights/farm account to carbon and nue datasets
-# 
-# AllYears_carbon <- AllYears_carbon %>% 
-#   inner_join(FBS_weights, by="fa_id") %>% 
-#   inner_join(AllYears_fa, by="fa_id")
-# AllYears_nue <- AllYears_nue %>% 
-#   inner_join(FBS_weights, by="fa_id") %>% 
-#   inner_join(AllYears_fa, by="fa_id") %>% 
-#   left_join(select(AllYears_carbon, fa_id, farm_output_kg), by="fa_id")
-# 
-# # Calculate CO2 per ha using fa_uaaa - added June 2024
-# 
-# AllYears_carbon<-AllYears_carbon %>% 
-#   mutate(total_ha_co2_sac=total_ha_co2,
-#          total_ha_co2_calc=wf_co2/fa_aaua) %>% 
-#   select(-total_ha_co2)
-# 
-# # Save carbon and nue data as rdas before removing farm
-# 
-# save(AllYears_carbon, file="AllYears_carbon_unfiltered.rda")
-# save(AllYears_nue, file="AllYears_nue_unfiltered.rda")
-# 
-# 
-# # Remove atypical farm based on SAC advice
-# 
-# 
-# # farm<-AllYears_carbon %>% 
-#   # filter(str_detect(fa_id, "13706"))
-# # 
-# # AllYears_carbon<-AllYears_carbon %>% 
-# #   filter(!fa_id=="137062023")
-# # 
-# # AllYears_nue<-AllYears_nue %>% 
-# #   filter(!fa_id=="137062023")
-# 
-# 
-# # Export unrounded figures
-# write.csv(AllYears_carbon, "carbon_check.csv")
-# 
-# # Round figures
-# 
-# AllYears_carbon<-AllYears_carbon %>% 
-#   mutate(total_ha_co2_calc=round(total_ha_co2_calc,0))
-# 
-# 
 
-# Save carbon and nue data as rdas
-
-# save(AllYears_carbon, file="AllYears_carbon.rda")
-# save(AllYears_nue, file="AllYears_nue.rda")
 
 load(file="AllYears_carbon.rda")
 load(file="AllYears_nue.rda")
@@ -316,14 +148,6 @@ Carbon_summary <- apply_type_formats(Carbon_summary) %>%
 Nitrogen_summary <- apply_type_formats(Nitrogen_summary) %>% 
   select(sampyear, farmtype, everything())
 
-#Write Carbon and Nitrogen summaries to a CSV in the Z drive
-# write.csv(Carbon_summary, 
-#           file=paste0(Output_directory,"/Farm Business Survey ",max(sampyear_range)-1,"-",max(sampyear_range)-2000," - Tables - Carbon_summary.csv"),
-#           row.names = FALSE)
-# write.csv(Nitrogen_summary, 
-#           file=paste0(Output_directory,"/Farm Business Survey ",max(sampyear_range)-1,"-",max(sampyear_range)-2000," - Tables - Nitrogen_summary.csv"), 
-#           row.names = FALSE)  
-
 
 #Create a combined summary table and csv for the open data platform
 
@@ -365,12 +189,6 @@ Combined_summary_narrow <- Combined_summary_narrow %>%
 ### Change Measurement value to "Ratio" if Measure is NUE.
 Combined_summary_narrow$Measurement[substr(Combined_summary_narrow$Measure, 1, 12)=="Nitrogen use"] = "Ratio"
 
-### Output csv file; this is what gets uploaded to the open data platform
-# write.csv(Combined_summary_narrow, 
-#           file=paste0(Output_directory,"/farm-business-survey-environmental-data.csv"), 
-#           row.names = FALSE) 
-
-
 
 
 #Column names for the output tables - Type, measure and then one for each financial year.
@@ -403,30 +221,5 @@ Table_1 <- Create_output_table(Carbon_summary, "CO2e_per_ha", "Table_1")
 Table_2 <- Create_output_table(Carbon_summary, "CO2e_per_kg", "Table_2")
 Table_3 <- Create_output_table(Nitrogen_summary, "N_surplus", "Table_3")
 Table_4 <- Create_output_table(Nitrogen_summary, "nue", "Table_4")
-#Write the four tables into an Excel file in a vaguely publishable format
-# write_xlsx(list(CO2e_per_ha = Table_1, CO2e_per_kg = Table_2, N_surplus = Table_3, NUE = Table_4), 
-#            path=paste0(Output_directory,"/Farm Business Survey ",max(sampyear_range)-1,"-",max(sampyear_range)-2000," - Tables - Carbon and Nitrogen tables data.xlsx"))
-
-
-# Added in 2024 to create NUE csv file
-
-# NUE<-FBS_nue_data %>% 
-#   inner_join(FBS_weights, by="fa_id") %>% 
-#   inner_join(AllYears_fa, by="fa_id") %>% 
-#   apply_type_formats() %>% 
-#   mutate(nue = nue*100) 
-# 
-# names(NUE) <- toupper(names(NUE))
-# 
-# NUE<-NUE %>% 
-#   select(FA_ID:ORGANIC_CODE, TYPE)
-#   
-# NUE<-NUE %>% 
-#   rename(FARM_TYPE=TYPE) %>% 
-#   mutate(Variable=ifelse(AN_CODE=="NNKG", "Total_N_kg", "KG_per_ha")) %>% 
-#   mutate(Comment="")
-# 
-# 
-# write.csv(NUE, "C:/Users/u455049/Documents/R/repos/FBS_minor_projects_Lucy/FBS_CXC/CSV_Input/NUE_Data_NoOrganic.csv")
 
 

@@ -4,10 +4,14 @@ navbar:
   left:
     - text: "Home"
       href: "index.html"
-    - text: "Example"
-      href: "example.html"
+    - text: "Data"
+      href: "data.html"
+    - text: "Methodology"
+      href: "methodology.html"
+         
 output:
   html_document:
+    css: styles.css
     code_download: false
     df_print: paged
     fig_caption: true
