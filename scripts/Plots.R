@@ -77,6 +77,10 @@ t1<-list(family = 'Arial',
          size = 16,
          color = 'rgb(82, 82, 82)')
 
+t2<-list(family = 'Arial',
+         size = 1,
+         color = "darkblue")
+
 # Make plotly function for figures
 
 plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code=c("white","white","white",lightblue), yrange=c(0,24), NUE_flag=F){
@@ -91,19 +95,21 @@ plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkb
                        upperfence = ~round_half_up(Q3, 2),
                        line = list(color = colour_code),
                        hoverinfo = "none",
-                       text=~Median
-                       
+                       fillcolor=fill_code
   ) %>% 
     add_text(
       x=~Year,
       y=~Median,
-      text=~round_half_up(Median,2),
+      text=~paste("Year", Year, "Median:",round_half_up(Median,2)),
        textposition="top",
        inherit=F,
-       textfont=list(colour="white"),
+       textfont=list(family = 'Arial',
+                     size = 1,
+                     color = colour_code)
+      ,
        showlegend=FALSE,
-      hoverinfo="none",
-       colour="white"
+      hoverinfo="text",
+       # colour="white"
     ) %>%
     layout(yaxis = list(title = list(text = y_label, font = t1),
                         range = yrange,
