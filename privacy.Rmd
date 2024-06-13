@@ -14,10 +14,8 @@ sgtemplates:
       - href: "contact.html"
         text: "Contact"
   header:
-    phase_banner:
-      tag: "WIP"
-      text: "This is a work in progress."
     site_branding: "Scottish Government"
+    
   navigation:
     breadcrumb_trail:
       - href: "index.html"

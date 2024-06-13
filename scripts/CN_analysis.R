@@ -316,12 +316,12 @@ Nitrogen_summary <- apply_type_formats(Nitrogen_summary) %>%
   select(sampyear, farmtype, everything())
 
 #Write Carbon and Nitrogen summaries to a CSV in the Z drive
-write.csv(Carbon_summary, 
-          file=paste0(Output_directory,"/Farm Business Survey ",max(sampyear_range)-1,"-",max(sampyear_range)-2000," - Tables - Carbon_summary.csv"),
-          row.names = FALSE)
-write.csv(Nitrogen_summary, 
-          file=paste0(Output_directory,"/Farm Business Survey ",max(sampyear_range)-1,"-",max(sampyear_range)-2000," - Tables - Nitrogen_summary.csv"), 
-          row.names = FALSE)  
+# write.csv(Carbon_summary, 
+#           file=paste0(Output_directory,"/Farm Business Survey ",max(sampyear_range)-1,"-",max(sampyear_range)-2000," - Tables - Carbon_summary.csv"),
+#           row.names = FALSE)
+# write.csv(Nitrogen_summary, 
+#           file=paste0(Output_directory,"/Farm Business Survey ",max(sampyear_range)-1,"-",max(sampyear_range)-2000," - Tables - Nitrogen_summary.csv"), 
+#           row.names = FALSE)  
 
 
 #Create a combined summary table and csv for the open data platform
@@ -365,9 +365,9 @@ Combined_summary_narrow <- Combined_summary_narrow %>%
 Combined_summary_narrow$Measurement[substr(Combined_summary_narrow$Measure, 1, 12)=="Nitrogen use"] = "Ratio"
 
 ### Output csv file; this is what gets uploaded to the open data platform
-write.csv(Combined_summary_narrow, 
-          file=paste0(Output_directory,"/farm-business-survey-environmental-data.csv"), 
-          row.names = FALSE) 
+# write.csv(Combined_summary_narrow, 
+#           file=paste0(Output_directory,"/farm-business-survey-environmental-data.csv"), 
+#           row.names = FALSE) 
 
 
 
@@ -403,8 +403,8 @@ Table_2 <- Create_output_table(Carbon_summary, "CO2e_per_kg", "Table_2")
 Table_3 <- Create_output_table(Nitrogen_summary, "N_surplus", "Table_3")
 Table_4 <- Create_output_table(Nitrogen_summary, "nue", "Table_4")
 #Write the four tables into an Excel file in a vaguely publishable format
-write_xlsx(list(CO2e_per_ha = Table_1, CO2e_per_kg = Table_2, N_surplus = Table_3, NUE = Table_4), 
-           path=paste0(Output_directory,"/Farm Business Survey ",max(sampyear_range)-1,"-",max(sampyear_range)-2000," - Tables - Carbon and Nitrogen tables data.xlsx"))
+#write_xlsx(list(CO2e_per_ha = Table_1, CO2e_per_kg = Table_2, N_surplus = Table_3, NUE = Table_4), 
+           #path=paste0(Output_directory,"/Farm Business Survey ",max(sampyear_range)-1,"-",max(sampyear_range)-2000," - Tables - Carbon and Nitrogen tables data.xlsx"))
 
 
 # Added in 2024 to create NUE csv file
@@ -426,6 +426,6 @@ NUE<-NUE %>%
   mutate(Comment="")
 
 
-write.csv(NUE, "C:/Users/u455049/Documents/R/repos/FBS_minor_projects_Lucy/FBS_CXC/CSV_Input/NUE_Data_NoOrganic.csv")
+#write.csv(NUE, "C:/Users/u455049/Documents/R/repos/FBS_minor_projects_Lucy/FBS_CXC/CSV_Input/NUE_Data_NoOrganic.csv")
 
 
