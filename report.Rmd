@@ -1,7 +1,6 @@
 ---
 title: "Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-2023"
 
-=======
 author: 'no'
 published: r Sys.Date()
 
@@ -247,17 +246,15 @@ Whilst the largest source of agriculture emissions in 2022, enteric fermentation
 
 Emissions from liming and fuel combustion have both increased from 1990 to 2022 by a combined 0.4 MtCO~2~e. Arable farming accounts for most emissions from liming and fuel combustion.
 
-# Farm-level greenhouse gas emissions
+# Farm GHG emissions
 
-## Farm-level gross GHG emissions {.tabset}
-
--   Short commentary - include note of methdology change for 2022, comment on average farm 2022 results.
-
--   Interactive charts: Bar chart with panel to select different farm types. Time series Optional line chart -- plot median -- add plots of other farm types to chart.
+## Absolute gross emissions {.tabset}
 
 ### Average farm
 
-**Average farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+**Figure 4: Average farm absolute gross greenhouse gas (GHG) emissions**
+
+Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
  
 ```{r fig5a, echo = FALSE, fig.height= 6}
 fig5a
