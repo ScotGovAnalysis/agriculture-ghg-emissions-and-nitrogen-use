@@ -69,7 +69,12 @@ output_plotstatic<- function(i, title_label, quantity_label, y_label, colour_cod
   return(output_plot_box)
 }
 
+#, 
 
+Master_plots <- Master_plots %>% 
+  mutate(unit=ifelse(Quantity=="t CO2-e per ha"," tCO<sub>2</sub>e/ha", 
+                     ifelse(Quantity=="kg CO2-e per kg output", " kg CO<sub>2</sub>e/kg output",
+                            ifelse(Quantity=="Nitrogen surplus (kg)", " kg N surplus/ha", "%"))))
 
 # Plotly plots for markdown - report.Rmd -----------------------------------------------
 
@@ -88,11 +93,11 @@ plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkb
   
   plotlybox <- plot_ly(filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label),
                        x = ~Year, type = "box", 
-                       q1 = ~round_half_up(Q1, 2), 
-                       median = ~round_half_up(Median, 2), 
-                       q3 = ~round_half_up(Q3, 2),
-                       lowerfence = ~round_half_up(Q1, 2), 
-                       upperfence = ~round_half_up(Q3, 2),
+                       q1 = ~round_half_up(Q1, 1), 
+                       median = ~round_half_up(Median, 1), 
+                       q3 = ~round_half_up(Q3, 1),
+                       lowerfence = ~round_half_up(Q1, 1), 
+                       upperfence = ~round_half_up(Q3, 1),
                        line = list(color = colour_code),
                        hoverinfo = "none",
                        fillcolor=fill_code
@@ -100,7 +105,7 @@ plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkb
     add_text(
       x=~Year,
       y=~Median,
-      text=~paste("Year", Year, "Median:",round_half_up(Median,2)),
+      text=~paste0("Median: ",round_half_up(Median,1),unit),
        textposition="top",
        inherit=F,
        textfont=list(family = 'Arial',
@@ -111,150 +116,44 @@ plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkb
       hoverinfo="text",
        # colour="white"
     ) %>%
+    add_text(
+      x=~Year,
+      y=~Q1,
+      text=~paste0("Lower quartile: ",round_half_up(Q1,1),unit),
+      textposition="top",
+      inherit=F,
+      textfont=list(family = 'Arial',
+                    size = 1,
+                    color = colour_code)
+      ,
+      showlegend=FALSE,
+      hoverinfo="text",
+      # colour="white"
+    ) %>%
+    add_text(
+      x=~Year,
+      y=~Q3,
+      text=~paste0("Upper quartile: ",round_half_up(Q3,1),unit),
+      textposition="top",
+      inherit=F,
+      textfont=list(family = 'Arial',
+                    size = 1,
+                    color = colour_code)
+      ,
+      showlegend=FALSE,
+      hoverinfo="text",
+      # colour="white"
+    ) %>%
     layout(yaxis = list(title = list(text = y_label, font = t1),
                         range = yrange,
                         tickfont = t1),
            xaxis = list(title = list(font = t1),
                         tickfont = t1), boxgroupgap=0, showlegend = FALSE) 
-  # %>% 
-    # style(hoverinfo = "none")
+  
 
 }
 
-# 
-# plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code=c("white","white","white",lightblue), yrange=c(0,24), NUE_flag=F){
-#   data<-filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)
-#   
-#   data<-data %>% mutate(hovertext=paste("Year:",Year, "Median:", Median))
-#  ggbox <-  ggplot(data, text=paste("Group:",Year, "\n",
-#                                              "Class:", Median)) +
-#     geom_boxplot(aes(x=Year, lower = Q1, upper = Q3,
-#                      middle = Median, ymin = Q1, ymax = Q3, group=Year),
-#                  stat = "identity")+
-#     
-#     #invisible layer of points
-#     geom_point(alpha = 0)
-#   
-#   ggbox %>% plot_ly(data,
-#                        x = ~Year, type = "box", 
-#                        q1 = ~round_half_up(Q1, 2), 
-#                        median = ~round_half_up(Median, 2), 
-#                        q3 = ~round_half_up(Q3, 2),
-#                        lowerfence = ~round_half_up(Q1, 2), 
-#                        upperfence = ~round_half_up(Q3, 2),
-#                        fillcolor=fill_code,
-#                        line = list(color = colour_code),
-#                        hoverinfo = "none"
-#                        
-#   ) %>% 
-#     add_text(
-#       x=~Year,
-#       y=~max(Q3)+1, 
-#       text=~round_half_up(Median,2),
-#       textposition="top",
-#       inherit=F,
-#       font=list(family=t1),
-#       showlegend=FALSE,
-#       hoverinfo="none"
-#     ) %>% 
-#     layout(yaxis = list(title = list(text = y_label, font = t1),
-#                         range = yrange,
-#                         tickfont = t1),
-#            xaxis = list(title = list(font = t1),
-#                         tickfont = t1), boxgroupgap=0, showlegend = FALSE) 
-#   # %>% 
-#   # style(hoverinfo = "none")
-#   
-# }
-# 
-# 
-# 
-# 
-# Master_plots<-Master_plots %>% 
-#   mutate(hovertext=paste("Year:",Year, "Median:", Median))
-# 
-# fig <- plot_ly(Master_plots, x = ~Year)
-# 
-# plotlybox1 <- function(i, title_label, quantity_label, y_label, colour_code=darkblue,  yrange=c(0,24), NUE_flag=F){
-#   data<-filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)
-#   
-#   data<-data %>% mutate(hovertext=paste("Year:",Year, "Median:", Median))
-#   
-#   fill_code<-ifelse(data$Year=="2022-23", lightblue, "white")
-#   
-#                             fig<-plot_ly(data, x = ~Year, type = "box", boxpoints = "all", 
-#                              q1 = ~round_half_up(Q1, 2), 
-#                              median = ~round_half_up(Median, 2), 
-#                              q3 = ~round_half_up(Q3, 2),
-#                              lowerfence = ~round_half_up(Q1, 2), 
-#                              upperfence = ~round_half_up(Q3, 2),
-#                              fillcolor=fill_code,
-#                              line = list(color = colour_code)
-#                        #  text=~hovertext,
-#                        # hoverinfo = "text"
-#                        # 
-#                        ) %>% 
-#     layout(yaxis = list(title = list(text = y_label, font = t1),
-#                         range = yrange,
-#                                tickfont = t1),
-#                   xaxis = list(title = list(font = t1),
-#                                tickfont = t1), boxgroupgap=0, showlegend = FALSE) %>% 
-#                               style(hoverinfo="none")
-#   
-# }
-# 
-# 
-# plotlybox2 <- function(i, title_label, quantity_label, y_label, colour_code=darkblue,  yrange=c(0,24), NUE_flag=F){
-#   data<-filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)
-#   
-#   data<-data %>% mutate(hovertext=paste("Year:",Year, "Median:", Median))
-#   
-#   fill_code<-ifelse(data$Year=="2022-23", lightblue, "white")
-#   
-#   fig<-plot_ly(data, x = ~Year, type = "box", boxpoints = "all", 
-#                q1 = ~round_half_up(Q1, 2), 
-#                median = ~round_half_up(Median, 2), 
-#                q3 = ~round_half_up(Q3, 2),
-#                lowerfence = ~round_half_up(Q1, 2), 
-#                upperfence = ~round_half_up(Q3, 2),
-#                fillcolor=fill_code,
-#                line = list(color = colour_code)
-#                #  text=~hovertext,
-#                # hoverinfo = "text"
-#                # 
-#   ) %>% 
-#     layout(yaxis = list(title = list(text = y_label, font = t1),
-#                         range = yrange,
-#                         tickfont = t1),
-#            xaxis = list(title = list(font = t1),
-#                         tickfont = t1), boxgroupgap=0, showlegend = FALSE)
-#   
-# }
-# 
-# 
-# 
-# Master_plots<-Master_plots %>% 
-#   mutate(hovertext=paste("Year:",Year, "Median:", Median))
-# 
-# fig <- plot_ly(Master_plots, x = ~Year)
-# 
-# plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkblue, fill_code=c("white","white","white",lightblue), yrange=c(0,24), NUE_flag=F){
-#   data<-filter(Master_plots, `Farm type`==fbs_type_words[i], Quantity == quantity_label)
-#          
-#          data<-data %>% mutate(hovertext=paste("Year:",Year, "Median:", Median))
-#                        
-#          fig<-plot_ly() %>% 
-#            for(j in 1:row(data)){
-#              fig<-fig %>% 
-#                add_trace( type = "box", x = rep(stats$Year[j], 5), # Repeat year for each box parameter 
-#                           lowerfence = stats$Min[j], q1 = stats$Q1[j], median = stats$Median[j], q3 = stats$Q3[j], upperfence = stats$Max[j], name = as.character(stats$Year[j]), fillcolor = fill_code[j %% length(fill_code) + 1], line = list(color = colour_code), text = stats$hovertext[j], hoverinfo = "text")
-#            }
-#     fig<-fig %>% layout(yaxis = list(title = list(text = y_label, font = t1),
-#                         range = yrange,
-#                         tickfont = t1),
-#            xaxis = list(title = list(font = t1),
-#                         tickfont = t1), boxgroupgap=0, showlegend = FALSE)
-# }
+
 # # Absolute emissions
 # # Separate figures for each farmtype
 # 
@@ -301,25 +200,25 @@ fig5i <- plotlybox(8, "Absolute emissions", "t CO2-e per ha","Absolute emissions
 
 # Emissions intensity
 
-fig6a <- plotlybox(9, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+fig6a <- plotlybox(9, "Emissions intensity", "kg CO2-e per kg output", "Emission intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 fig6a
 
 
-fig6b <- plotlybox(1, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+fig6b <- plotlybox(1, "Emissions intensity", "kg CO2-e per kg output", "Emission intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
-fig6c <- plotlybox(2, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+fig6c <- plotlybox(2, "Emissions intensity", "kg CO2-e per kg output", "Emission intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
-fig6d <- plotlybox(3, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+fig6d <- plotlybox(3, "Emissions intensity", "kg CO2-e per kg output", "Emission intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
-fig6e <- plotlybox(4, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+fig6e <- plotlybox(4, "Emissions intensity", "kg CO2-e per kg output", "Emission intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
-fig6f <- plotlybox(5, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity ((kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+fig6f <- plotlybox(5, "Emissions intensity", "kg CO2-e per kg output", "Emission intensity ((kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
-fig6g <- plotlybox(6, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+fig6g <- plotlybox(6, "Emissions intensity", "kg CO2-e per kg output", "Emission intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
-fig6h <- plotlybox(7, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+fig6h <- plotlybox(7, "Emissions intensity", "kg CO2-e per kg output", "Emission intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
-fig6i <- plotlybox(8, "Emissions intensity", "kg CO2-e per kg output", "Emissions intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
+fig6i <- plotlybox(8, "Emissions intensity", "kg CO2-e per kg output", "Emission intensity (kg CO<sub>2</sub>e/kg output)", yrange=c(0,42))
 
 
 # Nitrogen balance
