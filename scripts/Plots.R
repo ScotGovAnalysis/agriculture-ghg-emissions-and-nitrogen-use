@@ -110,7 +110,7 @@ plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkb
       y=0.98,
       yanchor="top",
       yref="paper",
-      text="Methodology change \nin 2022-23                    ",
+      text="Methodology change \nin 2022-23               ",
       inherit=F,
       font=t2,
       showlegend=FALSE,
@@ -120,7 +120,7 @@ plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkb
     layout(yaxis = list(title = list(text = y_label, font = t1),
                         range = yrange,
                         tickfont = t1),
-           xaxis = list(title = list(font = t1),
+           xaxis = list(title = list(text="Year", font = t1),
                         tickfont = t1), boxgroupgap=0, showlegend = FALSE,
            shapes=list(type='line', yref = "paper", x0= 2.5, x1= 2.5, y0=0, y1=max(yrange), line=list(dash='dot', width=3, color="##b0b0b0"))
           ) 
@@ -149,7 +149,7 @@ plotlyboxnitrogen <- function(i, title_label, quantity_label, y_label, colour_co
     layout(yaxis = list(title = list(text = y_label, font = t1),
                         range = yrange,
                         tickfont = t1),
-           xaxis = list(title = list(font = t1),
+           xaxis = list(title = list(text="Year", font = t1),
                         tickfont = t1), boxgroupgap=0, showlegend = FALSE
            
     ) 
