@@ -32,6 +32,7 @@ documents_url <- paste0(publication_url,"documents/")
 ##Run the two R scripts and the Rmarkdown document
 source('scripts/CN_analysis.R')
 source('scripts/Plots.R')
+#source('scripts/a11ytable_output.R')
 
 
 #rmarkdown::render('scripts/CN_analysis_md.Rmd', output_file = html_filename)

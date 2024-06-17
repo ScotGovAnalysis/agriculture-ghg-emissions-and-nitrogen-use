@@ -10,7 +10,18 @@ crop_23 <- haven::read_sas(paste0(FBS_directory_path, "SO_Y2023_ACR.sas7bdat"))
 
 save(crop_23, file="crop_23.rda")
 
+load("crop_23.rda")
 
+nsurplus<-AllYears_nue %>% 
+  select(fa_id, sampyear, crop_year, fa_aaua, farm_n_surplus, noutput_total, ninput_total, nue, total_area, type, fbswt) %>% 
+  mutate(diff=(noutput_total/ninput_total-1)*100)
+
+nsurplus<-nsurplus %>% 
+  group_by(sampyear) %>% 
+  summarise(N_output_med = weighted.median(noutput_total, fbswt),
+         N_input_med = weighted.median(ninput_total, fbswt),
+         N_nue_med = weighted.median(nue, fbswt),
+         N_diff_med=weighted.median(diff, fbswt))
 
 # Carbon investigation ----------------------------------------------------
 

@@ -1,15 +1,19 @@
 
 Table_1<-Table_1 %>% 
-filter(Measure=="Average (median)"| Measure=="Upper quartile"|Measure=="Lower quartile")
+filter(Measure=="Average (median)"| Measure=="Upper quartile"|Measure=="Lower quartile") %>% 
+  mutate(`Farm type` =ifelse(`Farm type`=="All Types", "All farm types", `Farm type`))
 
 Table_2<-Table_2 %>% 
-  filter(Measure=="Average (median)"| Measure=="Upper quartile"|Measure=="Lower quartile")
+  filter(Measure=="Average (median)"| Measure=="Upper quartile"|Measure=="Lower quartile")%>% 
+  mutate(`Farm type` =ifelse(`Farm type`=="All Types", "All farm types", `Farm type`))
 
 Table_3<-Table_3 %>% 
-  filter(Measure=="Average (median)"| Measure=="Upper quartile"|Measure=="Lower quartile")
+  filter(Measure=="Average (median)"| Measure=="Upper quartile"|Measure=="Lower quartile")%>% 
+  mutate(`Farm type` =ifelse(`Farm type`=="All Types", "All farm types", `Farm type`))
 
 Table_4<-Table_4 %>% 
-  filter(Measure=="Average (median)"| Measure=="Upper quartile"|Measure=="Lower quartile")
+  filter(Measure=="Average (median)"| Measure=="Upper quartile"|Measure=="Lower quartile")%>% 
+  mutate(`Farm type` =ifelse(`Farm type`=="All Types", "All farm types", `Farm type`))
 
 
 cover_df <- tibble::tribble( 
@@ -36,10 +40,10 @@ cover_df <- tibble::tribble(
 contents_df <- tibble::tribble(
   ~"Sheet name", ~"Sheet title",
   "Notes",       "Notes used in this workbook",
-  "Table 1", "Absolute emissions (t CO2-e per ha) by farm type, 2019-20 to 2021-22",
-  "Table 2", "Emission intensity (kg CO2-e per kg output) by farm type, 2019-20 to 2021-22",
-  "Table 3", "Nitrogen balance (kg nitrogen surplus) by farm type, 2019-20 to 2021-22",
-  "Table 4", "Nitrogen use efficiency (% nitrogen outputs / nitrogen inputs) by farm type, 2019-20 to 2021-22"
+  "Table 1", "Absolute emissions (t CO2-e per ha) by farm type, 2019-20 to 2022-2023",
+  "Table 2", "Emission intensity (kg CO2-e per kg output) by farm type, 2019-20 to 2022-2023",
+  "Table 3", "Nitrogen balance (kg nitrogen surplus) by farm type, 2019-20 to 2022-2023",
+  "Table 4", "Nitrogen use efficiency (% nitrogen outputs / nitrogen inputs) by farm type, 2019-20 to 2022-2023"
 )
 
 notes_df <- tibble::tribble(
@@ -89,14 +93,14 @@ my_a11ytable <-
       "Farm Business Survey ",
       "Table of contents",
       "Notes",
-      "Table 1: Absolute emissions (t CO2-e per ha) by farm type, 2019-20 to 2021-22",
-      "Table 2: Emission intensity (kg CO2-e per kg output) by farm type, 2019-20 to 2021-22",
-      "Table 3: Nitrogen balance (kg nitrogen surplus) by farm type, 2019-20 to 2021-22",
-      "Table 4: Nitrogen use efficiency (% nitrogen outputs / nitrogen inputs) by farm type, 2019-20 to 2021-22"
+      "Table 1: Absolute emissions (t CO2-e per ha) by farm type, 2019-20 to 2022-2023",
+      "Table 2: Emission intensity (kg CO2-e per kg output) by farm type, 2019-20 to 2022-2023",
+      "Table 3: Nitrogen balance (kg nitrogen surplus) by farm type, 2019-20 to 2022-2023",
+      "Table 4: Nitrogen use efficiency (% nitrogen outputs / nitrogen inputs) by farm type, 2019-20 to 2022-2023"
       
     ),
     sources = rep(
-      "Scottish Government - Farm Business Survey 2021-22: Farm level emissions and nitrogen usage",7
+      "Scottish Government - Farm Business Survey 2022-2023: Farm level emissions and nitrogen usage",7
     ),
     tables = list(
       cover_df,
