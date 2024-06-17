@@ -115,6 +115,16 @@ left_join(final2022, by="fa_id")
 
 # lowland cattle and sheep intensity
 
+# farm 13706 
+
+farm137062022<-AllYears_carbon %>% 
+  filter(fa_id=="137062022"|fa_id=="137062023")
+
+write.csv(farm137062022, "13706.csv")
+
+thisyear<-AllYears_carbon %>% 
+  filter(sampyear==2023)
+  
 lowland<-AllYears_carbon %>% 
   filter(sampyear==2023 & type==7) %>% 
   mutate(total_ha_co2_calc=total_ha_co2_calc*0.001) %>% 
