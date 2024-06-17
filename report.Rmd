@@ -1,38 +1,41 @@
 ---
 title: "Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-2023"
-
-author: 'no'
-published: r Sys.Date()
+author: no
+published: '27 June 2024'
 
 sgtemplates:
-  datatables:
-    features:
+  datatables: 
+    features: 
       info: yes
       ordering: yes
       paging: yes
       searching: no
   footer:
     link:
-    - href: privacy.html
-      text: Privacy
-    - href: cookies.html
-      text: Cookies
+    # - href: privacy.html
+    #   text: Privacy
+    # - href: cookies.html
+    #   text: Cookies
     - href: accessibility.html
       text: Accessibility
     - href: contact.html
       text: Contact
   header:
-    phase_banner:
-      tag: WIP
-      text: This is a work in progress.
-    site_branding: Scottish Government
+    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
   metadata:
     label: "Publication - Statistics"
   navigation:
     breadcrumb_trail:
-    - href: index.html
+    - href: "index.html"
       text: Home
-    - text: Main report
+    - href: "report.html"
+      text: Main report
+    # - href: "data.html"
+    #   text: Download the data
+    # - href: "methodology.html"
+    #   text: Methodology
+    
+    
     toc:
       sticky: yes
 output: 
@@ -246,15 +249,17 @@ Whilst the largest source of agriculture emissions in 2022, enteric fermentation
 
 Emissions from liming and fuel combustion have both increased from 1990 to 2022 by a combined 0.4 MtCO~2~e. Arable farming accounts for most emissions from liming and fuel combustion.
 
-# Farm GHG emissions
+# Farm-level greenhouse gas emissions
 
-## Absolute gross emissions {.tabset}
+## Farm-level gross GHG emissions {.tabset}
+
+-   Short commentary - include note of methdology change for 2022, comment on average farm 2022 results.
+
+-   Interactive charts: Bar chart with panel to select different farm types. Time series Optional line chart -- plot median -- add plots of other farm types to chart.
 
 ### Average farm
 
-**Figure 4: Average farm absolute gross greenhouse gas (GHG) emissions**
-
-Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
+**Average farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
  
 ```{r fig5a, echo = FALSE, fig.height= 6}
 fig5a
