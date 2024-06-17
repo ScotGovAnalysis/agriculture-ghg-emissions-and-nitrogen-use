@@ -32,7 +32,10 @@ source("scripts/national_charts.R")
 source("scripts/CN_analysis_build.R")
 
 ```
-
+<a href = download/scottish_agriculture_ghg_n_use_data_tables.xlsx>
+<button class="btn pdf"> Download data in
+                            .xlsx format </button>
+                            
 This report includes:
 
 -   Estimates of greenhouse gas emissions for Scottish agriculture as reported in the [Scottish Greenhouse Gas (GHG) Statistics 2022](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/)
@@ -173,6 +176,7 @@ Total and agriculture greenhouse gas emissions in Scotland, 1990 to 2022
 fig1
 
 ```
+Source: [Scottish Greenhouse Gas Statistics](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/). Data for this chart is taken from Table 1 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx) 
 
 Prior to the decline of 2022, greenhouse gas emissions from Scottish agriculture were relatively stable. From 2017 to 2021 emissions were 7.9 MtCO~2~e and rose or fell by 0.1 MtCO~2~e on average. Since 2000, agriculture emissions have remained below figures recorded in 1990 (8.8 MtCO~2~e).
 
@@ -193,6 +197,7 @@ fig2
 
 
 ```
+Source: [Scottish Greenhouse Gas Statistics](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/). Data for this chart is taken from Table 2 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx) 
 
 ## Sources of agriculture greenhouse gas emissions
 
@@ -226,6 +231,7 @@ Agriculture greenhouse gas emissions in Scotland, by subsector and emission sour
 fig3
 
 ```
+Source: [Scottish Greenhouse Gas Statistics](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/). Data for this chart is taken from Table 3 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)  
 
 Whilst the largest source of agriculture emissions in 2022, enteric fermentation emissions have reduced by the largest amount. From 1990 and 2022, emissions fell by 0.8 MtCO~2~e (17%). The primary producers of emissions from enteric fermentation are cattle and sheep. Over this period, the number of cattle and sheep in Scotland reduced by 20% and 33%, respectively.
 
@@ -467,6 +473,7 @@ fig6i
 
 <div class="alert alert-info">
   <strong>Guidance</strong> 
+  <br>
   Zoom into plots using the magnifying glass. Hover over each box for the median, lower quartile and upper quartile.
 </div>
 
