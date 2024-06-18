@@ -1,0 +1,61 @@
+---
+title: "Tell us what you think"
+author: no
+date: no
+sgtemplates:
+  footer:
+    link:
+      - href: "accessibility.html"
+        text: "Accessibility"
+      - href: "contact.html"
+        text: "Contact"
+  header:
+    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
+    toc:
+      sticky: false
+  navigation:
+    breadcrumb_trail:
+      - href: "index.html"
+        text: "Home"
+      - text: "Feedback"
+    toc:
+      sticky: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We are always interested to hear from our users about how our statistics are used, and how they can be improved.
+
+## Feedback survey
+
+We'd appreciate it if you would complete our short [feedback survey](https://forms.office.com/Pages/ResponsePage.aspx?id=R3T3DoMQ7E24nyfHZQdoQF6cx9x8PptJl4aj8Z1_v9dURUtFRTRaUlY2N0pKWVgzRFFYMzUzQlZPVy4u) on this publication.
+
+## Enquiries
+
+For enquiries about this publication please contact:
+
+Jackie Massaya
+
+<p>
+
+Rural and Environmental Science and Analytical Services Statistics
+
+e-mail: [agric.stats\@gov.scot](mailto:agric.stats@gov.scot){.email}
+
+</p>
+
+For general enquiries about Scottish Government statistics please contact:
+
+<p>
+
+Office of the Chief Statistician
+
+e-mail: [statistics.enquiries\@gov.scot](mailto:statistics.enquiries@gov.scot){.email}
+
+</p>
+
+## Join our mailing list
+
+If you would like to receive notification about statistical publications, or find out about consultations on our statistics please join the [ScotStat mailing list](http://www.gov.scot/scotstat).
