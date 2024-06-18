@@ -272,11 +272,20 @@ Double click the chart to zoom in. Double click again to reset.
 ```{r fig5a, echo = FALSE, fig.height= 6}
 fig5a
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. </font>
 
+Download data for this chart
+
+<a href = download/Absolute_All Types.xlsx>
+<button class="btn pdf">
+                            .xlsx </button> </a>
+
+<a href = download/Absolute_All Types.csv>
+<button class="btn pdf">
+                            .csv </button> </a>
 ### Cereal
 
-**Average cereal farm absolute gross greenhouse gas (GHG) emissions**
+**Cereal farm absolute gross greenhouse gas (GHG) emissions**
 
 Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
 
@@ -291,7 +300,7 @@ fig5b
 
 ### General cropping
 
-**Average general cropping farm absolute gross greenhouse gas (GHG) emissions**
+**General cropping farm absolute gross greenhouse gas (GHG) emissions**
 
 Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
 
@@ -306,7 +315,7 @@ fig5c
 
 ### Dairy
 
-**Average dairy farm absolute gross greenhouse gas (GHG) emissions**
+**Dairy farm absolute gross greenhouse gas (GHG) emissions**
 
 Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
 
@@ -321,7 +330,7 @@ fig5d
 
 ### Specialist sheep (LFA)
 
-**Average specialist sheep LFA (less favoured area) farm absolute gross greenhouse gas (GHG) emissions**
+**Specialist sheep LFA (less favoured area) farm absolute gross greenhouse gas (GHG) emissions**
 
 Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
 
@@ -336,7 +345,7 @@ fig5e
 
 ### Specialist cattle (LFA)
 
-**Average specialist cattle LFA farm absolute gross greenhouse gas (GHG) emissions**
+**Specialist cattle LFA farm absolute gross greenhouse gas (GHG) emissions**
 
 Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
 
@@ -351,7 +360,7 @@ fig5f
 
 ### Cattle and sheep (LFA)
 
-**Average cattle and sheep LFA farm absolute gross greenhouse gas (GHG) emissions**
+**Cattle and sheep LFA farm absolute gross greenhouse gas (GHG) emissions**
 
 Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
 
@@ -366,7 +375,7 @@ fig5g
 
 ### Lowland cattle and sheep
 
-**Average lowland cattle and sheep farm absolute gross greenhouse gas (GHG) emissions**
+**Lowland cattle and sheep farm absolute gross greenhouse gas (GHG) emissions**
 
 Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
 
@@ -381,7 +390,7 @@ fig5h
 
 ### Mixed
 
-**Average mixed farm absolute gross greenhouse gas (GHG) emissions**
+**Mixed farm absolute gross greenhouse gas (GHG) emissions**
 
 Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
 
@@ -428,7 +437,7 @@ fig6a
 
 ### Cereal
 
-**Average cereal farm greenhouse gas (GHG) emission intensity**
+**Cereal farm greenhouse gas (GHG) emission intensity**
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
@@ -444,7 +453,7 @@ fig6b
 
 ### General cropping
 
-**Average general cropping farm greenhouse gas (GHG) emission intensity**
+**General cropping farm greenhouse gas (GHG) emission intensity**
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
@@ -460,7 +469,7 @@ fig6c
 
 ### Dairy
 
-**Average dairy farm greenhouse gas (GHG) emission intensity**
+**Dairy farm greenhouse gas (GHG) emission intensity**
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
@@ -476,7 +485,7 @@ fig6d
 
 ### Specialist sheep (LFA)
 
-**Average specialist sheep LFA (less favoured area) farm greenhouse gas (GHG) emission intensity**
+**Specialist sheep LFA (less favoured area) farm greenhouse gas (GHG) emission intensity**
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
@@ -492,7 +501,7 @@ fig6e
 
 ### Specialist cattle (LFA)
 
-**Average specialist cattle LFA farm greenhouse gas (GHG) emission intensity**
+**Specialist cattle LFA farm greenhouse gas (GHG) emission intensity**
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
@@ -507,8 +516,7 @@ fig6f
 <font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Cattle and sheep (LFA)
-
-**Average cattle and sheep LFA farm greenhouse gas (GHG) emission intensity**
+Cattle and sheep LFA farm greenhouse gas (GHG) emission intensity**
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
@@ -524,7 +532,7 @@ fig6g
 
 ### Lowland cattle and sheep
 
-**Average lowland cattle and sheep farm greenhouse gas (GHG) emission intensity**
+**Lowland cattle and sheep farm greenhouse gas (GHG) emission intensity**
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
@@ -540,7 +548,7 @@ fig6h
 
 ### Mixed
 
-**Average mixed farm emissions greenhouse gas (GHG) emission intensity **
+**Mixed farm emissions greenhouse gas (GHG) emission intensity **
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
