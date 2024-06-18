@@ -36,7 +36,7 @@ source("scripts/CN_analysis_build.R")
 
 This report includes:
 
--   Estimates of greenhouse gas emissions for Scottish agriculture as reported in the [Scottish Greenhouse Gas (GHG) Statistics 2022](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/).
+-   Estimates of greenhouse gas emissions for Scottish agriculture as reported in the <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish Greenhouse Gas (GHG) Statistics 2022</a>.
 
 -   Estimates of greenhouse gas emissions by agricultural subsector. New analysis of the Scottish Greenhouse Gas Statistics 2022 allocates total GHG emissions from agriculture to agricultural subsectors. The subsectors align more closely with agricultural enterprises and provide a different breakdown to the categories used in the Scottish Greenhouse Gas Statistics.
 
@@ -44,35 +44,37 @@ This report includes:
 
 -   Average farm estimates are for the accounting year 2022-23 rather than the 2022 calendar year. Methodology improvements have been made for emission estimates for the average farm for 2022-23. Previous years have not yet been revised. Average farm emission results for 2022-23 are not directly comparable to previous years.
 
+<br></br>
+
 # Key Points
 
 ## For the Agriculture sector
 
 -   In 2022, greenhouse gas emissions from Scottish agriculture were at their lowest levels since the baseline period in 1990. Total emissions from agriculture in 2022 were 7.7 million tonnes of carbon dioxide equivalent (MtCO~2~e). This is a decrease of 3% (0.3 MtCO~2~e) compared with 2021.
 
--   Price increases of inorganic fertiliser in 2022 may have contributed to lower emissions from agriculture compared with 2021, as usage rates fell. Prior to the fall in 2022, agriculture emissions had been relatively stable. From 2016 to 2021, emissions were within the range 7.9 to 8.0 MtCO2e.
+-   Price increases of inorganic fertiliser in 2022 may have contributed to lower emissions from agriculture compared with 2021, as usage rates fell. Prior to the fall in 2022, agriculture emissions had been relatively stable. From 2016 to 2021, emissions were within the range 7.9 to 8.0 MtCO~2~e.
 
--   Total agriculture emissions have been in a long-term decline. Since 1990 emissions have fallen by 12% from 8.8 MtCO2e to 7.7 MtCO2e. Over the same period, total GHG emissions in Scotland have halved from 81.9 MtCO2e to 40.6 MtCO2e.
+-   Total agriculture emissions have been in a long-term decline. Since 1990 emissions have fallen by 12% from 8.8 MtCO~2~e to 7.7 MtCO~2~e. Over the same period, total GHG emissions in Scotland have halved from 81.9 MtCO~2~e to 40.6 MtCO~2~e.
 
--    The long-term fall in emissions from agriculture was largely driven by falling livestock numbers. From 1990 to 2022 cattle and sheep numbers have decreased by 20% and 33%, respectively.
+-   The long-term fall in emissions from agriculture was largely driven by falling livestock numbers. From 1990 to 2022 cattle and sheep numbers have decreased by 20% and 33%, respectively.
 
--   In 2022, emissions from arable and dairy subsectors both fell by 4% (0.1 MtCO2e and 0.05 MtCO2e respectively) compared to 2021. Suckler beef emissions fell by 3% (0.1 MtCO2e) from the previous year,
+-   In 2022, emissions from arable and dairy subsectors both fell by 4% (0.1 MtCO~2~e and 0.05 MtCO~2~e respectively) compared to 2021. Suckler beef emissions fell by 3% (0.1 MtCO~2~e) from the previous year,
 
--    The suckler beef subsector is the largest contributor to total agriculture emissions. In 2022 emissions were 3.2 MtCO2e, 41% of agriculture emissions. Suckler beef emissions fell by 0.6 MtCO2e (17%) from 1990 to 2022. This was the largest absolute reduction across the agriculture subsectors. Emissions from sheep and dairy beef subsectors also fell by 17% from the baseline period. This follows the trend of declining livestock numbers over the same period.
+-   The suckler beef subsector is the largest contributor to total agriculture emissions. In 2022 emissions were 3.2 MtCO~2~e, 41% of agriculture emissions. Suckler beef emissions fell by 0.6 MtCO~2~e (17%) from 1990 to 2022. This was the largest absolute reduction across the agriculture subsectors. Emissions from sheep and dairy beef subsectors also fell by 17% from the baseline period. This follows the trend of declining livestock numbers over the same period.
 
--    Emissions from the arable subsector increased by 14% from 1990 to 2022. Arable farming accounts for most agriculture emissions from fuel combustion and liming. Emissions from fuel combustion and liming have increased by 42% and 38% respectively, over the same period.
+-   Emissions from the arable subsector increased by 14% from 1990 to 2022. Arable farming accounts for most agriculture emissions from fuel combustion and liming. Emissions from fuel combustion and liming have increased by 42% and 38% respectively, over the same period.
 
 ## For the average farm
 
 -   Farm-level emission results reflect the different nature of farm outputs from different farm types. A wide variation of results within each farm type suggests that there may be scope for some farms to decrease their emissions.
 
--   Dairy farms tend to have the highest emissions per hectare due to high stocking densities. In 2022-23, emissions from the average dairy farm were estimated at 17.8 tCO2e ha.
+-   Dairy farms tend to have the highest emissions per hectare due to high stocking densities. In 2022-23, emissions from the average dairy farm were estimated at 17.8 tCO~2~e ha.
 
--   In 2022-23, emissions per hectare were higher for the average cereal farm (2.8 tCO2e/ha) than for the average general cropping farm (2.2 tCO2e/ha).
+-   In 2022-23, emissions per hectare were higher for the average cereal farm (2.8 tCO~2~e/ha) than for the average general cropping farm (2.2 tCO~2~e/ha).
 
--   Emissions per unit of output, or emissions intensity, are typically higher for livestock farms than arable farms, reflecting the different nature of the outputs. In 2022-23, sheep farms in less favoured areas (LFA) had the highest average emissions intensity at 27.7 kg CO2e/kg output on average.
+-   Emissions per unit of output, or emissions intensity, are typically higher for livestock farms than arable farms, reflecting the different nature of the outputs. In 2022-23, cattle and sheep farms in less favoured areas (LFA) had the highest average emissions intensity at 29.4 kg CO~2~e/kg output on average.
 
--   Dairy farms, where the primary output is milk, have a lower emission intensity than livestock farms. The average dairy farm had an emissions intensity of 1.5 kg CO2e/kg output in 2022-23.
+-   Dairy farms, where the primary output is milk, have a lower emission intensity than livestock farms. The average dairy farm had an emissions intensity of 1.5 kg CO~2~e/kg output in 2022-23.
 
 -   Farm-level nitrogen use results show a wide variation within each farm type. Farms can vary widely in their nitrogen use efficiency due to management practices and environmental conditions. This suggests that there may be scope for some farms to improve their nitrogen use.
 
@@ -83,6 +85,8 @@ This report includes:
 -   Similar trends in nitrogen balance and nitrogen use efficiency were seen for most farm types. In general, this was driven by increased farm output.
 
 -   Large decreases in nitrogen balance, and corresponding increases in nitrogen use efficiency, were seen for general cropping (129%) and cereal (66%) farms compared with the previous year. A larger decrease in fertiliser input as well as increases in output drove these results for the average cereal farm.
+
+<br></br>
 
 # Introduction
 
@@ -102,6 +106,8 @@ These statistics are official statistics in development. Official statistics in 
 
 Scottish Government statistics are regulated by the Office for Statistics Regulation (OSR). OSR sets the standards of trustworthiness, quality and value in the [Code of Practice for Statistics](https://code.statisticsauthority.gov.uk/the-code/) that all producers of official statistics should adhere to.
 
+<br></br>
+
 # Agriculture sector greenhouse gas emissions
 
 #### Greenhouse gas emissions from agriculture at lowest levels
@@ -117,17 +123,21 @@ fig1
 
 ```
 
-<font size="2"><strong>Source:</strong> [Scottish Greenhouse Gas Statistics](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/) Data for this chart is taken from Table 1 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> <a href ="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish Greenhouse Gas (GHG) Statistics 2022</a>.
 
-GHG emissions from Scottish agriculture were 7.7 million tonnes of carbon dioxide equivalent (MtCO2e) in 2022. This is the lowest value since the baseline period in 1990, a decrease of 1.0 MtCO2e over this period.
+<strong> Download data for this chart </strong> <a href = download/Scot_ghg_emiss.xlsx> <button class="btn pdf"> .xlsx </button> </a> <a href = download/Scot_ghg_emiss.csv> <button class="btn pdf"> .csv </button> </a>
 
-Since the baseline period in 1990 (8.8 MtCO2e), total agriculture emissions have decreased by 12%. Total Scotland emissions have fallen by 50% over the same period, from 81.9 MtCO2e in 1990 to 40.6 MtCO2e in 2022. In 2022, Agriculture was the third largest source of emissions in Scotland behind Transport and Industry, using Climate Change Plan emission categories [LINK].
+GHG emissions from Scottish agriculture were 7.7 million tonnes of carbon dioxide equivalent (MtCO~2~e) in 2022. This is the lowest value since the baseline period in 1990, a decrease of 1.0 MtCO~2~e over this period.
 
-Compared with the previous year, total agriculture emissions by 3% (from 8.0 MtCO2e in 2021 to 7.7 MtCO2e in 2022). Increased fertiliser prices may have contributed to lower agriculture emissions in 2022, as usage rates fell. Results from the British Survey of Fertiliser Practice 2022 showed that the overall application rate for nitrogen on crops and grass in Scotland decreased by 19% compared to the previous year.
+Since the baseline period in 1990 (8.8 MtCO~2~e), total agriculture emissions have decreased by 12%. Total Scotland emissions have fallen by 50% over the same period, from 81.9 MtCO~2~e in 1990 to 40.6 MtCO~2~e in 2022. In 2022, Agriculture was the third largest source of emissions in Scotland behind Transport and Industry, using Climate Change Plan emission categories [LINK].
 
-Prior to the fall in 2022, agriculture emissions had been relatively stable. From 2016 to 2021, emissions were within the range 7.9 to 8.0 MtCO2e.
+Compared with the previous year, total agriculture emissions by 3% (from 8.0 MtCO~2~e in 2021 to 7.7 MtCO~2~e in 2022). Increased fertiliser prices may have contributed to lower agriculture emissions in 2022, as usage rates fell. Results from the <a href ="https://www.gov.uk/government/collections/fertiliser-usage/" target ="_blank">British Survey of Fertiliser Practice 2022</a> showed that the overall application rate for nitrogen on crops and grass in Scotland decreased by 19% compared to the previous year.
 
-More results for total Scotland GHG emissions, including for agriculture, are available in the [Scottish Greenhouse Gas Statistics](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022).
+Prior to the fall in 2022, agriculture emissions had been relatively stable. From 2016 to 2021, emissions were within the range 7.9 to 8.0 MtCO~2~e.
+
+More results for total Scotland GHG emissions, including for agriculture, are available in the <a href ="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish Greenhouse Gas (GHG) Statistics 2022</a>.
+
+<br></br>
 
 # Agriculture sub-sector greenhouse gas emissions
 
@@ -145,13 +155,15 @@ fig2
 
 ```
 
-Source: [Scottish Greenhouse Gas Statistics](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/). Data for this chart is taken from Table 2 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)
+**Source**: <a href ="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish Greenhouse Gas (GHG) Statistics 2022</a>.
 
-The suckler beef subsector had the largest share of Scottish agriculture emissions from 1990 to 2022. In 2022 suckler beef contributed to 41% (3.2 MtCO2e) of total agricultural emissions. The second largest contribution is from arable (20% or 1.6 MtCO2e in 2022), closely followed by dairy (17% or 1.3 MtCO2e in 2022) and sheep (15% or 1.2 MtCO2e in 2022). Dairy beef and other subsectors (including pigs, poultry, and non-agriculture) accounted for a very small proportion (3%) of total agriculture emissions in 2022.
+<strong> Download data for this chart </strong> <a href = download/agr_ss_ghg_emiss.xlsx> <button class="btn pdf"> .xlsx </button> </a> <a href = download/agr_ss_ghg_emiss.csv> <button class="btn pdf"> .csv </button> </a>
 
-In 2022, emissions from arable and dairy subsectors fell by 4% compared with the previous year. Suckler beef emissions fell by 3% (0.1 MtCO2e) to 3.2 MtCO2e.
+The suckler beef subsector had the largest share of Scottish agriculture emissions from 1990 to 2022. In 2022 suckler beef contributed to 41% (3.2 MtCO~2~e) of total agricultural emissions. The second largest contribution is from arable (20% or 1.6 MtCO~2~e in 2022), closely followed by dairy (17% or 1.3 MtCO~2~e in 2022) and sheep (15% or 1.2 MtCO~2~e in 2022). Dairy beef and other subsectors (including pigs, poultry, and non-agriculture) accounted for a very small proportion (3% each) of total agriculture emissions in 2022.
 
-Reductions in emissions from suckler beef have contributed to the largest absolute decrease in total agriculture emissions since the baseline period. From 1990 to 2022 suckler beef emissions fell by 0.6 MtCO2e (17%). This was driven by declining cattle numbers over the same period. Cattle numbers fell from 2.1 million in 1990 to 1.7 million in 2022, a decrease of 20%.
+In 2022, emissions from arable and dairy subsectors fell by 4% compared with the previous year. Suckler beef emissions fell by 3% (0.1 MtCO~2~e) to 3.2 MtCO~2~e.
+
+Reductions in emissions from suckler beef have contributed to the largest absolute decrease in total agriculture emissions since the baseline period. From 1990 to 2022 suckler beef emissions fell by 0.6 MtCO~2~e (17%). This was driven by declining cattle numbers over the same period. Cattle numbers fell from 2.1 million in 1990 to 1.7 million in 2022, a decrease of 20%.
 
 The suckler beef subsector's contribution to total agriculture emissions has fallen from 43% in 1990 to 41% in 2022.
 
@@ -174,17 +186,21 @@ fig3
 
 ```
 
-Source: [Scottish Greenhouse Gas Statistics](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/). Data for this chart is taken from Table 3 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)
+**Source**: <a href ="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish Greenhouse Gas (GHG) Statistics 2022</a>.
 
-As reported in the Scottish Greenhouse Gas Statistics 2022, enteric fermentation (animal digestion) was the largest source of GHG emissions from agriculture in 2022. Emissions from enteric fermentation were 4.0 MtCO2e, just over half (52%) of total emissions from Scottish agriculture.
+<strong> Download data for this chart </strong> <a href = download/agr_source_ghg_emiss.xlsx> <button class="btn pdf"> .xlsx </button> </a><a href = download/agr_source_ghg_emiss.csv> <button class="btn pdf"> .csv </button></a>
+
+As reported in the <a href ="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish Greenhouse Gas (GHG) Statistics 2022</a>, enteric fermentation (animal digestion) was the largest source of GHG emissions from agriculture in 2022. Emissions from enteric fermentation were 4.0 MtCO~2~e, just over half (52%) of total emissions from Scottish agriculture.
 
 Looking at emission sources by subsector, just over half (52%) of emissions from enteric fermentation were produced by suckler beef.
 
-Emissions from enteric fermentation have had the largest overall reduction compared with all other agricultural emission sources. From 1990 and 2022, emissions from enteric fermentation fell by 0.8 MtCO2e (17%). The primary producers of emissions from enteric fermentation are cattle and sheep. Over this period, the number of cattle and sheep in Scotland reduced by 20% and 33%, respectively.
+Emissions from enteric fermentation have had the largest overall reduction compared with all other agricultural emission sources. From 1990 and 2022, emissions from enteric fermentation fell by 0.8 MtCO~2~e (17%). The primary producers of emissions from enteric fermentation are cattle and sheep. Over this period, the number of cattle and sheep in Scotland reduced by 20% and 33%, respectively.
 
-Emissions from liming and fuel combustion have both increased from 1990 to 2022 by a combined 0.4 MtCO2e. Arable farming accounts for most emissions from liming and fuel combustion.
+Emissions from liming and fuel combustion have both increased from 1990 to 2022 by a combined 0.4 MtCO~2~e. Arable farming accounts for most emissions from liming and fuel combustion.
 
 Another major source of emissions from agriculture is manure management, which is mostly associated with livestock.
+
+<br></br>
 
 # Farm GHG emissions
 
