@@ -1,23 +1,18 @@
 ---
 title: "Contact Information"
-author: "`r as.character(Sys.info()[7])`"
-date: "`r Sys.Date()`"
+author: no
+date: no
 sgtemplates:
   footer:
     link:
-      - href: "privacy.html"
-        text: "Privacy"
-      - href: "cookies.html"
-        text: "Cookies"
       - href: "accessibility.html"
         text: "Accessibility"
       - href: "contact.html"
         text: "Contact"
   header:
-    phase_banner:
-      tag: "WIP"
-      text: "This is a work in progress."
-    site_branding: "Scottish Government"
+    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
+    toc:
+      sticky: false
   navigation:
     breadcrumb_trail:
       - href: "index.html"
@@ -30,3 +25,9 @@ sgtemplates:
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+-   Email: [agric.stats\@gov.scot](mailto:agric.stats@gov.scot)
+
+-   Phone: 0300 244 4000 (Scottish Government central enquiry unit)
+
+-   Scottish Government [general enquiries](https://www.gov.scot/about/contact-information/)
