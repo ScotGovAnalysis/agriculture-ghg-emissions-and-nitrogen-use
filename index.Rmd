@@ -19,7 +19,7 @@ sgtemplates:
   header:
     site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
     toc:
-      sticky: false
+      sticky: true
   seo:
     description: "SEO (search engine optimisation) description"
     keywords: "agriculture 2022, agriculture emissions, scotland ghg, beef emissions"
@@ -206,267 +206,182 @@ Another major source of emissions from agriculture is manure management, which i
 
 ## Absolute gross emissions per hectare {.tabset}
 
-
-
 ### All farms
 
 **Average farm absolute gross greenhouse gas (GHG) emissions**
 
-Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
+Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
- 
-```{r fig5a, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig5a, echo = FALSE, fig.height= 6}
 fig5a
 ```
+
 <font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
+<strong> Download data for this chart </strong>
 
-<a href = download/Absolute_AllTypes.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Absolute_AllTypes.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+\<a href = download/Absolute_Alltypes.xlsx\> <button class="btn pdf"> .xlsx </button> </a>\<a href = download/Absolute_All Types.xlsx\> <button class="btn pdf"> .csv </button> </a>
 
 ### Cereal
 
 **Average cereal farm absolute gross greenhouse gas (GHG) emissions**
 
-Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
+Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig5b, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig5b, echo = FALSE, fig.height= 6}
 fig5b
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Absolute_Cereal.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Absolute_Cereal.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
 
 ### General cropping
 
 **Average general cropping farm absolute gross greenhouse gas (GHG) emissions**
 
-Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
+Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig5c, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig5c, echo = FALSE, fig.height= 6}
 fig5c
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Absolute_GeneralCropping.xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Absolute_GeneralCropping.csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
 
 ### Dairy
 
 **Average dairy farm absolute gross greenhouse gas (GHG) emissions**
 
-Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
+Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig5d, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig5d, echo = FALSE, fig.height= 6}
 fig5d
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Absolute_Dairy.xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Absolute_Dairy.csv >
-  <button class="btn pdf">
-  .csv </button> </a>
-
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
 
 ### Specialist sheep (LFA)
 
 **Average specialist sheep LFA (less favoured area) farm absolute gross greenhouse gas (GHG) emissions**
 
-Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
+Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig5e, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig5e, echo = FALSE, fig.height= 6}
 fig5e
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Absolute_SpecialistSheep(LFA).xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Absolute_SpecialistSheep(LFA).csv >
-  <button class="btn pdf">
-  .csv </button> </a>
-
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
 
 ### Specialist cattle (LFA)
 
 **Average specialist cattle LFA farm absolute gross greenhouse gas (GHG) emissions**
 
-Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
+Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig5f, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig5f, echo = FALSE, fig.height= 6}
 fig5f
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Absolute_SpecialistCattle(LFA).xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Absolute_SpecialistCattle(LFA).csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
 
 ### Cattle and sheep (LFA)
 
 **Average cattle and sheep LFA farm absolute gross greenhouse gas (GHG) emissions**
 
-Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
+Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig5g, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig5g, echo = FALSE, fig.height= 6}
 fig5g
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Absolute_CattleandSheep(LFA).xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Absolute_CattleandSheep(LFA).csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
 
 ### Lowland cattle and sheep
 
 **Average lowland cattle and sheep farm absolute gross greenhouse gas (GHG) emissions**
 
-Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
+Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig5h, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig5h, echo = FALSE, fig.height= 6}
 fig5h
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Absolute_LowlandCattleandSheep.xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Absolute_LowlandCattleandSheep.csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
 
 ### Mixed
 
 **Average mixed farm absolute gross greenhouse gas (GHG) emissions**
 
-Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. 
+Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig5i, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig5i, echo = FALSE, fig.height= 6}
 fig5i
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
 
-<a href = download/Absolute_Mixed.xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Absolute_Mixed.csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+##  {.unnumbered}
 
-## {-}
+Absolute emissions for the average Scottish farm were estimated at 4.4 tCO~2~e/ha in 2022-23.
 
-
-Absolute emissions for the average Scottish farm were estimated at 4.4 tCO~2~e/ha in 2022-23. 
-
-Emissions per hectare is a useful measure for arable farms where land area is more strongly related to output. In 2022-23, emissions for the average cereal farm were estimated at 2.8 tCO~2~e/ha. For general cropping, this was 2.2 tCO~2~e/ha. 
-Emissions for the average cereal farm were more stable over the previous three years than those for general cropping farms. General cropping farms are likely to have more livestock and more intensive crops, e.g. potatoes, and have a different relationship between land area, output, and emissions.  
+Emissions per hectare is a useful measure for arable farms where land area is more strongly related to output. In 2022-23, emissions for the average cereal farm were estimated at 2.8 tCO~2~e/ha. For general cropping, this was 2.2 tCO~2~e/ha. Emissions for the average cereal farm were more stable over the previous three years than those for general cropping farms. General cropping farms are likely to have more livestock and more intensive crops, e.g. potatoes, and have a different relationship between land area, output, and emissions.
 
 Dairy farms tend to have higher emissions per hectare than other livestock farms. This is due to higher stocking densities. In 2022-23, average dairy emissions were 17.8 tCO~2~e/ha. For the average lowland cattle and sheep farm (the next highest emitter), this was 6.9 tCO~2~e/ha.
 
-Mixed farms represent a mix of crop and livestock activities and exhibit average emissions in between arable and livestock farm types. In 2022-23, average mixed farm emissions were 5.2 tCO~2~e/ha. 
-
-
+Mixed farms represent a mix of crop and livestock activities and exhibit average emissions in between arable and livestock farm types. In 2022-23, average mixed farm emissions were 5.2 tCO~2~e/ha.
 
 ## Emission intensity {.tabset}
 
-### All farms 
+### All farms
 
 **Average farm greenhouse gas (GHG) emission intensity**
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
- 
-```{r fig6a, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig6a, echo = FALSE, fig.height= 6}
 fig6a
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Intensity_AllTypes.xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Intensity_AllTypes.csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Cereal
 
@@ -474,49 +389,33 @@ fig6a
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
- 
-```{r fig6b, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig6b, echo = FALSE, fig.height= 6}
 fig6b
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
-<a href = download/Intensity_Cereal.xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Intensity_Cereal.csv >
-  <button class="btn pdf">
-  .csv </button> </a>
-  
 ### General cropping
 
 **Average general cropping farm greenhouse gas (GHG) emission intensity**
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
- 
-```{r fig6c, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig6c, echo = FALSE, fig.height= 6}
 fig6c
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Intensity_GeneralCropping.xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Intensity_GeneralCropping.csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Dairy
 
@@ -524,24 +423,16 @@ fig6c
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
- 
-```{r fig6d, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig6d, echo = FALSE, fig.height= 6}
 fig6d
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Intensity_Dairy.xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Intensity_Dairy.csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Specialist sheep (LFA)
 
@@ -549,24 +440,16 @@ fig6d
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
- 
-```{r fig6e, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig6e, echo = FALSE, fig.height= 6}
 fig6e
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Intensity_SpecialistSheep(LFA).xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Intensity_SpecialistSheep(LFA).csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Specialist cattle (LFA)
 
@@ -574,24 +457,16 @@ fig6e
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
- 
-```{r fig6f, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig6f, echo = FALSE, fig.height= 6}
 fig6f
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Intensity_SpecialistCattle(LFA).xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Intensity_SpecialistCattle(LFA).csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Cattle and sheep (LFA)
 
@@ -599,24 +474,16 @@ fig6f
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
- 
-```{r fig6g, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig6g, echo = FALSE, fig.height= 6}
 fig6g
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Intensity_CattleandSheep(LFA).xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Intensity_CattleandSheep(LFA).csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Lowland cattle and sheep
 
@@ -624,300 +491,204 @@ fig6g
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
- 
-```{r fig6h, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig6h, echo = FALSE, fig.height= 6}
 fig6h
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Intensity_LowlandCattleandSheep.xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Intensity_LowlandCattleandSheep.csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Mixed
 
-**Average mixed farm emissions greenhouse gas (GHG) emission intensity **
+**Average mixed farm emissions greenhouse gas (GHG) emission intensity**
 
 Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. Due to methodology improvements, results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
- 
-```{r fig6i, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig6i, echo = FALSE, fig.height= 6}
 fig6i
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
-<a href = download/Intensity_Mixed.xlsx >
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Intensity_Mixed.csv >
-  <button class="btn pdf">
-  .csv </button> </a>
+##  {.unnumbered}
 
-## {-}
+Emission intensity for the average farm was 7.0 kg CO~2~e/kg output in 2022-23.
 
+Farms vary widely in their emission intensity results within each farm type, suggesting that there may be scope for some farms to decrease emission intensity.
 
+Livestock farms have higher emission intensities than arable or mixed farms. In 2022-23, cattle and sheep farms in less favoured areas (LFA) had the highest average emission intensity at 29.4 kg CO~2~e/kg output. Dairy farms, where the primary output is milk, have lower emission intensities compared with other livestock farms. The average dairy farm had an emission intensity of 1.5 kg CO~2~e/kg output in 2022-23.
 
+Cereals and general cropping farms had an average emission intensity of 0.4 and 0.3 kg CO~2~e/kg output respectively, in 2022-23. In the previous three years, both types remained similarly stable. Mixed farms showed an average emission intensity higher than arable farms, at 1.4 kg CO~2~e/kg.
 
-Emission intensity for the average farm was 7.0 kg CO~2~e/kg output in 2022-23. 
-
-Farms vary widely in their emission intensity results within each farm type, suggesting that there may be scope for some farms to decrease emission intensity. 
-
-Livestock farms have higher emission intensities than arable or mixed farms. In 2022-23, sheep farms in less favoured areas (LFA) had the highest average emission intensity at 27.7 kg CO~2~e/kg output.
-Dairy farms, where the primary output is milk, have lower emission intensities compared with other livestock farms. The average dairy farm had an emission intensity of 1.5 kg CO~2~e/kg output in 2022-23. 
-
-Cereals and general cropping farms had an average emission intensity of 0.4 and 0.3 kg CO~2~e/kg output respectively, in 2022-23. In the previous three years, both types remained similarly stable. 
-Mixed farms showed an average emission intensity higher than arable farms, at 1.4 kg CO~2~e/kg. 
-
-
+<br></br>
 
 # Farm nitrogen use
-
 
 ## Nitrogen balance {.tabset}
 
 ### All farms
 
 **Average farm nitrogen balance decreases**
- 
- Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
- 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
- 
-```{r fig7a, echo = FALSE, fig.height= 4.5, fig.width= 6}
+
+Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
+
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig7a, echo = FALSE, fig.height= 6}
 fig7a
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Nbalance_AllTypes.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Nbalance_AllTypes.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Cereal
 
 **Average cereal farm nitrogen balance decreases**
 
-Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
+Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig7b, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig7b, echo = FALSE, fig.height= 6}
 fig7b
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Nbalance_Cereal.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Nbalance_Cereal.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### General cropping
 
 **Average general cropping farm nitrogen balance decreases**
 
-Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
+Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig7c, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig7c, echo = FALSE, fig.height= 6}
 fig7c
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Nbalance_GeneralCropping.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Nbalance_GeneralCropping.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Dairy
 
 **Average dairy farm nitrogen balance decreases**
 
-Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
+Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig7d, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig7d, echo = FALSE, fig.height= 6}
 fig7d
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
-<a href = download/Nbalance_Dairy.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Nbalance_Dairy.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
-  
 ### Specialist sheep (LFA)
 
 **Average specialist sheep LFA (less favoured area) farm nitrogen balance decreases**
 
-Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
+Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig7e, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig7e, echo = FALSE, fig.height= 6}
 fig7e
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Nbalance_SpecialistSheep(LFA).xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Nbalance_SpecialistSheep(LFA).csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Specialist cattle (LFA)
 
 **Average specialist cattle LFA farm nitrogen balance decreases**
 
-Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
+Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig7f, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig7f, echo = FALSE, fig.height= 6}
 fig7f
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Nbalance_SpecialistCattle(LFA).xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Nbalance_SpecialistCattle(LFA).csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Cattle and sheep (LFA)
 
 **Average cattle and sheep LFA farm nitrogen balance decreases**
 
-Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
+Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig7g, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig7g, echo = FALSE, fig.height= 6}
 fig7g
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Nbalance_CattleandSheep(LFA).xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Nbalance_CattleandSheep(LFA).csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Lowland cattle and sheep
 
 **Average lowland cattle and sheep farm nitrogen balance increases**
 
-Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
+Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig7h, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig7h, echo = FALSE, fig.height= 6}
 fig7h
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/Nbalance_LowlandCattleandSheep.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Nbalance_LowlandCattleandSheep.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Mixed farm
 
 **Average mixed farm nitrogen balance decreases**
 
-Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
+Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig7i, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig7i, echo = FALSE, fig.height= 6}
 fig7i
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
-<a href = download/Nbalance_Mixed.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/Nbalance_Mixed.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
-
-## {-}
-
-
+##  {.unnumbered}
 
 Nitrogen balance measures the difference between nitrogen input and nitrogen output, accounting for land area.
 
@@ -925,255 +696,178 @@ Nitrogen balance on the average Scottish farm was 38.2 kg N surplus/ha in 2022-2
 
 For the average farm, the decrease in nitrogen balance was mostly driven by increases in nitrogen output. Nitrogen output increased as farm output increased in 2022-23. Nitrogen inputs also decreased, mostly as a result of decreased fertiliser input. Increased fertiliser prices may have contributed to this decrease in 2022-23, as usage rates fell.
 
-Estimates of the average nitrogen balance vary by farm type. 
+Estimates of the average nitrogen balance vary by farm type.
 
 Nitrogen from fertiliser makes the largest contribution to nitrogen input for general cropping and cereal farm types.
 
 Estimates of nitrogen balance on the average general cropping farm decreased dramatically (by 129%) in 2022-23 to -5.0 kg N surplus/ha. The average cereal farm also showed a large decrease (66%) in nitrogen balance to 9.4 kg N surplus/ha. Large decreases in fertiliser input and increases in output in 2022-23 compared with the previous year drove the decreases in nitrogen balance.
 
-A negative nitrogen balance is associated with a nitrogen use efficiency (NUE) that is above 100%. Both occur when nitrogen outputs are larger than nitrogen inputs. This may indicate a loss of nitrogen from the soil but cannot be separated from known limitations of the methodology. Limited information is available about some nitrogen inputs. More information is available in the Methodology [LINK] 
+A negative nitrogen balance is associated with a nitrogen use efficiency (NUE) that is above 100%. Both occur when nitrogen outputs are larger than nitrogen inputs. This may indicate a loss of nitrogen from the soil but cannot be separated from known limitations of the methodology. Limited information is available about some nitrogen inputs. More information is available in the <a href = methodology.html> Methodology</a>, .
 
-Dairy farms, where the primary output is milk, have the highest average nitrogen balance of the farm types, estimated at 255.6 kg N surplus/ha in 2022-23. Nitrogen balance for the average dairy farm decreased 7% from the previous year. 
+Dairy farms, where the primary output is milk, have the highest average nitrogen balance of the farm types, estimated at 255.6 kg N surplus/ha in 2022-23. Nitrogen balance for the average dairy farm decreased 7% from the previous year.
 
 Lowland cattle and sheep were the only farm type where the average nitrogen balance increased in 2022-23, by 5% to 59.8 kg N surplus/ha.
 
-Across the remaining livestock types, the average nitrogen balance decreased in 2022-23. This was most notable for the average LFA cattle and sheep farm, with a decrease of 39% to 38.7 kg N surplus/ha. In LFA sheep and LFA cattle and sheep farms, decreases in nitrogen inputs drove the nitrogen balance decrease. In LFA cattle, increases in nitrogen outputs drove the decrease. 
+Across the remaining livestock types, the average nitrogen balance decreased in 2022-23. This was most notable for the average LFA cattle and sheep farm, with a decrease of 39% to 38.7 kg N surplus/ha. In LFA sheep and LFA cattle and sheep farms, decreases in nitrogen inputs drove the nitrogen balance decrease. In LFA cattle, increases in nitrogen outputs drove the decrease.
 
-Mixed farms have a nitrogen balance comparable to livestock farms, with an estimated average of 41.4 kg N surplus/ha in 2022-23, a decrease of 29% from previous years. 
-
-
+Mixed farms have a nitrogen balance comparable to livestock farms, with an estimated average of 41.4 kg N surplus/ha in 2022-23, a decrease of 29% from previous years.
 
 ## Nitrogen use efficiency {.tabset}
 
 ### All farms
 
 **Average farm nitrogen use efficiency increases**
- 
+
 Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig8a, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig8a, echo = FALSE, fig.height= 6}
 fig8a
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/NUE_AllTypes.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/NUE_AllTypes.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Cereal
 
 **Average cereal farm nitrogen use efficiency increases**
- 
-Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-```{r fig8b, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig8b, echo = FALSE, fig.height= 6}
 fig8b
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
-<a href = download/NUE_Cereal.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/NUE_Cereal.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
-  
 ### General cropping
 
 **Average general cropping farm nitrogen use efficiency increases**
- 
-Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-```{r fig8c, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig8c, echo = FALSE, fig.height= 6}
 fig8c
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
-<a href = download/NUE_GeneralCropping.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/NUE_GeneralCropping.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
-  
 ### Dairy
 
 **Average dairy farm nitrogen use efficiency remains stable**
- 
-Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-```{r fig8d, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig8d, echo = FALSE, fig.height= 6}
 fig8d
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/NUE_Dairy.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/NUE_Dairy.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
-
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Specialist sheep (LFA)
 
 **Average specialist sheep LFA (less favoured area) farm nitrogen use efficiency increases**
- 
-Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-```{r fig8e, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig8e, echo = FALSE, fig.height= 6}
 fig8e
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/NUE_SpecialistSheep(LFA).xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/NUE_SpecialistSheep(LFA).csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Specialist cattle (LFA)
 
 **Average specialist cattle LFA farm nitrogen use efficiency increases**
- 
+
 Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
 
-```{r fig8f, echo = FALSE, fig.height= 4.5, fig.width= 6}
+```{r fig8f, echo = FALSE, fig.height= 6}
 fig8f
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/NUE_SpecialistCattle(LFA).xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/NUE_SpecialistCattle(LFA).csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Cattle and sheep (LFA)
 
 **Average cattle and sheep LFA farm nitrogen use efficiency increases**
- 
-Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-```{r fig8g, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig8g, echo = FALSE, fig.height= 6}
 fig8g
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
-
-<a href = download/NUE_CattleandSheep(LFA).xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/NUE_CattleandSheep(LFA).csv>
-  <button class="btn pdf">
-  .csv </button> </a>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
 ### Lowland cattle and sheep
 
 **Average lowland cattle and sheep farm nitrogen use efficiency increases**
- 
-Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-```{r fig8h, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig8h, echo = FALSE, fig.height= 6}
 fig8h
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
-<a href = download/NUE_LowlandCattleandSheep.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/NUE_LowlandCattleandSheep.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
-  
 ### Mixed
 
 **Average mixed farm nitrogen use efficiency decreases**
- 
-Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles. 
 
-<div class="alert alert-info">
-Double click the chart to zoom in. Double click again to reset.  
-</div>
+Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the median and upper and lower quartiles.
 
-```{r fig8i, echo = FALSE, fig.height= 4.5, fig.width= 6}
+::: {.alert .alert-info}
+Double click the chart to zoom in. Double click again to reset.
+:::
+
+```{r fig8i, echo = FALSE, fig.height= 6}
 fig8i
 
-
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<b> Download data for this chart </b>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
 
-<a href = download/NUE_Mixed.xlsx>
-  <button class="btn pdf">
-  .xlsx </button> </a>
-<a href = download/NUE_Mixed.csv>
-  <button class="btn pdf">
-  .csv </button> </a>
-
-## {-}
-
+##  {.unnumbered}
 
 Nitrogen use efficiency, the ratio of nitrogen outputs to inputs, indicates the proportion of nitrogen used in the farm system in a given year. This is related to nitrogen balance and is a different way of measuring the relationship between outputs and inputs.
 
@@ -1185,20 +879,146 @@ Within a farm type, farms can also vary widely in their nitrogen use efficiency 
 
 The average dairy farm had nitrogen use efficiency of 19%, remaining stable since the previous year.
 
-Nitrogen use efficiency for the average cereal farm was 90%, increasing by 10 percentage points in 2022-23. For the average general cropping farm, this was 102%, an increase of 15 percentage points.
+Nitrogen use efficiency for the average cereal farm was 90%, increasing by 10 percentage points in 2022-23. For the average general cropping farm, nitrogen use efficiency was 102%, an increase of 15 percentage points.
 
 Mixed farms show an intermediate efficiency between arable and livestock farms and decreased by one percentage point to 56% in 2022-23.
 
 The changes in nitrogen input and output between 2021-22 and 2022-23 that resulted in changes for both nitrogen balance and nitrogen use efficiency estimates are discussed in the previous section.
 
+<br></br>
+
+# About the statistics
+
+## About greenhouse gas (GHG) emissions in agriculture
+
+There are three main GHGs produced in agriculture. These are carbon dioxide, methane, and nitrous oxide. Total emissions are presented in carbon dioxide equivalent (CO~2~e) units. This takes into account the different effects that the different gases have on climate change, known as their global warming potential (GWP). Over a 100-year period, methane's GWP is considered to be 28 times stronger than that of carbon dioxide, while nitrous oxide's GWP is considered to be 265 times stronger than carbon dioxide.
+
+## About national GHG estimates for agriculture and agricultural subsectors
+
+The data source for the national estimates is the Scottish Greenhouse Gas Statistics where emissions are allocated by sector and type of gas. Emissions within the agriculture sector are grouped into the following categories:
+
+-   agricultural combustion
+
+-   agricultural soils
+
+-   livestock
+
+-   other agriculture - including lubricants and crop combustion.
+
+This report groups emissions within the agriculture sector into subsectors. Subsector analysis assigns agricultural emissions to enterprise or activity type. This gives more detail about the emission sources within agriculture. This report provides emission estimates for the following subsectors:
+
+-   suckler beef
+
+-   dairy beef
+
+-   dairy
+
+-   sheep
+
+-   arable
+
+-   other - including pigs, other livestock, and non-agriculture.
+
+**Table 1: Allocation of emission sources to agricultural subsector.**
+
+Proportions are based on a [methodology developed by SRUC](https://www.gov.scot/publications/disaggregating-headline-smart-inventory-figures/). The sectoral split of emissions are based on proportions from 2018 and are applied to the entire timeseries. Rows may not sum to 100% due to rounding.
+
+```{r table_1_pct, echo = FALSE, results = 'markup'}
+knitr::kable(table_1_pct) %>% kable_styling()
+caption = "Proportions are based on a methodology developed by SRUC. The sectoral split of emissions are based on proportions from 2018 and are applied to the entire timeseries. Rows may not sum to 100% due to rounding."
+```
+
+Further information about the data sources and methods are available in the <a href = methodology.html> Methodology</a>
+
+## About sources of agriculture GHG emissions
+
+The possible sources of GHG emissions from agricultural activity are grouped from categories in the Scottish Greenhouse Gas statistics into:
+
+-   **enteric fermentation** - a digestive process whereby carbohydrates are broken down by microorganisms into simple molecules. Both ruminant animals (e.g. cattle and sheep), and some non-ruminant animals (e.g. swine and horses) produce methane, although ruminants are the largest source per unit of feed intake.
+
+-   **manure management** - describes the methods used to capture, store, treat and use animal manure within a farm system. The choice of manure management techniques can significantly alter the GHG emissions and wider environmental impact of the manure.
+
+-   **agricultural soils**
+
+-   **fuel combustion** - including emissions from static and mobile machinery.
+
+-   **liming** - a common agricultural practice where lime is applied to soils to raise pH, optimising plant growth through improved nutrient uptake. Maintaining optimum pH has multiple benefits including minimising fertiliser waste and associated diffuse pollution.
+
+-   **other emission sources** (including urea application, and non-energy products from fuels and solvent use). Urea-based fertilizers are applied to soils to improve the availability of nitrogen for plants. However increased nitrogen also impacts soil microbial activity, resulting in increased nitrous oxide emissions. Excess urea may leach into the environment causing diffuse pollution or volatilize into ammonia. Non-energy products from fuels and solvent use include lubricants, paraffin waxes, bitumen/asphalt, and solvents. Carbon dioxide is the major GHG released from the use of these products.
+
+Some emission sources cut across several agriculture subsectors. For example, both dairy and arable farmers will produce emissions from the process of fuel combustion.
+
+More information about how the emission sources have been grouped is available in the <a href = methodology.html> Methodology</a>.
+
+## About nitrogen in agriculture
+
+Nitrogen is an essential nutrient for plant growth. Nitrogen supplied by fertiliser, soil and other sources are consumed in harvested crops and animal products. However, excess nitrogen can also be lost to the wider environment. Losses of nitrogen to the environment can have harmful effects on, for example, climate change, biodiversity, air quality and water quality.
+
+## About national nitrogen use estimates
+
+National results for agriculture nitrogen use efficiency are available in the Scottish Nitrogen Balance Sheet. Results are available for 2021.
+
+## About average farm GHG emissions
+
+Average farm estimates complement the national results by providing a view of emissions and nitrogen use at a whole-farm level and how these vary over time
+
+Farms are complex businesses with multiple enterprises that contribute to GHG emissions. For example, cereal farms may have livestock and the scale of this secondary enterprise can vary.
+
+Average farm estimates include emissions from farm production activities. They do not account for any sequestration by woodland areas or soil.
+
+Data do not cover the full agricultural industry and are not comparable with national estimates.
+
+Farm data are collected through the Farm Business Survey. This provides a consistent and high-quality input data set about farm activities. It is a survey of around 400 commercial farms (whose standard output exceeds around £20,000 per year and are not part time). The sample excludes farm types not in receipt of support payments (such as pigs, poultry and horticulture). Results are for the accounting year 2022-23, which relates to the 2022 crop year. The survey sample is weighted using results from the 2022 June Agricultural Census.
+
+Average results are shown for the median farm and as such are not directly comparable to results published on farm income.
+
+Farm GHG emissions are estimated using a carbon footprint calculator tool (Agrecalc). It is based on the life cycle assessment (LCA) framework for estimating emissions from products and processes. The LCA accounts for emissions up to when product leaves the farm. The tool uses the latest IPCC Tier I and Tier II as well as national figures from the UK National GHG Inventory in its calculations. It is PAS2050:2011 certified. Different results may be obtained using different carbon calculators or different methods, for example using an inventory approach.
+
+Results for 2022-23 include methodological improvements to Agrecalc methodology for estimating GHG emissions. These include changes to GWP to stay aligned with the IPCC.
+
+Previous years have not yet been revised. Average farm emission results for 2022-23 are not directly comparable to previous years. Caution should be used when comparing with previous years as some differences in estimates will be attributable to changes in methodology.
+
+### About average farm emissions and emissions intensity
+
+Farm GHG emissions in this report are:
+
+-   Absolute gross emissions per hectare (CO~2~e/ha)
+
+-   Emissions intensity (CO~2~e/kg)
+
+Absolute gross emissions are emissions from a unit area of agriculture land (hectare) adjusted for forage quality. This accounts for large differences in rough grazing area and quality between farms.
+
+Emissions intensity is the carbon footprint of a unit of product or output (kg) up to the farm gate. It includes all types of agricultural products produced on the farm.
+
+## About average farm nitrogen use estimates
+
+Farm nitrogen estimates are based on standard estimates of nitrogen content in all inputs and outputs. The amount of nitrogen is estimated for all farm inputs and outputs up to farm gate, where possible. Limited information is available for some inputs and outputs.
+
+Organic farms are excluded from these estimates as limited information is collected on their use of biological fixation of nitrogen. As such, the results are not directly comparable to other results based on the Farm Business Survey.
+
+### About average farm nitrogen balance and use efficiency
+
+Nitrogen use estimates in this report are:
+
+-   Nitrogen balance (kg N surplus / ha)
+
+-   Nitrogen use efficiency NUE (% N output / N input)
+
+Nitrogen balance is the difference between total nitrogen input and output. A higher balance indicates less efficient use of nitrogen. It provides an estimate of the size of the nitrogen surplus not being captured in agricultural products that is potentially available for losses.
+
+Nitrogen use efficiency (NUE) is the ratio of nitrogen outputs to inputs. It indicates the proportion of nitrogen used in the farm system. This measure allows for better comparison across farms. NUE values should always be interpreted in relation to nitrogen surpluses and nitrogen outputs.
+
+A higher NUE typically indicates a more efficient use of nitrogen but very high values may indicate unsustainable "soil mining". The best range of NUE values depends on the type of farming activity as well as environmental conditions, livestock types and feed types.
+
+<br></br>
 
 # Glossary
 
-<b> Absolute gross GHG emissions (tonnes CO2 equivalent per hectare):</b> measures the total gross GHG emissions from a unit area of agriculture land (hectare).
+<b> Absolute gross GHG emissions (tonnes CO~2~ equivalent per hectare):</b> measures the total gross GHG emissions from a unit area of agriculture land (hectare).
 
-<b>Carbon dioxide equivalent (CO2e):</b> provides an estimate of total GHG emission taking into account the different effects that different gases have on climate change, known as their global warming potential (GWP).
+<b>Carbon dioxide equivalent (CO~2~e):</b> provides an estimate of total GHG emission taking into account the different effects that different gases have on climate change, known as their global warming potential (GWP).
 
-<b>Emissions intensity (kg CO2 equivalent per kg of output):</b> measures the carbon footprint of a unit of product up to the farm gate. It includes all types of farm product.
+<b>Emissions intensity (kg CO~2~ equivalent per kg of output):</b> measures the carbon footprint of a unit of product up to the farm gate. It includes all types of farm product.
 
 <b>Enteric fermentation:</b> a digestive process whereby carbohydrates are broken down by microorganisms into simple molecules. Both ruminant animals (e.g. cattle and sheep), and some non-ruminant animals (e.g. swine and horses) produce methane, although ruminants are the largest source per unit of feed intake.
 
@@ -1212,7 +1032,7 @@ The changes in nitrogen input and output between 2021-22 and 2022-23 that result
 
 <b>Manure management:</b> describes the methods used to capture, store, treat and use animal manure within a farm system. The choice of manure management techniques can significantly alter the GHG emissions and wider environmental impact of the manure.
 
-<b>Nitrogen balance (kg N surplus per hectare):</b> the difference between total nitrogen nput and output.
+<b>Nitrogen balance (kg N surplus per hectare):</b> the difference between total nitrogen input and output.
 
 <b>Nitrogen use efficiency (% N output / N input):</b> the ratio of nitrogen outputs to inputs.
 
@@ -1222,44 +1042,20 @@ The changes in nitrogen input and output between 2021-22 and 2022-23 that result
 
 <b>Urea application:</b> Urea-based fertilizers are applied to soils to improve the availability of nitrogen for plants. However increased nitrogen also impacts soil microbial activity, resulting in increased nitrous oxide emissions. Excess urea may leach into the environment causing diffuse pollution or volatilize into ammonia.
 
+<br></br>
+
 # Data and Methodology
 
 ## How to access background or source data
 
-The data collected for this publication are available...
+The data collected for this publication are available to download in the <a href = data.html>Data</a> section.
 
 ## Methodology
 
-More detailed information is available in the Methodology [link].
+More detailed information is available in the <a href = methodology.html> Methodology</a>.
 
-# Tell us what you think
+<br></br>
 
-We are always interested to hear from our users about how our statistics are used, and how they can be improved.
-
-## Feedback survey
-
-We'd appreciate it if you would complete our short feedback survey [LINK] on this publication.
-
-## Enquiries
-
-For enquiries about this publication please contact:
-
-Jackie Massaya
-
-Rural and Environmental Science and Analytical Services Statistics
-
-e-mail: [agric.stats\@gov.scot](mailto:agric.stats@gov.scot){.email}
-
-For general enquiries about Scottish Government statistics please contact:
-
-Office of the Chief Statistician
-
-e-mail: [statistics.enquiries\@gov.scot](mailto:statistics.enquiries@gov.scot){.email}
-
-## Join our mailing list
-
-If you would like to receive notification about statistical publications, or find out about consultations on our statistics please join the [ScotStat mailing list](http://www.gov.scot/scotstat).
-
-## Future publications
+# Future publications
 
 Details of future publications can be found on our [forthcoming publications](https://www.gov.scot/publications/official-statistics-forthcoming-publications/) page.

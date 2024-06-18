@@ -4,6 +4,7 @@
 library(readxl) 
 library(tidyverse)
 library(data.table)
+library(kableExtra)
 
 # set parameters ----
 CurrentYear = 2022
@@ -12,6 +13,7 @@ sectors <- c("Arable", "Dairy", "Dairy beef", "Other", "Sheep", "Suckler beef"
 )
 
 national_data <- "C:/Users/U456727/OneDrive - SCOTS Connect/Economic Statistics/Data lab 2024/GHG inventory data 2022.xlsx"
+table_1 <- "C:/Users/U456727/OneDrive - SCOTS Connect/Economic Statistics/GHG emissions and N use report/Data/GHG inventory tables in report.xlsx"
 
 #load data----
 #read in national totals
@@ -28,6 +30,8 @@ sec_tot <- read_excel(national_data, sheet = "subsector_total")
 # read in subsector gas compostion for latest year bar chart
 sec_source <- read_excel(national_data, sheet = "subsector_source")
 
+#read in table 1
+table_1 <- read_excel(table_1, sheet = "table 1")
 
 
 #sort data----
@@ -87,3 +91,11 @@ sec_source <- sec_source %>% dplyr::arrange(total)
 #for plotly- it ignores order of dataset - need to get order and then set Industry as factor
 sec_order <- sec_source$Sector
 sec_source$Sector<- factor(sec_source$Sector, levels = sec_order)
+
+
+# table 1 ----
+# change values to percentages
+table_1_pct <- table_1 %>% mutate(across(where(is.numeric), ~round(.x,2)*100)) %>% 
+  mutate(across(where(is.numeric), ~paste0(.x, "%")))
+
+
