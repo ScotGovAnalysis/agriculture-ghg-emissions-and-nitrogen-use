@@ -203,18 +203,17 @@ Double click the chart to zoom in. Double click again to reset.
 </div>
 
  
-```{r fig5a, echo = FALSE, fig.height= 6}
+```{r fig5a, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5a
 ```
 <font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
-<strong> Download data for this chart </strong>
+<b> Download data for this chart </b>
 
-<a href = download/Absolute_All Types.xlsx>
+<a href = download/Absolute_AllTypes.xlsx>
   <button class="btn pdf">
   .xlsx </button> </a>
-  
-  <a href = download/Absolute_All Types.csv>
+<a href = download/Absolute_AllTypes.csv>
   <button class="btn pdf">
   .csv </button> </a>
 
@@ -228,10 +227,19 @@ Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box pl
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig5b, echo = FALSE, fig.height= 6}
+```{r fig5b, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5b
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Absolute_Cereal.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Absolute_Cereal.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### General cropping
 
@@ -243,10 +251,19 @@ Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box pl
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig5c, echo = FALSE, fig.height= 6}
+```{r fig5c, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5c
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Absolute_GeneralCropping.xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Absolute_GeneralCropping.csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Dairy
 
@@ -258,10 +275,20 @@ Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box pl
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig5d, echo = FALSE, fig.height= 6}
+```{r fig5d, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5d
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Absolute_Dairy.xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Absolute_Dairy.csv >
+  <button class="btn pdf">
+  .csv </button> </a>
+
 
 ### Specialist sheep (LFA)
 
@@ -273,10 +300,20 @@ Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box pl
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig5e, echo = FALSE, fig.height= 6}
+```{r fig5e, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5e
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Absolute_SpecialistSheep(LFA).xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Absolute_SpecialistSheep(LFA).csv >
+  <button class="btn pdf">
+  .csv </button> </a>
+
 
 ### Specialist cattle (LFA)
 
@@ -288,10 +325,19 @@ Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box pl
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig5f, echo = FALSE, fig.height= 6}
+```{r fig5f, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5f
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Absolute_SpecialistCattle(LFA).xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Absolute_SpecialistCattle(LFA).csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Cattle and sheep (LFA)
 
@@ -303,10 +349,19 @@ Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box pl
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig5g, echo = FALSE, fig.height= 6}
+```{r fig5g, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5g
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Absolute_CattleandSheep(LFA).xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Absolute_CattleandSheep(LFA).csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Lowland cattle and sheep
 
@@ -318,10 +373,19 @@ Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box pl
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig5h, echo = FALSE, fig.height= 6}
+```{r fig5h, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5h
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Absolute_LowlandCattleandSheep.xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Absolute_LowlandCattleandSheep.csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Mixed
 
@@ -333,10 +397,19 @@ Median farm absolute gross GHG emissions per hectare, 2019-20 to 2022-23. Box pl
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig5i, echo = FALSE, fig.height= 6}
+```{r fig5i, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5i
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 4 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx).</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Absolute_Mixed.xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Absolute_Mixed.csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ## {-}
 
@@ -364,11 +437,20 @@ Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the media
 Double click the chart to zoom in. Double click again to reset.  
 </div>
  
-```{r fig6a, echo = FALSE, fig.height= 6}
+```{r fig6a, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig6a
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Intensity_AllTypes.xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Intensity_AllTypes.csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Cereal
 
@@ -380,12 +462,21 @@ Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the media
 Double click the chart to zoom in. Double click again to reset.  
 </div>
  
-```{r fig6b, echo = FALSE, fig.height= 6}
+```{r fig6b, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig6b
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
+<b> Download data for this chart </b>
+
+<a href = download/Intensity_Cereal.xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Intensity_Cereal.csv >
+  <button class="btn pdf">
+  .csv </button> </a>
+  
 ### General cropping
 
 **Average general cropping farm greenhouse gas (GHG) emission intensity**
@@ -396,11 +487,20 @@ Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the media
 Double click the chart to zoom in. Double click again to reset.  
 </div>
  
-```{r fig6c, echo = FALSE, fig.height= 6}
+```{r fig6c, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig6c
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Intensity_GeneralCropping.xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Intensity_GeneralCropping.csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Dairy
 
@@ -412,11 +512,20 @@ Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the media
 Double click the chart to zoom in. Double click again to reset.  
 </div>
  
-```{r fig6d, echo = FALSE, fig.height= 6}
+```{r fig6d, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig6d
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Intensity_Dairy.xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Intensity_Dairy.csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Specialist sheep (LFA)
 
@@ -428,11 +537,20 @@ Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the media
 Double click the chart to zoom in. Double click again to reset.  
 </div>
  
-```{r fig6e, echo = FALSE, fig.height= 6}
+```{r fig6e, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig6e
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Intensity_SpecialistSheep(LFA).xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Intensity_SpecialistSheep(LFA).csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Specialist cattle (LFA)
 
@@ -444,11 +562,20 @@ Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the media
 Double click the chart to zoom in. Double click again to reset.  
 </div>
  
-```{r fig6f, echo = FALSE, fig.height= 6}
+```{r fig6f, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig6f
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Intensity_SpecialistCattle(LFA).xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Intensity_SpecialistCattle(LFA).csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Cattle and sheep (LFA)
 
@@ -460,11 +587,20 @@ Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the media
 Double click the chart to zoom in. Double click again to reset.  
 </div>
  
-```{r fig6g, echo = FALSE, fig.height= 6}
+```{r fig6g, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig6g
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Intensity_CattleandSheep(LFA).xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Intensity_CattleandSheep(LFA).csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Lowland cattle and sheep
 
@@ -476,11 +612,20 @@ Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the media
 Double click the chart to zoom in. Double click again to reset.  
 </div>
  
-```{r fig6h, echo = FALSE, fig.height= 6}
+```{r fig6h, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig6h
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Intensity_LowlandCattleandSheep.xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Intensity_LowlandCattleandSheep.csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Mixed
 
@@ -492,11 +637,20 @@ Median farm GHG emission intensity, 2019-20 to 2022-23. Box plot shows the media
 Double click the chart to zoom in. Double click again to reset.  
 </div>
  
-```{r fig6i, echo = FALSE, fig.height= 6}
+```{r fig6i, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig6i
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 5 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Intensity_Mixed.xlsx >
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Intensity_Mixed.csv >
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ## {-}
 
@@ -530,11 +684,20 @@ Mixed farms showed an average emission intensity higher than arable farms, at 1.
 Double click the chart to zoom in. Double click again to reset.  
 </div>
  
-```{r fig7a, echo = FALSE, fig.height= 6}
+```{r fig7a, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig7a
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Nbalance_AllTypes.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Nbalance_AllTypes.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Cereal
 
@@ -546,11 +709,20 @@ Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and 
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig7b, echo = FALSE, fig.height= 6}
+```{r fig7b, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig7b
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Nbalance_Cereal.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Nbalance_Cereal.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### General cropping
 
@@ -562,11 +734,20 @@ Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and 
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig7c, echo = FALSE, fig.height= 6}
+```{r fig7c, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig7c
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Nbalance_GeneralCropping.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Nbalance_GeneralCropping.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Dairy
 
@@ -578,12 +759,21 @@ Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and 
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig7d, echo = FALSE, fig.height= 6}
+```{r fig7d, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig7d
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
+<b> Download data for this chart </b>
+
+<a href = download/Nbalance_Dairy.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Nbalance_Dairy.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
+  
 ### Specialist sheep (LFA)
 
 **Average specialist sheep LFA (less favoured area) farm nitrogen balance decreases**
@@ -594,11 +784,20 @@ Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and 
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig7e, echo = FALSE, fig.height= 6}
+```{r fig7e, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig7e
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Nbalance_SpecialistSheep(LFA).xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Nbalance_SpecialistSheep(LFA).csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Specialist cattle (LFA)
 
@@ -610,11 +809,20 @@ Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and 
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig7f, echo = FALSE, fig.height= 6}
+```{r fig7f, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig7f
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Nbalance_SpecialistCattle(LFA).xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Nbalance_SpecialistCattle(LFA).csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Cattle and sheep (LFA)
 
@@ -626,11 +834,20 @@ Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and 
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig7g, echo = FALSE, fig.height= 6}
+```{r fig7g, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig7g
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Nbalance_CattleandSheep(LFA).xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Nbalance_CattleandSheep(LFA).csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Lowland cattle and sheep
 
@@ -642,11 +859,20 @@ Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and 
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig7h, echo = FALSE, fig.height= 6}
+```{r fig7h, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig7h
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Nbalance_LowlandCattleandSheep.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Nbalance_LowlandCattleandSheep.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Mixed farm
 
@@ -658,11 +884,20 @@ Median farm nitrogen balance, 2019-20 to 2022-23. Box plot shows the median and 
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig7i, echo = FALSE, fig.height= 6}
+```{r fig7i, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig7i
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 6 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/Nbalance_Mixed.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/Nbalance_Mixed.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ## {-}
 
@@ -704,11 +939,20 @@ Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the medi
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig8a, echo = FALSE, fig.height= 6}
+```{r fig8a, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig8a
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/NUE_AllTypes.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/NUE_AllTypes.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Cereal
 
@@ -720,12 +964,21 @@ Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the medi
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig8b, echo = FALSE, fig.height= 6}
+```{r fig8b, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig8b
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
+<b> Download data for this chart </b>
+
+<a href = download/NUE_Cereal.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/NUE_Cereal.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
+  
 ### General cropping
 
 **Average general cropping farm nitrogen use efficiency increases**
@@ -736,12 +989,21 @@ Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the medi
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig8c, echo = FALSE, fig.height= 6}
+```{r fig8c, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig8c
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
+<b> Download data for this chart </b>
+
+<a href = download/NUE_GeneralCropping.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/NUE_GeneralCropping.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
+  
 ### Dairy
 
 **Average dairy farm nitrogen use efficiency remains stable**
@@ -752,11 +1014,20 @@ Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the medi
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig8d, echo = FALSE, fig.height= 6}
+```{r fig8d, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig8d
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/NUE_Dairy.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/NUE_Dairy.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 
 ### Specialist sheep (LFA)
@@ -769,11 +1040,20 @@ Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the medi
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig8e, echo = FALSE, fig.height= 6}
+```{r fig8e, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig8e
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/NUE_SpecialistSheep(LFA).xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/NUE_SpecialistSheep(LFA).csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Specialist cattle (LFA)
 
@@ -785,11 +1065,20 @@ Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the medi
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig8f, echo = FALSE, fig.height= 6}
+```{r fig8f, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig8f
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/NUE_SpecialistCattle(LFA).xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/NUE_SpecialistCattle(LFA).csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Cattle and sheep (LFA)
 
@@ -801,11 +1090,20 @@ Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the medi
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig8g, echo = FALSE, fig.height= 6}
+```{r fig8g, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig8g
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/NUE_CattleandSheep(LFA).xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/NUE_CattleandSheep(LFA).csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ### Lowland cattle and sheep
 
@@ -817,12 +1115,21 @@ Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the medi
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig8h, echo = FALSE, fig.height= 6}
+```{r fig8h, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig8h
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
 
+<b> Download data for this chart </b>
+
+<a href = download/NUE_LowlandCattleandSheep.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/NUE_LowlandCattleandSheep.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
+  
 ### Mixed
 
 **Average mixed farm nitrogen use efficiency decreases**
@@ -833,11 +1140,20 @@ Median farm nitrogen use efficiency, 2019-20 to 2022-23. Box plot shows the medi
 Double click the chart to zoom in. Double click again to reset.  
 </div>
 
-```{r fig8i, echo = FALSE, fig.height= 6}
+```{r fig8i, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig8i
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23. Data for this chart is taken from Table 7 of the [data tables](download/scottish_agriculture_ghg_n_use_data_tables.xlsx)</font>
+<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+
+<b> Download data for this chart </b>
+
+<a href = download/NUE_Mixed.xlsx>
+  <button class="btn pdf">
+  .xlsx </button> </a>
+<a href = download/NUE_Mixed.csv>
+  <button class="btn pdf">
+  .csv </button> </a>
 
 ## {-}
 

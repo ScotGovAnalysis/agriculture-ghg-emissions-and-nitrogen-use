@@ -106,7 +106,7 @@ plotlybox <- function(i, title_label, quantity_label, y_label, colour_code=darkb
   ) %>% 
   
     add_annotations(
-      x=3.2,
+      x=3.4,
       y=0.98,
       yanchor="top",
       yref="paper",

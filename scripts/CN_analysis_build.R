@@ -40,118 +40,120 @@ source('scripts/Plots.R')
 # rmarkdown::render('CN_ppt.Rmd')
 
 
-# Create individual csvs and xls for each farmtype
-types <- unique(Table_1$`Farm type`)
+# # Create individual csvs and xls for each farmtype
+ types <- unique(Table_1$`Farm type`)
+# 
+# 
+# # Absolute
+# # 
+# export_data1 <- function(t) {
+#   # Filter data for the current type
+#   df_filtered <- Table_1 %>% filter(`Farm type` == t)
+# 
+#   # Create file names
+#   csv_file <- paste0("download/Absolute_", gsub(" ", "", t), ".csv")
+#   xlsx_file <- paste0("download/Absolute_", gsub(" ", "", t), ".xlsx")
+# 
+#   names(df_filtered)<-NULL
+# 
+# 
+#   df_filtered<-rbind(c("Absolute gross greenhouse gas (GHG) emissions, 2019-20 to 2022-23", rep("",5)), rep("",6), c("Unit", "", "tCO2e/ha", rep("",3)), rep("",6),
+#                      c("Farm type", "Measure", "2019-20", "2020-21", "2021-22", "2022-23"), df_filtered)
+# 
+#   # Export to CSV
+#   write.csv(df_filtered, csv_file, row.names = FALSE)
+# 
+#   # Export to XLSX
+#   writexl::write_xlsx(df_filtered, xlsx_file)
+# }
+# 
+# # Apply the function to each type
+# lapply(types, export_data1)
+# 
+# 
+# # Intensity
+# 
+# 
+# export_data2 <- function(t) {
+#   # Filter data for the current type
+#   df_filtered <- Table_2 %>% filter(`Farm type` == t)
+# 
+#   # Create file names
+#   csv_file <- paste0("download/Intensity_", gsub(" ", "", t), ".csv")
+#   xlsx_file <- paste0("download/Intensity_", gsub(" ", "", t), ".xlsx")
+# 
+#   names(df_filtered)<-NULL
+# 
+# 
+#   df_filtered<-rbind(c("Greenhouse gas (GHG) emission intensity, 2019-20 to 2022-23", rep("",5)), rep("",6), c("Unit", "", "kg CO2e/kg output", rep("",3)), rep("",6),
+#                      c("Farm type", "Measure", "2019-20", "2020-21", "2021-22", "2022-23"), df_filtered)
+# 
+#   # Export to CSV
+#   write.csv(df_filtered, csv_file, row.names = FALSE)
+# 
+#   # Export to XLSX
+#   writexl::write_xlsx(df_filtered, xlsx_file)
+# }
+# 
+# # Apply the function to each type
+# lapply(types, export_data2)
+# 
+# 
+# 
+# # Nitrogen balance
+# 
+# 
+# export_data3 <- function(t) {
+#   # Filter data for the current type
+#   df_filtered <- Table_3 %>% filter(`Farm type` == t)
+# 
+#   # Create file names
+#   csv_file <- paste0("download/Nbalance_", gsub(" ", "", t), ".csv")
+#   xlsx_file <- paste0("download/Nbalance_", gsub(" ", "", t), ".xlsx")
+# 
+#   names(df_filtered)<-NULL
+# 
+# 
+#   df_filtered<-rbind(c("Nitrogen balance, 2019-20 to 2022-23", rep("",5)), rep("",6), c("Unit", "", "kg N surplus/ha", rep("",3)), rep("",6),
+#                      c("Farm type", "Measure", "2019-20", "2020-21", "2021-22", "2022-23"), df_filtered)
+# 
+#   # Export to CSV
+#   write.csv(df_filtered, csv_file, row.names = FALSE)
+# 
+#   # Export to XLSX
+#   writexl::write_xlsx(df_filtered, xlsx_file)
+# }
+# 
+# # Apply the function to each type
+# lapply(types, export_data3)
+# 
+# 
+# # NUE
+# 
+# 
+# export_data4 <- function(t) {
+#   # Filter data for the current type
+#   df_filtered <- Table_4 %>% filter(`Farm type` == t)
+# 
+#   # Create file names
+#   csv_file <- paste0("download/NUE_", gsub(" ", "", t), ".csv")
+#   xlsx_file <- paste0("download/NUE_", gsub(" ", "", t), ".xlsx")
+# 
+#   names(df_filtered)<-NULL
+# 
+# 
+#   df_filtered<-rbind(c("Nitrogen use efficiency, 2019-20 to 2022-23", rep("",5)), rep("",6), c("Unit", "", "%", rep("",3)), rep("",6),
+#                      c("Farm type", "Measure", "2019-20", "2020-21", "2021-22", "2022-23"), df_filtered)
+# 
+#   # Export to CSV
+#   write.csv(df_filtered, csv_file, row.names = FALSE)
+# 
+#   # Export to XLSX
+#   writexl::write_xlsx(df_filtered, xlsx_file)
+# }
+# 
+# # Apply the function to each type
+# lapply(types, export_data4)
 
 
-# Absolute
-
-export_data1 <- function(t) {
-  # Filter data for the current type
-  df_filtered <- Table_1 %>% filter(`Farm type` == t)
-
-  # Create file names
-  csv_file <- paste0("download/Absolute_", t, ".csv")
-  xlsx_file <- paste0("download/Absolute_", t, ".xlsx")
-  
-  names(df_filtered)<-NULL
-  
-  
-  df_filtered<-rbind(c("Absolute gross greenhouse gas (GHG) emissions, 2019-20 to 2022-23", rep("",5)), rep("",6), c("Unit", "", "tCO2e/ha", rep("",3)), rep("",6), 
-                     c("Farm type", "Measure", "2019-20", "2020-21", "2021-22", "2022-23"), df_filtered)
-  
-  # Export to CSV
-  write.csv(df_filtered, csv_file, row.names = FALSE)
-  
-  # Export to XLSX
-  writexl::write_xlsx(df_filtered, xlsx_file)
-}
-
-# Apply the function to each type
-lapply(types, export_data1)
-
-
-# Intensity
-
-
-export_data2 <- function(t) {
-  # Filter data for the current type
-  df_filtered <- Table_2 %>% filter(`Farm type` == t)
-  
-  # Create file names
-  csv_file <- paste0("download/Intensity_", t, ".csv")
-  xlsx_file <- paste0("download/Intensity_", t, ".xlsx")
-  
-  names(df_filtered)<-NULL
-  
-  
-  df_filtered<-rbind(c("Greenhouse gas (GHG) emission intensity, 2019-20 to 2022-23", rep("",5)), rep("",6), c("Unit", "", "kg CO2e/kg output", rep("",3)), rep("",6), 
-                     c("Farm type", "Measure", "2019-20", "2020-21", "2021-22", "2022-23"), df_filtered)
-  
-  # Export to CSV
-  write.csv(df_filtered, csv_file, row.names = FALSE)
-  
-  # Export to XLSX
-  writexl::write_xlsx(df_filtered, xlsx_file)
-}
-
-# Apply the function to each type
-lapply(types, export_data2)
-
-
-
-# Nitrogen balance
-
-
-export_data3 <- function(t) {
-  # Filter data for the current type
-  df_filtered <- Table_3 %>% filter(`Farm type` == t)
-  
-  # Create file names
-  csv_file <- paste0("download/Nbalance_", t, ".csv")
-  xlsx_file <- paste0("download/Nbalance_", t, ".xlsx")
-  
-  names(df_filtered)<-NULL
-  
-  
-  df_filtered<-rbind(c("Nitrogen balance, 2019-20 to 2022-23", rep("",5)), rep("",6), c("Unit", "", "kg N surplus/ha", rep("",3)), rep("",6), 
-                     c("Farm type", "Measure", "2019-20", "2020-21", "2021-22", "2022-23"), df_filtered)
-  
-  # Export to CSV
-  write.csv(df_filtered, csv_file, row.names = FALSE)
-  
-  # Export to XLSX
-  writexl::write_xlsx(df_filtered, xlsx_file)
-}
-
-# Apply the function to each type
-lapply(types, export_data3)
-
-
-# NUE
-
-
-export_data4 <- function(t) {
-  # Filter data for the current type
-  df_filtered <- Table_4 %>% filter(`Farm type` == t)
-  
-  # Create file names
-  csv_file <- paste0("download/NUE_", t, ".csv")
-  xlsx_file <- paste0("download/NUE_", t, ".xlsx")
-  
-  names(df_filtered)<-NULL
-  
-  
-  df_filtered<-rbind(c("Nitrogen use efficiency, 2019-20 to 2022-23", rep("",5)), rep("",6), c("Unit", "", "%", rep("",3)), rep("",6), 
-                     c("Farm type", "Measure", "2019-20", "2020-21", "2021-22", "2022-23"), df_filtered)
-  
-  # Export to CSV
-  write.csv(df_filtered, csv_file, row.names = FALSE)
-  
-  # Export to XLSX
-  writexl::write_xlsx(df_filtered, xlsx_file)
-}
-
-# Apply the function to each type
-lapply(types, export_data4)
 
