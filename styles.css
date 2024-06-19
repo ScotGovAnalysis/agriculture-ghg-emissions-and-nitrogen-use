@@ -21,3 +21,14 @@ p,
   font-style: normal; /*Larger font for accessibility*/
   line-height: 1.8;
 }
+
+
+.btn {
+  font-size: large;
+  outline: 1px solid currentColor;
+  outline-offset: -1px;
+  color: #fff;
+  background-color: #0065bd;
+  margin: 0px;
+  margin-bottom: 10px;
+}

@@ -8,7 +8,9 @@ navbar:
       href: "data.html"
     - text: "Methodology"
       href: "methodology.html"
-         
+    - text: "Feedback"
+      href: "feedback.html"
+      
 output:
   html_document:
     css: styles.css
