@@ -1,0 +1,29 @@
+---
+title: "Data"
+author: no
+date: no
+sgtemplates:
+  footer:
+    link:
+      - href: "accessibility.html"
+        text: "Accessibility"
+      - href: "contact.html"
+        text: "Contact"
+  header:
+    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
+    toc:
+      sticky: false
+  navigation:
+    breadcrumb_trail:
+      - href: "index.html"
+        text: "Home"
+      - text: "Data"
+    toc:
+      sticky: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<a href = download/scottish_agriculture_ghg_n_use_data_tables.xlsx>Download</a> the Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23 data tables.
