@@ -34,6 +34,7 @@ source("scripts/CN_analysis_build.R")
 
 <b> Publication date: 27th June 2024 </b>
 
+
 <a href = download/scottish_agriculture_ghg_n_use_data_tables.xlsx> <button class="btn noprint"> Download data in .xlsx format </button></a>
 
 This report includes:
