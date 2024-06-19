@@ -1,25 +1,24 @@
 ---
 title: "Tell us what you think"
-author: no
-date: no
+date: "no"
 sgtemplates:
   footer:
     link:
-      - href: "accessibility.html"
-        text: "Accessibility"
-      - href: "contact.html"
-        text: "Contact"
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
   header:
     site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
     toc:
-      sticky: false
+      sticky: no
   navigation:
     breadcrumb_trail:
-      - href: "index.html"
-        text: "Home"
-      - text: "Feedback"
+    - href: index.html
+      text: Home
+    - text: Feedback
     toc:
-      sticky: false
+      sticky: no
 ---
 
 ```{r setup, include = FALSE}

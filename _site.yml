@@ -10,11 +10,9 @@ navbar:
       href: "methodology.html"
     - text: "Feedback"
       href: "feedback.html"
-      
-<<<<<<< HEAD
-=======
-         
->>>>>>> a705197e688e9f8aa5996f7576d64a7868ec2652
+    - text: "Accessibility"
+      href: "accessibility.html"
+
 output:
   html_document:
     css: styles.css

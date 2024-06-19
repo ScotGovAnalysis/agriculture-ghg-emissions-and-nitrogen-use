@@ -12,8 +12,8 @@ sectors <- c("Arable", "Dairy", "Dairy beef", "Other", "Sheep", "Suckler beef"
 #, "Total"
 )
 
-national_data <- "C:/Users/U456727/OneDrive - SCOTS Connect/Economic Statistics/Data lab 2024/GHG inventory data 2022.xlsx"
-table_1 <- "C:/Users/U456727/OneDrive - SCOTS Connect/Economic Statistics/GHG emissions and N use report/Data/GHG inventory tables in report.xlsx"
+national_data <- "C:/Users/U455049/OneDrive - SCOTS Connect/Economic Statistics/Data lab 2024/GHG inventory data 2022.xlsx"
+table_1 <- "C:/Users/U455049/OneDrive - SCOTS Connect/Economic Statistics/GHG emissions and N use report/Data/GHG inventory tables in report.xlsx"
 
 #load data----
 #read in national totals
@@ -98,4 +98,7 @@ sec_source$Sector<- factor(sec_source$Sector, levels = sec_order)
 table_1_pct <- table_1 %>% mutate(across(where(is.numeric), ~round(.x,2)*100)) %>% 
   mutate(across(where(is.numeric), ~paste0(.x, "%")))
 
-
+table_1_pct<-table_1_pct %>% 
+  mutate(`IPCC - emission source category`=ifelse(`IPCC - emission source category`==	
+                                                     "3D15Mineralisation/immobilisation", "	
+3D15 Mineralisation/immobilisation", `IPCC - emission source category`))

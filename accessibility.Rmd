@@ -1,25 +1,24 @@
 ---
 title: "Accessibility"
-author: no
 date: "27 June 2024"
 sgtemplates:
   footer:
     link:
-      - href: "accessibility.html"
-        text: "Accessibility"
-      - href: "contact.html"
-        text: "Contact"
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
   header:
     site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
     toc:
-      sticky: false
+      sticky: no
   navigation:
     breadcrumb_trail:
-      - href: "index.html"
-        text: "Home"
-      - text: "Accessibility"
+    - href: index.html
+      text: Home
+    - text: Accessibility
     toc:
-      sticky: false
+      sticky: no
 ---
 
 ```{r setup, include = FALSE}
