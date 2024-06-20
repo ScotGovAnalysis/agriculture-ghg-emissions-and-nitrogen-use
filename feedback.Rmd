@@ -1,6 +1,5 @@
 ---
 title: "Tell us what you think"
-date: "no"
 sgtemplates:
   footer:
     link:
@@ -9,7 +8,8 @@ sgtemplates:
     - href: contact.html
       text: Contact
   header:
-    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
+    site_branding: "Scottish agriculture greenhouse gas emissions and nitrogen use:
+      2022-23"
     toc:
       sticky: no
   navigation:

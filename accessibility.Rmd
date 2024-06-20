@@ -9,7 +9,8 @@ sgtemplates:
     - href: contact.html
       text: Contact
   header:
-    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
+    site_branding: "Scottish agriculture greenhouse gas emissions and nitrogen use:
+      2022-23"
     toc:
       sticky: no
   navigation:
@@ -24,6 +25,8 @@ sgtemplates:
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
 
 This website is run by the Scottish Government. We want it to be accessible and usable for as many people as possible.
 

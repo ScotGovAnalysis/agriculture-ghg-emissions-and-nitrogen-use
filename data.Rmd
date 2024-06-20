@@ -9,7 +9,8 @@ sgtemplates:
     - href: contact.html
       text: Contact
   header:
-    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
+    site_branding: "Scottish agriculture greenhouse gas emissions and nitrogen use:
+      2022-23"
     toc:
       sticky: no
   navigation:
@@ -24,5 +25,9 @@ sgtemplates:
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+<b>An Official Statistics in Development Publication for Scotland </b>
+
+Publication date: 27 June 2024
 
 <a href = download/scottish_agriculture_ghg_n_use_data_tables.xlsx>Download</a> the Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23 data tables.

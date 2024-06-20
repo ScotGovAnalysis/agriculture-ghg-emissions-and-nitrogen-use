@@ -102,3 +102,9 @@ table_1_pct<-table_1_pct %>%
   mutate(`IPCC - emission source category`=ifelse(`IPCC - emission source category`==	
                                                      "3D15Mineralisation/immobilisation", "	
 3D15 Mineralisation/immobilisation", `IPCC - emission source category`))
+
+
+# Save table_1 as xlsx and csv
+
+writexl::write_xlsx(table_1_pct, "Table_1.xlsx")
+write.csv(table_1_pct, "Table_1.csv")
