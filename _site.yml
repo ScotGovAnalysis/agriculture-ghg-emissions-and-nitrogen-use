@@ -10,8 +10,7 @@ navbar:
       href: "methodology.html"
     - text: "Feedback"
       href: "feedback.html"
-      
-         
+
 output:
   html_document:
     css: styles.css
@@ -20,7 +19,7 @@ output:
     fig_caption: true
     number_sections: false
     self_contained: false
-    template: "_template.html"
+    template: _template.html
     toc: true
     toc_depth: 2
-    toc_float: true
+    toc_float: false

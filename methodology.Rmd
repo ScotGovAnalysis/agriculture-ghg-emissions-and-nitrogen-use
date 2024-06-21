@@ -1,33 +1,37 @@
 ---
 title: "Methodology"
-author: no
-date: no
+date: "27 June 2024"
 sgtemplates:
   footer:
     link:
-      - href: "accessibility.html"
-        text: "Accessibility"
-      - href: "contact.html"
-        text: "Contact"
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
   header:
-    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
+    site_branding: "Scottish agriculture greenhouse gas emissions and nitrogen use:
+      2022-23"
     toc:
-      sticky: false
+      sticky: no
   navigation:
     breadcrumb_trail:
-      - href: "index.html"
-        text: "Home"
-      - text: "Methodology"
+    - href: index.html
+      text: Home
+    - text: Methodology
     toc:
-      sticky: false
+      sticky: no
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+<b>An Official Statistics in Development Publication for Scotland </b>
+
+
 -   Email: [agric.stats\@gov.scot](mailto:agric.stats@gov.scot)
 
 -   Phone: 0300 244 4000 (Scottish Government central enquiry unit)
 
--   Scottish Government [general enquiries](https://www.gov.scot/about/contact-information/)
+-   Scottish Government <a href ="https://www.gov.scot/about/contact-information/" target ="_blank">general enquiries</a> 
+

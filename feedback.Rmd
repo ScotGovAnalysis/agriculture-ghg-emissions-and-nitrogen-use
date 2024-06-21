@@ -1,25 +1,24 @@
 ---
 title: "Tell us what you think"
-author: no
-date: no
 sgtemplates:
   footer:
     link:
-      - href: "accessibility.html"
-        text: "Accessibility"
-      - href: "contact.html"
-        text: "Contact"
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
   header:
-    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
+    site_branding: "Scottish agriculture greenhouse gas emissions and nitrogen use:
+      2022-23"
     toc:
-      sticky: false
+      sticky: no
   navigation:
     breadcrumb_trail:
-      - href: "index.html"
-        text: "Home"
-      - text: "Feedback"
+    - href: index.html
+      text: Home
+    - text: Feedback
     toc:
-      sticky: false
+      sticky: no
 ---
 
 ```{r setup, include = FALSE}
@@ -30,7 +29,7 @@ We are always interested to hear from our users about how our statistics are use
 
 ## Feedback survey
 
-We'd appreciate it if you would complete our short [feedback survey](https://forms.office.com/Pages/ResponsePage.aspx?id=R3T3DoMQ7E24nyfHZQdoQF6cx9x8PptJl4aj8Z1_v9dURUtFRTRaUlY2N0pKWVgzRFFYMzUzQlZPVy4u) on this publication.
+We'd appreciate it if you would complete our short <a href ="https://forms.office.com/Pages/ResponsePage.aspx?id=R3T3DoMQ7E24nyfHZQdoQF6cx9x8PptJl4aj8Z1_v9dURUtFRTRaUlY2N0pKWVgzRFFYMzUzQlZPVy4u" target ="_blank">feedback survey</a> 
 
 ## Enquiries
 
@@ -58,4 +57,4 @@ e-mail: [statistics.enquiries\@gov.scot](mailto:statistics.enquiries@gov.scot){.
 
 ## Join our mailing list
 
-If you would like to receive notification about statistical publications, or find out about consultations on our statistics please join the [ScotStat mailing list](http://www.gov.scot/scotstat).
+If you would like to receive notification about statistical publications, or find out about consultations on our statistics please join the <a href ="https://scot.us20.list-manage.com/subscribe?u=04ac66a77bddcaae40a67c4ba&id=0bb948a047" target ="_blank">ScotStat mailing list</a>
