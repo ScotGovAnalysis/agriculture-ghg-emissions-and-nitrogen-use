@@ -99,3 +99,89 @@ table_1_pct <- table_1 %>% mutate(across(where(is.numeric), ~round(.x,2)*100)) %
   mutate(across(where(is.numeric), ~paste0(.x, "%")))
 
 
+# # export plot data csvs and xlsx ----
+# 
+# #Fig 1
+#   # select just agriculture and total
+#   df <- nat_tot %>% select(c(Year, industry_names[1], 
+#                              industry_names[8]))
+# 
+#   # Create file names
+#   csv_file <- paste0("download/Scot_ghg_emiss",".csv")
+#   xlsx_file <- paste0("download/Scot_ghg_emiss", ".xlsx")
+# 
+#   names(df)<-NULL
+# 
+# 
+#   df<-rbind(c("Total and agriculture greenhouse gas emissions in Scotland, 1990 to 2022",
+#                rep("",2)), 
+#              rep("",3),
+#              c("Unit", "", "MtCO2e"),
+#              rep("",3),
+#             c("Year", industry_names[1], "Total Scotland"), df)
+# 
+#   # Export to CSV
+#   write.csv(df, csv_file, row.names = FALSE)
+# 
+#   # Export to XLSX
+#   writexl::write_xlsx(df, xlsx_file)
+# 
+# # Fig 2----
+#   
+#   df <- sec_tot
+#   
+#   
+#   # Create file names
+#   csv_file <- paste0("download/agr_ss_ghg_emiss",".csv")
+#   xlsx_file <- paste0("download/agr_ss_ghg_emiss", ".xlsx")
+#   
+#   #change back to character 
+#   df$Subsector <- as.character(df$Subsector)
+#    
+#   names(df)<-NULL
+#   
+#  
+#   
+#   df<-rbind(c("Agriculture greenhouse gas (GHG) emissions in Scotland, by subsector, 2022",
+#               ""), 
+#             rep("",2),
+#             c("Unit", "MtCO2e"),
+#             rep("",2),
+#              c("Subsector", "GHG emissions" ), df)
+#   
+#   # Export to CSV
+#   write.csv(df, csv_file, row.names = FALSE)
+#   
+#   # Export to XLSX
+#   writexl::write_xlsx(df, xlsx_file)
+# 
+#   # Fig 3----
+#   
+#   df <- sec_source %>% select(-total)
+#   
+#   # round to 2dp
+#   df <- df %>% mutate(across(where(is.numeric), ~round(.x, 2)))
+#   
+#   # Create file names
+#   csv_file <- paste0("download/agr_source_ghg_emiss",".csv")
+#   xlsx_file <- paste0("download/agr_source_ghg_emiss", ".xlsx")
+#   
+#   #change back to character 
+#   df$Sector <- as.character(df$Sector)
+#   
+#   headings <- names(df)
+#   
+#   names(df) <- NULL
+#   
+#   df<-rbind(c("Agriculture greenhouse gas (GHG) emissions in Scotland, by subsector and emission source, 2022",
+#               rep("", 6)), 
+#             rep("",7),
+#             c("Unit", "", "MtCO2e", rep("", 4)),
+#             rep("",7),
+#             c(headings ), df)
+#   
+#   # Export to CSV
+#   write.csv(df, csv_file, row.names = FALSE)
+#   
+#   # Export to XLSX
+#   writexl::write_xlsx(df, xlsx_file)
