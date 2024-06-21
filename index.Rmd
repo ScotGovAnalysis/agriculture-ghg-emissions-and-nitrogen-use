@@ -35,7 +35,7 @@ source("scripts/CN_analysis_build.R")
 
 ```
 
-<b>An Official Statistics in Development Publication for Scotland </b>
+<b>An official statistics in development publication for Scotland </b>
 
 Publication date: 27 June 2024
 
@@ -108,7 +108,7 @@ Estimates cover similar but different time periods. Emissions for the agricultur
 
 It is important to note that agriculture and food production rely on natural processes. This means that agricultural activity will always cause a degree of GHG emissions. Emissions will also vary widely between different agricultural produce.
 
-## An Official Statistics in Development Publication for Scotland
+## An official statistics in development publication for Scotland
 
 These statistics are official statistics in development. Official statistics in development may be new or existing statistics, and will be tested with users, in line with the standards of trustworthiness, quality, and value in the <a href ="https://code.statisticsauthority.gov.uk/the-code/" target ="_blank">Code of Practice for Statistics</a>.
 
@@ -123,7 +123,7 @@ Scottish Government statistics are regulated by the Office for Statistics Regula
 Total and agriculture GHG emissions in Scotland, 1990 to 2022
 
 ::: {.alert .alert-info}
-Click and drag to zoom in on part of the chart. Double click to reset.
+Click and drag to zoom in on part of the chart. Click "Reset zoom" to reset.
 :::
 
 ```{r fig1, echo = FALSE}
@@ -156,7 +156,7 @@ More results for total Scotland GHG emissions, including for agriculture, are av
 Agriculture GHG emissions in Scotland, by subsector, 2022
 
 ::: {.alert .alert-info}
-Click and drag to zoom in on part of the chart. Double click to reset.
+Click and drag to zoom in on part of the chart. Click "Reset zoom" to reset.
 :::
 
 ```{r fig2, echo = FALSE}
@@ -165,7 +165,7 @@ fig2
 
 ```
 
-<font size="2"><strong>Source:</strong> <a href ="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish Greenhouse Gas Statistics 2022</a>.
+<font size="2"><strong>Source:</strong> <a href ="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</a>.
 
 
 <strong> Download data for this chart </strong> 
@@ -195,7 +195,7 @@ Emissions from both the sheep and dairy beef subsectors fell by 17% from 1990 to
 Agriculture greenhouse gas (GHG) emissions in Scotland, by subsector and emission source, 2022
 
 ::: {.alert .alert-info}
-Click and drag to zoom in on part of the chart. Double click to reset. Click on individual emission sources on the right to select or deselect.
+Click and drag to zoom in on part of the chart. Click "Reset zoom" to reset. Click on individual emission sources on the right to select or deselect.
 :::
 
 ```{r fig3, echo = FALSE}
@@ -203,7 +203,7 @@ fig3
 
 ```
 
-<font size="2"><strong>Source:</strong> <a href ="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish Greenhouse Gas Statistics 2022</a>.
+<font size="2"><strong>Source:</strong> <a href ="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</a>.
 
 <strong> Download data for this chart </strong> 
 
@@ -243,7 +243,7 @@ Double click the chart to zoom in. Double click again to reset.
 ```{r fig5a, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5a
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -270,7 +270,7 @@ Double click the chart to zoom in. Double click again to reset.
 ```{r fig5b, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5b
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23.</font>
 
 <b> Download data for this chart </b>
 
@@ -294,7 +294,7 @@ Double click the chart to zoom in. Double click again to reset.
 ```{r fig5c, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5c
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23.</font>
 
 <b> Download data for this chart </b>
 
@@ -318,7 +318,7 @@ Double click the chart to zoom in. Double click again to reset.
 ```{r fig5d, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5d
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -343,7 +343,7 @@ Double click the chart to zoom in. Double click again to reset.
 ```{r fig5e, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5e
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -368,7 +368,7 @@ Double click the chart to zoom in. Double click again to reset.
 ```{r fig5f, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5f
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -392,7 +392,7 @@ Double click the chart to zoom in. Double click again to reset.
 ```{r fig5g, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5g
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -416,7 +416,7 @@ Double click the chart to zoom in. Double click again to reset.
 ```{r fig5h, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5h
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -440,7 +440,7 @@ Double click the chart to zoom in. Double click again to reset.
 ```{r fig5i, echo = FALSE, fig.height= 4.5, fig.width= 6}
 fig5i
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -481,7 +481,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig6a
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -506,7 +506,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig6b
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -531,7 +531,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig6c
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -556,7 +556,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig6d
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -581,7 +581,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig6e
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -606,7 +606,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig6f
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -631,7 +631,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig6g
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -656,7 +656,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig6h
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -681,7 +681,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig6i
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -728,7 +728,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig7a
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -753,7 +753,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig7b
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -778,7 +778,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig7c
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -803,7 +803,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig7d
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -828,7 +828,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig7e
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -853,7 +853,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig7f
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -878,7 +878,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig7g
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -903,7 +903,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig7h
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -928,7 +928,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig7i
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -982,7 +982,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig8a
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -1007,7 +1007,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig8b
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -1032,7 +1032,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig8c
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -1057,7 +1057,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig8d
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -1083,7 +1083,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig8e
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -1108,7 +1108,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig8f
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -1133,7 +1133,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig8g
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -1158,7 +1158,7 @@ Double click the chart to zoom in. Double click again to reset.
 fig8h
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -1184,7 +1184,7 @@ fig8i
 
 
 ```
-<font size="2"><strong>Source:</strong> Farm Business Survey 2022-23.</font>
+<font size="2"><strong>Source:</strong> Scottish agriculture greenhouse gas emissions and nitrogen use 2022-23</font>
 
 <b> Download data for this chart </b>
 
@@ -1252,7 +1252,7 @@ This report groups emissions within the agriculture sector into subsectors. Subs
 
 **Table 1: Allocation of emission sources to agricultural subsector.**
 
-Proportions are based on a [methodology developed by SRUC](https://www.gov.scot/publications/disaggregating-headline-smart-inventory-figures/). The sectoral split of emissions are based on proportions from 2018 and are applied to the entire timeseries.
+Proportions are based on a <a href ="https://www.gov.scot/publications/disaggregating-headline-smart-inventory-figures/" target ="_blank">methodology developed by SRUC</a>. The sectoral split of emissions are based on proportions from 2018 and are applied to the entire timeseries.
 
 <button class="btn btn-primary" data-toggle="collapse" data-target="#BlockName"> Show/Hide data table </button>  
 <div id="BlockName" class="collapse">  
@@ -1331,7 +1331,7 @@ Absolute gross emissions are emissions from a unit area of agricultural land (he
 
 Emission intensity is the carbon footprint of a unit of product or output (kg) up to the farm gate. It includes all types of agricultural products produced on the farm.
 
-## About average farm nitrogen use estimates {#nitrogen}
+### About average farm nitrogen use estimates {#nitrogen}
 
 Farm nitrogen estimates are based on standard estimates of nitrogen content in all inputs and outputs. The amount of nitrogen is estimated for all farm inputs and outputs up to farm gate, where possible. Limited information is available for some inputs and outputs.
 
@@ -1385,18 +1385,7 @@ A higher NUE typically indicates a more efficient use of nitrogen but very high 
 
 <br></br>
 
-# Data and Methodology
-
-## How to access background or source data
-
-The data collected for this publication are available to download in the <a href = data.html>Data</a> section.
-
-## Methodology
-
-More detailed information is available in the <a href = methodology.html> Methodology</a>.
-
-<br></br>
 
 # Future publications
 
-Details of future publications can be found on our [forthcoming publications](https://www.gov.scot/publications/official-statistics-forthcoming-publications/) page.
+Details of future publications can be found on our <a href ="https://www.gov.scot/publications/official-statistics-forthcoming-publications/" target ="_blank">forthcoming publications</a> page.

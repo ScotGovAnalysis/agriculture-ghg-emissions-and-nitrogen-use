@@ -30,11 +30,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This website is run by the Scottish Government. We want it to be accessible and usable for as many people as possible.
 
-This accessibility statement applies only to the [Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23](https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23) publication. It does not apply to any other content found on [data.gov.scot](https://data.gov.scot/).
+This accessibility statement applies only to the <a href ="https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23" target ="_blank">Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23</a> publication. It does not apply to any other content found on <a href ="https://data.gov.scot/" target ="_blank">data.gov.scot</a>.
 
 ## Feedback
 
-[Contact us](https://data.gov.scot/wealth/index.html#contact) if you:
+<a href ="https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23" target ="_blank">Contact us</a> if you:
 
 -   Cannot access any part of this site or want to report an accessibility problem.
 
@@ -42,17 +42,17 @@ This accessibility statement applies only to the [Scottish agriculture greenhous
 
 ## Enforcement
 
-If you're not happy with how we respond to your feedback, contact the [Equality Advisory and Support Service](https://www.equalityadvisoryservice.com/). They are an independent advice service. They will advise you on what to do next.
+If you're not happy with how we respond to your feedback, contact the <a href ="https://www.equalityadvisoryservice.com/" target ="_blank">Equality Advisory and Support Service</a>. They are an independent advice service. They will advise you on what to do next.
 
 ## Compliance
 
-Scottish Government is committed to making its websites accessible, in accordance with the [Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/regulation/4/made).
+Scottish Government is committed to making its websites accessible, in accordance with the <a href ="https://www.legislation.gov.uk/uksi/2018/952/regulation/4/made" target ="_blank">Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018</a>
 
-This accessibility statement applies to the the [Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23](https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23) webpages.
+This accessibility statement applies to the the <a href ="https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23/contact" target ="_blank">Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23</a> webpages.
 
 ### Compliance status
 
-We believe that this website is partially compliant with the regulations. This is based on a non-expert assessment using [WCAG 2.1 success criteria and techniques](https://www.w3.org/WAI/WCAG21/quickref/).
+We believe that this website is partially compliant with the regulations. This is based on a non-expert assessment using <a href ="https://www.w3.org/WAI/WCAG21/quickref" target ="_blank">WCAG 2.1 success criteria and techniques</a>.
 
 ### Potentially non-accessible and non-compliant content
 
@@ -60,7 +60,7 @@ The content listed below is compliant with the regulations, and yet may not be f
 
 -   The charts may be difficult to explore in detail using the keyboard, screen readers and other assistive tools.
 
-The interactive charts on this website are produced by the third-party software library 'Plotly'. Interactivity of the charts fails WCAG 2.1 success criteria. However, the option to download the data displayed in the chart in csv or xlsx format is available. Body text of the report aims to ensure that the reader can access or interpret the main points of the charts. As such, we believe that fixing accessibility issues would be a [disproportionate burden](https://www.legislation.gov.uk/uksi/2018/952/regulation/7/made) within the meaning of the accessibility regulations. We are investigating ways in which this content can be made accessible in a proportionate way.
+The interactive charts on this website are produced by the third-party software library 'Plotly'. Interactivity of the charts fails WCAG 2.1 success criteria. However, the option to download the data displayed in the chart in csv or xlsx format is available. Body text of the report aims to ensure that the reader can access or interpret the main points of the charts. As such, we believe that fixing accessibility issues would be a <a href ="https://www.legislation.gov.uk/uksi/2018/952/regulation/7/made" target ="_blank">disproportionate burden</a> within the meaning of the accessibility regulations. We are investigating ways in which this content can be made accessible in a proportionate way.
 
 -   Some of the text is complex.
 
