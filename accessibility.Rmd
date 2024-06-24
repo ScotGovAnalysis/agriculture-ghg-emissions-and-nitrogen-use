@@ -26,8 +26,6 @@ sgtemplates:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-
 This website is run by the Scottish Government. We want it to be accessible and usable for as many people as possible.
 
 This accessibility statement applies only to the <a href ="https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23" target ="_blank">Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23</a> publication. It does not apply to any other content found on <a href ="https://data.gov.scot/" target ="_blank">data.gov.scot</a>.
