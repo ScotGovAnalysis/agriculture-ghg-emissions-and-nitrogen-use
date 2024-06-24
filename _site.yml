@@ -8,6 +8,8 @@ navbar:
       href: "data.html"
     - text: "Methodology"
       href: "methodology.html"
+    - text: "Glossary"
+      href: "glossary.html"
     - text: "Feedback"
       href: "feedback.html"
 

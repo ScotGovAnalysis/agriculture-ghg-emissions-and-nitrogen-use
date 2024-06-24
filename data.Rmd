@@ -26,7 +26,7 @@ sgtemplates:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<b>An Official Statistics in Development Publication for Scotland </b>
+<b>An official statistics in development publication for Scotland </b>
 
 Publication date: 27 June 2024
 

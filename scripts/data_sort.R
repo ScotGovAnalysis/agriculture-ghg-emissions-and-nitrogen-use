@@ -12,8 +12,8 @@ sectors <- c("Arable", "Dairy", "Dairy beef", "Other", "Sheep", "Suckler beef"
 #, "Total"
 )
 
-national_data <- "C:/Users/U455049/OneDrive - SCOTS Connect/Economic Statistics/Data lab 2024/GHG inventory data 2022.xlsx"
-table_1 <- "C:/Users/U455049/OneDrive - SCOTS Connect/Economic Statistics/GHG emissions and N use report/Data/GHG inventory tables in report.xlsx"
+national_data <- "C:/Users/U456727/OneDrive - SCOTS Connect/Economic Statistics/Data lab 2024/GHG inventory data 2022.xlsx"
+tables <- "C:/Users/U456727/OneDrive - SCOTS Connect/Economic Statistics/GHG emissions and N use report/Data/GHG inventory tables in report.xlsx"
 
 #load data----
 #read in national totals
@@ -27,12 +27,14 @@ sec_tot <- read_excel(national_data, sheet = "subsector_total")
 # read in subsector gas compostion for latest year bar chart
 #sec_comp_latest <- read_excel(national_data, sheet = "subsector_comp_latest")
 
-# read in subsector gas compostion for latest year bar chart
+# # read in subsector emisison sources for latest year bar chart
 sec_source <- read_excel(national_data, sheet = "subsector_source")
 
-#read in table 1
-table_1 <- read_excel(table_1, sheet = "table 1")
+# read in table 1
+table_1 <- read_excel(tables, sheet = "table 1")
 
+# read in table 2
+table_2 <- read_excel(tables, sheet = "table 2 ")
 
 #sort data----
 # industry gross totals - fig 1
@@ -98,12 +100,13 @@ sec_source$Sector<- factor(sec_source$Sector, levels = sec_order)
 table_1_pct <- table_1 %>% mutate(across(where(is.numeric), ~round(.x,2)*100)) %>% 
   mutate(across(where(is.numeric), ~paste0(.x, "%")))
 
-table_1_pct<-table_1_pct %>% 
-  mutate(`IPCC - emission source category`=ifelse(`IPCC - emission source category`==	
-                                                     "3D15Mineralisation/immobilisation", "	
-3D15 Mineralisation/immobilisation", `IPCC - emission source category`))
+# table 2 ----
+#for display - "add merge suffix"
+table_2_merge <- table_2
+table_2_merge$`Category in Scottish agriculture GHG emissions and nitrogen use` <-  replace(table_2$`Category in Scottish agriculture GHG emissions and nitrogen use`,
+                  duplicated(table_2$`Category in Scottish agriculture GHG emissions and nitrogen use`), "")
 
-<<<<<<< HEAD
+
 # # export plot data csvs and xlsx ----
 # 
 # #Fig 1
@@ -190,10 +193,16 @@ table_1_pct<-table_1_pct %>%
 #   
 #   # Export to XLSX
 #   writexl::write_xlsx(df, xlsx_file)
-=======
+
 
 # Save table_1 as xlsx and csv
 
 writexl::write_xlsx(table_1_pct, "Table_1.xlsx")
 write.csv(table_1_pct, "Table_1.csv")
->>>>>>> 6bc153e587ecb92d4beee33127b974953baaeb27
+
+# Save table_2 as xlsx and csv
+
+writexl::write_xlsx(table_2, "Table_2.xlsx")
+write.csv(table_2, "Table_2.csv")
+
+
