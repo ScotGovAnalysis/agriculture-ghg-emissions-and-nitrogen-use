@@ -33,15 +33,15 @@ source("scripts/data_sort.R")
 
 This report provides information on the methodology for estimating greenhouse gas (GHG) emissions for Scottish agricultural subsectors and GHG emission and nitrogen use estimates for average Scottish farms by farm type. Information is included about estimation methods and limitations.
 
-Estimates of GHG emissions for the Scottish agriculture sector are as reported in the Scottish Greenhouse Gas Statistics 2022. Methodology for these results [is available alongside the publication](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/pages/section-d--revisions-to-the-inventory-and-methodology/).
+Estimates of GHG emissions for the Scottish agriculture sector are as reported in the Scottish Greenhouse Gas Statistics 2022. Methodology for these results <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/pages/section-d--revisions-to-the-inventory-and-methodology/" target ="_blank">is available alongside the publication</a>.
 
 Estimates of GHG emissions by agricultural subsector are created by allocating total GHG emissions, as reported in the Greenhouse Gas Statistics 2022, to agricultural subsectors.
 
-Average farm greenhouse gas and nitrogen use estimates are produced using data collected in the Farm Business Survey. Methodology and quality information about data collected in the FBS and its headline measure of income, Farm Business Income (FBI), is available in the [Scottish farm business income: annual estimates: Methodology - gov.scot (www.gov.scot)](Scottish%20farm%20business%20income:%20annual%20estimates:%20Methodology%20-%20gov.scot%20(www.gov.scot)).
+Average farm greenhouse gas and nitrogen use estimates are produced using data collected in the Farm Business Survey. Methodology and quality information about data collected in the FBS and its headline measure of income, Farm Business Income (FBI), is available in the <a href = "https://www.gov.scot/publications/scottish-farm-business-income-annual-estimates-methodology/" target ="_blank">Scottish farm business income: annual estimates: methodology</a>.
 
-Methodology improvements have been made for 2022-23 emission estimates for the average farm in the 'Scottish Agriculture Greenhouse Gas Emissions and Nitrogen Use: 2022-2023' publication. Results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. More information available under Changes to Methodology.
+Methodology improvements have been made for 2022-23 emission estimates for the average farm in the 'Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-2023' publication. Results for 2022-23 are not directly comparable to previous years. Previous years have not yet been revised. More information available under [Changes to methodology](#changes).
 
-Details about greenhouse gas (GHG) emissions and nitrogen use estimates are included here in line with the [European Statistical System (ESS) quality framework](https://ec.europa.eu/eurostat/web/quality/european-quality-standards/quality-assurance-framework). This covers areas of statistical:
+Details about greenhouse gas (GHG) emissions and nitrogen use estimates are included here in line with the <a href = "https://ec.europa.eu/eurostat/web/quality/european-quality-standards/quality-assurance-framework" target ="_blank">European Statistical System (ESS) quality framework</a>. This covers areas of statistical:
 
 -   Relevance
 
@@ -57,35 +57,36 @@ Details about greenhouse gas (GHG) emissions and nitrogen use estimates are incl
 
 These statistics are official statistics in development. Official statistics in development may be new or existing statistics, and will be tested with users, in line with the standards of trustworthiness, quality, and value in the Code of Practice for Statistics.
 
-We wish to involve users in our assessment of suitability and quality. If you use this data we would like to hear from you. Please give us your feedback in this short survey, or alternatively please get in touch with us at [agric.stats\@gov.scot](mailto:agric.stats@gov.scot).
+We wish to involve users in our assessment of suitability and quality. If you use this data we would like to hear from you. Please give us your feedback in this short survey, or alternatively please get in touch with us at [agric.stats@gov.scot](mailto:agric.stats@gov.scot).
 
 ## Developing these statistics
 
-Farm level GHG emissions and nitrogen use estimates were first published in June 2023 as [Farm Business Survey 2021-22: Farm level emissions and nitrogen usage.](https://www.gov.scot/publications/farm-business-survey-2021-22-farm-level-emissions-and-nitrogen-usage/)
+Farm level GHG emissions and nitrogen use estimates were first published in June 2023 as <a href = "https://www.gov.scot/publications/farm-business-survey-2021-22-farm-level-emissions-and-nitrogen-usage/" target ="_blank">Farm Business Survey 2021-22: Farm level emissions and nitrogen usage.</a>
 
 This latest publication includes national GHG emissions of agriculture, to give a broader picture of the agricultural sector. New subsector analysis assigns agricultural emissions to enterprise or activity type. This gives more detail about the emission sources within agriculture. The name change of the publication reflects this additional content.
 
-Scottish Government statistics are regulated by the Office for Statistics Regulation (OSR). OSR sets the standards of trustworthiness, quality and value in the [Code of Practice for Statistics](Code%20of%20Practice%20for%20Statistics "https://code.statisticsauthority.gov.uk/the-code/") that all producers of official statistics should adhere to.
+Scottish Government statistics are regulated by the Office for Statistics Regulation (OSR). OSR sets the standards of trustworthiness, quality and value in the <a href = "https://code.statisticsauthority.gov.uk/the-code/" target ="_blank">Code of Practice for Statistics</a> that all producers of official statistics should adhere to.
 
 <br></br>
 
-# Changes to methodology
+
+# Changes to methodology {#changes}
 
 Methodology improvements have been made for 2022-23 farm-level GHG emission estimates. This means that 2022-23 absolute emissions and emission intensity estimates are not directly comparable with data from previous years.
 
-Farm GHG emissions are produced using the Agricultural Resource Efficiency Calculator ([Agrecalc](https://www.agrecalc.com/)). For 2022-23, the following changes were made:
+Farm GHG emissions are produced using the Agricultural Resource Efficiency Calculator <a href = "https://www.agrecalc.com/" target ="_blank">(Agrecalc)</a>. For 2022-23, the following changes were made:
 
-• Calculations: Fertiliser calculations use UK National Inventory 1990-2019 methodology
+- Calculations: Fertiliser calculations use UK National Inventory 1990-2019 methodology
 
-• Coefficients: IPCC 5th Assessment Report (AR5) GWP 100 conversion factors. Coefficients for fertiliser and organic manure application are sourced from the UK National Inventory 1990-2019 methodology
+- Coefficients: IPCC 5th Assessment Report (AR5) GWP 100 conversion factors. Coefficients for fertiliser and organic manure application are sourced from the UK National Inventory 1990-2019 methodology
 
-Agrecalc have published more information about [changes to the platform](https://www.agrecalc.com/home/insights/how-will-my-carbon-footprint-change-in-agrecalc-cloud/).
+Agrecalc have published more information about <a href = "https://www.agrecalc.com/home/insights/how-will-my-carbon-footprint-change-in-agrecalc-cloud/" target ="_blank">changes to the platform</a>.
 
 <br></br>
 
-# Agricultural subsector estimates methodology
+# Agricultural subsector estimates methodology {#subsector}
 
-Estimates of GHG emissions by agricultural subsector are created by allocating total GHG emissions, as reported in the [Scottish Greenhouse Gas Statistics 2022](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/) to agricultural subsectors.
+Estimates of GHG emissions by agricultural subsector are created by allocating total GHG emissions, as reported in the <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target ="_blank">Scottish Greenhouse Gas Statistics 2022</a> to agricultural subsectors.
 
 The subsectors align more closely with agricultural enterprises and provide a different breakdown to the categories used in the Scottish Greenhouse Gas Statistics. Agriculture emission estimates are allocated to the following subsectors:
 
@@ -168,7 +169,7 @@ knitr::kable(table_2_merge) %>% kable_styling(font_size = 16,  html_font = 'Aria
 
 # The Farm Business Survey (FBS) {#the-farm-business-survey-fbs}
 
-More detailed methodology and quality information about data collected in the FBS and its headline measure of income, namely Farm Business Income (FBI), is available in [Scottish farm business income (FBI) - gov.scot (www.gov.scot)](https://www.gov.scot/collections/scottish-farm-business-income-fbi-annual-estimates/).
+More detailed methodology and quality information about data collected in the FBS and its headline measure of income, namely Farm Business Income (FBI), is available in <a href = "https://www.gov.scot/collections/scottish-farm-business-income-fbi-annual-estimates/" target ="_blank">Scottish farm business income (FBI)</a>.
 
 The FBS results are obtained from a sample of around 400 Scottish farms that are stratified by farm type and economic size.
 
@@ -212,7 +213,7 @@ Data from the June Agricultural Census are used to weight the farm business inco
 
 ## Classification of Farms
 
-The classification is based on detailed sub-types as defined in the [European Commission (EC) farm typology](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014R1198&from=en), which have been grouped together where required to give the types shown below.
+The classification is based on detailed sub-types as defined in the <a href = "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014R1198&from=en" target ="_blank">European Commission (EC) farm typology</a>, which have been grouped together where required to give the types shown below.
 
 The classification is based on the relative importance of the various crop and livestock enterprises on each farm assessed in terms of standard output. The method of classifying each farm is to multiply the area of each crop (other than forage) and the average number of each category of livestock by the appropriate standard output, with the largest source of output determining the type of farm. The list below defines the main types that are reported in the FBS and groupings applied to present emissions and nitrogen use data.
 
@@ -236,7 +237,7 @@ The classification is based on the relative importance of the various crop and l
 
 # Farm level GHG emission estimates methodology
 
-The 'Scottish Agriculture Greenhouse Gas Emissions and Nitrogen Use' publication reports on the following headline metrics of GHG emissions:
+The 'Scottish agriculture greenhouse gas emissions and nitrogen use' publication reports on the following headline metrics of GHG emissions:
 
 -   Absolute gross GHG emissions (tCO~2~e/ha)
 
@@ -304,7 +305,7 @@ The carbon footprint model draws on various external databases to estimate emiss
 
 # Farm level nitrogen use estimates methodology
 
-The 'Farm Business Survey: Farm level emissions and nitrogen usage' publication reports on the following headline metrics of nitrogen use:
+The 'Scottish agriculture greenhouse gas emissions and nitrogen use' publication reports on the following headline metrics of nitrogen use:
 
 -   Nitrogen balance (kg N surplus/ha)
 
@@ -316,7 +317,7 @@ NUE is the ratio of nitrogen outputs to inputs. It indicates the proportion of n
 
 A higher NUE typically indicates a more efficient use of nitrogen but very high values may indicate unsustainable "soil mining". The best range of NUE values depends on the type of farming activity as well as environmental conditions, livestock types and feed types.
 
-Estimate methodology follows guidance from the EU Nitrogen Expert Panel for assessing nitrogen at farm level.
+Estimate methodology follows guidance from the <a href = "https://www.researchgate.net/publication/312554339_Nitrogen_Use_Efficiency_NUE_-_an_indicator_for_the_utilization_of_nitrogen_in_agriculture_and_food_systems_Prepared_by_the_EU_Nitrogen_Expert_Panel" target ="_blank">EU Nitrogen Expert Panel</a>  for assessing nitrogen at farm level.
 
 This method assumes standard quantities for the nitrogen content of inputs and outputs for each year. The amount of nitrogen is estimated for all farm inputs and outputs up to farm gate, where possible.
 
@@ -382,15 +383,15 @@ This report provides greenhouse gas emission estimates and nitrogen use estimate
 
 Nitrogen is a key driver of productivity in agriculture given its direct impact on yield. Nitrogen fertiliser is an expensive input and efficient use is linked to profitability. Nitrogen can also harm the environment and is linked to water pollution, poorer air quality, climate change and damage to natural ecosystems.
 
-The emission and nitrogen use indicators published in 'Scottish Agriculture Greenhouse Gas Emissions and Nitrogen Use' were selected following a <a href = "https://sefari.scot/environmental-indicators-in-farm-level-surveys-a-literature-review" target = "_blank">systematic literature review </a> of environmental indicators and metrics that are currently used in farm level surveys and <a href = "https://sefari.scot/environmental-indicators-in-farm-level-surveys-stakeholder-engagement" target = "_blank">user engagement</a> undertaken in 2023 and 2024.
+The emission and nitrogen use indicators published in 'Scottish agriculture greenhouse gas emissions and nitrogen use' were selected following a <a href = "https://sefari.scot/environmental-indicators-in-farm-level-surveys-a-literature-review" target = "_blank">systematic literature review </a> of environmental indicators and metrics that are currently used in farm level surveys and <a href = "https://sefari.scot/environmental-indicators-in-farm-level-surveys-stakeholder-engagement" target = "_blank">user engagement</a> undertaken in 2023 and 2024.
 
-Findings from stakeholder engagement showed that the most common indicators found in our literature review (absolute emissions and emissions intensity as well as nitrogen use efficiency and nitrogen surplus) also most commonly meet the needs of our users.
+Findings from stakeholder engagement showed that the most common indicators found in our literature review (absolute emissions and emission intensity as well as nitrogen use efficiency and nitrogen surplus) also most commonly meet the needs of our users.
 
 Other indicators can be estimated from these data and may be available on demand and considered for future publications. User need was also identified for indicators that that cannot currently be produced as limited data is collected.
 
 The data are under development to continue to improve and understand data quality and ensure that analysis is fit for purpose.
 
-We wish to involve users in our assessment of suitability and quality. If you use this data we would like to hear from you, please get in touch with us at [agric.stats\@gov.scot](mailto:agric.stats@gov.scot).
+We wish to involve users in our assessment of suitability and quality. If you use this data we would like to hear from you, please get in touch with us at [agric.stats@gov.scot](mailto:agric.stats@gov.scot).
 
 <br></br>
 
@@ -402,21 +403,21 @@ These data are designated as official statistics in development as they are stil
 
 ## Scottish Greenhouse Gas Statistics
 
-Detail about revisions to the GHG Inventory and methodology are available at <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/pages/section-d–revisions-to-the-inventory-and-methodology/" target = "_blank">Scottish Greenhouse Gas Statistics 2022 - gov.scot (www.gov.scot)</a>.
+Detail about revisions to the GHG Inventory and methodology are available at <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/pages/section-d--revisions-to-the-inventory-and-methodology/" target = "_blank">Scottish Greenhouse Gas Statistics 2022</a>.
 
 ## Agriculture subsector estimates
 
-There are limitations to the agriculture subsector emissions estimates methodology. More information is included under [Agricultural subsector estimates methodology]
+There are limitations to the agriculture subsector emissions estimates methodology. More information is included under [Agricultural subsector estimates methodology](#subsector)
 
 ## June Agricultural Census area estimates
 
 Farm level emission estimates are weighted using the same method as farm business income, which relies on results from the June Agricultural Census. There may be limitations in applying a weighting methodology that was developed for economic outputs to emissions results. More information is under [The Farm Business Survey (FBS)](#the-farm-business-survey-fbs).
 
-Data quality and assurance measures for the June Agricultural Census are available at <a href = "https://www.gov.scot/collections/june-scottish-agricultural-census/" target = "_blank">Scottish Agricultural Census: results - gov.scot (www.gov.scot)</a>.
+Data quality and assurance measures for the June Agricultural Census are available at <a href = "https://www.gov.scot/collections/june-scottish-agricultural-census/" target = "_blank">Scottish Agricultural Census: results</a>.
 
 ## The Farm Business Survey
 
-Data quality and assurance measures for the Farm Business Survey and its official statistical outputs are available at <a href = "https://www.gov.scot/collections/scottish-farm-business-income-fbi-annual-estimates/" target = "_blank">Scottish farm business income (FBI) - gov.scot (www.gov.scot)</a>.
+Data quality and assurance measures for the Farm Business Survey and its official statistical outputs are available at <a href = "https://www.gov.scot/collections/scottish-farm-business-income-fbi-annual-estimates/" target = "_blank">Scottish farm business income (FBI)</a>.
 
 As a sample survey, results are subject to a degree of uncertainty. More detailed breakdowns of the sample result in relatively low sample sizes and an increase in uncertainty. For example in representing overall national averages by farm type.
 
@@ -434,11 +435,11 @@ There are limitations to the farm level nitrogen estimate methodology. Nitrogen 
 
 Timeliness is about releasing statistics in a timely and punctual manner.
 
-The 'Scottish Agriculture Greenhouse Gas Emissions and Nitrogen Use: 2022-2023' publication was first released on 27 June 2024 at [Scottish agriculture greenhouse gas emissions and nitrogen use: 2022 -23 - (data.gov.scot).](https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23/)
+The 'Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-2023' publication was first released on 27 June 2024 at <a href = "https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23/" target ="_blank">Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23</a>.
 
 ## Agriculture subsector estimates
 
-Agriculture emissions are reported in <a href="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target = "_blank">Scottish Greenhouse Gas Statistics 2022 </a>, which was released on 18 June 2024. Subsector analysis of agriculture emissions cannot be published earlier than Scottish Greenhouse Gas Statistics. This publication was released shortly after, allowing time for quality assurance.
+Agriculture emissions are reported in <a href="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target = "_blank">Scottish Greenhouse Gas Statistics 2022</a>, which was released on 18 June 2024. Subsector analysis of agriculture emissions cannot be published earlier than Scottish Greenhouse Gas Statistics. This publication was released shortly after, allowing time for quality assurance.
 
 ## Farm level GHG emissions and nitrogen use estimates
 
@@ -464,11 +465,11 @@ Accessibility and clarity are about:
 
 These statistics are published online by the Scottish Government in an accessible format (html).
 
-Data tables are made available in excel format to allow users to carry out further analysis. Charts in the report are available to download in excel and csv format. Farm-level datasets may be made available to recognised research organisations for research purposes agreed with the Scottish Government with appropriate security and disclosure control in place. To make a data request get in touch with us at [agric.stats\@gov.scot](mailto:agric.stats@gov.scot).
+Data tables are made available in excel format to allow users to carry out further analysis. Charts in the report are available to download in excel and csv format. Farm-level datasets may be made available to recognised research organisations for research purposes agreed with the Scottish Government with appropriate security and disclosure control in place. To make a data request get in touch with us at [agric.stats@gov.scot](mailto:agric.stats@gov.scot).
 
 Methodological information and specific quality issues are included on these pages. Metadata appropriate for users to consider comparability of statistics over time is included with all data releases, for example as notes on tables. This metadata is regularly reviewed and updated as necessary with each publication or more frequently as needed.
 
-We aim to use modern and accessible means of dissemination and communication of statistics and are committed to continual improvement. More information about general accessibility is available under [Accessibility](https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23/accessibility.html)
+We aim to use modern and accessible means of dissemination and communication of statistics and are committed to continual improvement. More information about general accessibility is available under  [Accessibility](https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23/accessibility.html)
 
 <br></br>
 
@@ -478,7 +479,7 @@ This section covers how consistent these statistics are over time and how compar
 
 ## Agriculture subsector estimates
 
-Detail about revisions to the GHG Inventory and methodology are available at <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/pages/section-d–revisions-to-the-inventory-and-methodology/" target = "_blank">Scottish Greenhouse Gas Statistics 2022 </a>.
+Detail about revisions to the GHG Inventory and methodology are available at <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/pages/section-d--revisions-to-the-inventory-and-methodology/" target = "_blank">Scottish Greenhouse Gas Statistics 2022 </a>.
 
 This is the first release of the timeseries for subsector estimates. Results are available from 1990 to 2022.
 
@@ -488,11 +489,11 @@ Methodology improvements have been made for 2022-23 farm-level GHG emission esti
 
 Nitrogen use results are considered to be consistent and comparable over time. Results are available from 2019-20 to 2022-23. The methodology has been consistent over this time period.
 
-Trends for most farm types in the Farm Business survey are subject to annual sample variations, as a small number of farms join and leave the survey each year. Farms in the sample may also change their characteristics, and might move from being classified as one main farm type to another. More commentary is available in a href = "<https://www.gov.scot/collections/scottish-farm-business-income-fbi-annual-estimates/>" target = "\_blank"\>Scottish farm business income (FBI) - gov.scot (www.gov.scot)</a>.
+Trends for most farm types in the Farm Business survey are subject to annual sample variations, as a small number of farms join and leave the survey each year. Farms in the sample may also change their characteristics, and might move from being classified as one main farm type to another. More commentary is available in  <a href = "https://www.gov.scot/collections/scottish-farm-business-income-fbi-annual-estimates/" target ="_blank">Scottish farm business income (FBI)</a>.
 
 ## Comparability between agriculture sector, subsector and farm-level estimates
 
-Emissions for the agriculture sector and subsectors are for the calendar year and are based on estimates of greenhouse gas (GHG) emissions for Scottish agriculture as reported in the S<a href="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target = "_blank">Scottish Greenhouse Gas Statistics 2022 </a>. Agricultural subsectors align more closely with agricultural enterprises and provide a different breakdown to the categories used in the Scottish Greenhouse Gas Statistics.
+Emissions for the agriculture sector and subsectors are for the calendar year and are based on estimates of greenhouse gas (GHG) emissions for Scottish agriculture as reported in the S<a href="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/" target = "_blank">Scottish Greenhouse Gas Statistics 2022</a>. Agricultural subsectors align more closely with agricultural enterprises and provide a different breakdown to the categories used in the Scottish Greenhouse Gas Statistics.
 
 Nitrogen use estimates for the agriculture sector are available in the <a href ="https://www.gov.scot/publications/scottish-nitrogen-balance-sheet-2021/" target ="_blank">Scottish Nitrogen Balance Sheet</a>.
 
