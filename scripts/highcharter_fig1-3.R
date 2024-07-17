@@ -151,7 +151,10 @@ fig2 <- highchart() %>%
 #fig 3 ----
 # Reshape the data from wide to long format
 data_long <- subsector_source %>%
-  pivot_longer(cols = -Source, names_to = "Subsector", values_to = "Value")
+  pivot_longer(cols = -Source, names_to = "Subsector", values_to = "Value") 
+
+data_long <- data_long %>%  filter(Source != "Urea application") %>% 
+  filter(Source != "Non-energy products from fuels and solvent use") 
 
 # Invert
 data_long <- data_long %>%

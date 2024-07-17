@@ -28,6 +28,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <b>An official statistics in development publication for Scotland </b>
 
-Publication date: 27 June 2024
+<b>Publication date: 27 June 2024</b>
 
-<a href = download/scottish_agriculture_ghg_n_use_data_tables.xlsx>Download</a> the Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23 data tables.
+<a href = download/ScottishAgricultureGHGEmissionsAndNUseDataTables.xlsx>Download</a> the Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23 data tables.

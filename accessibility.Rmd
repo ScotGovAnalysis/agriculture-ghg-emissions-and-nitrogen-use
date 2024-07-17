@@ -32,7 +32,7 @@ This accessibility statement applies only to the <a href ="https://data.gov.scot
 
 ## Feedback
 
-<a href ="https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23" target ="_blank">Contact us</a> if you:
+<a href =feedback.html>Contact us</a> if you:
 
 -   Cannot access any part of this site or want to report an accessibility problem.
 
@@ -58,10 +58,12 @@ The content listed below is compliant with the regulations, and yet may not be f
 
 -   The charts may be difficult to explore in detail using the keyboard, screen readers and other assistive tools.
 
-The interactive charts on this website are produced by the third-party software library 'Plotly'. Interactivity of the charts fails WCAG 2.1 success criteria. However, the option to download the data displayed in the chart in csv or xlsx format is available. Body text of the report aims to ensure that the reader can access or interpret the main points of the charts. As such, we believe that fixing accessibility issues would be a <a href ="https://www.legislation.gov.uk/uksi/2018/952/regulation/7/made" target ="_blank">disproportionate burden</a> within the meaning of the accessibility regulations. We are investigating ways in which this content can be made accessible in a proportionate way.
+The interactive charts on this website are produced by third-party software libraries 'Plotly' and 'Highcharts'. Interactivity of the charts fails WCAG 2.1 success criteria. However, the option to download the data displayed in the chart in csv or xlsx format is available. Body text of the report aims to ensure that the reader can access or interpret the main points of the charts. As such, we believe that fixing accessibility issues would be a <a href ="https://www.legislation.gov.uk/uksi/2018/952/regulation/7/made" target ="_blank">disproportionate burden</a> within the meaning of the accessibility regulations. We are investigating ways in which this content can be made accessible in a proportionate way.
 
 -   Some of the text is complex.
 
 ## Preparation of statement
 
-This statement was prepared on 19 June 2024.
+This statement was prepared on 27 June 2024.
+
+<br></br>
