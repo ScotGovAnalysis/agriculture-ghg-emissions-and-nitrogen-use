@@ -1,0 +1,27 @@
+name: "Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23"
+title-prefix: "data.gov.scot"
+navbar:
+  left:
+    - text: "Home"
+      href: "index.html"
+    - text: "Data"
+      href: "data.html"
+    - text: "Methodology"
+      href: "methodology.html"
+    - text: "Glossary"
+      href: "glossary.html"
+    - text: "Feedback"
+      href: "feedback.html"
+
+output:
+  html_document:
+    css: styles.css
+    code_download: false
+    df_print: paged
+    fig_caption: true
+    number_sections: false
+    self_contained: false
+    template: _template.html
+    toc: true
+    toc_depth: 1
+    toc_float: false

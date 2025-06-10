@@ -1,0 +1,36 @@
+---
+title: "Data"
+date: "10 June 2025"
+sgtemplates:
+  footer:
+    link:
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
+  header:
+    site_branding: "Scottish agriculture greenhouse gas emissions and nitrogen use:
+      2023-24"
+    toc:
+      sticky: false
+  navigation:
+    breadcrumb_trail:
+    - href: index.html
+      text: Home
+    - text: Data
+    toc:
+      sticky: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<b>An official statistics in development publication for Scotland </b>
+
+<b>Publication date: 10 June 2025</b>
+
+<a href = download/scottish_agriculture_ghg_n_use_data_table.xlsx>Download</a> the Scottish agriculture greenhouse gas emissions and nitrogen use: 2023-24 data table.
+
+
+Explore more interactive charts for agriculture greenhouse gas emissions on the <a href ="https://scotland.shinyapps.io/sg-agric-stats-hub/" target ="_blank">Agricultural Statistics Hub</a>.

@@ -1,0 +1,542 @@
+---
+title: "Methodology"
+date: "10 June 2025"
+sgtemplates:
+  footer:
+    link:
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
+  header:
+    site_branding: "Scottish agriculture greenhouse gas emissions and nitrogen use:
+      2023-24"
+    toc:
+      sticky: no
+  navigation:
+    breadcrumb_trail:
+    - href: index.html
+      text: Home
+    - text: Methodology
+    toc:
+      sticky: no
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(knitr.kable.NA = '')
+source("scripts/html tables.R")
+```
+
+# Introduction
+
+This report provides information on the methodology for estimating greenhouse gas (GHG) emissions for Scottish agricultural subsectors and GHG emission and nitrogen use estimates for average Scottish farms by farm type. Information is included about estimation methods and limitations. 
+
+Estimates of GHG emissions for the Scottish agriculture sector are as reported in the Scottish Greenhouse Gas Statistics 2023. Methodology for these results <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2023" target ="_blank">is available alongside the publication</a>.
+
+Estimates of GHG emissions by agricultural subsector are created by allocating total GHG emissions, as reported in the Greenhouse Gas Statistics 2023, to agricultural subsectors. 
+
+Average farm greenhouse gas and nitrogen use estimates are produced using data collected in the Farm Business Survey. Methodology and quality information about data collected in the FBS and its headline measure of income, Farm Business Income (FBI), is available in the <a href = "https://www.gov.scot/publications/scottish-farm-business-income-annual-estimates-methodology/" target ="_blank">Scottish farm business income: annual estimates: methodology</a>.
+
+Methodology improvements have been made for emission estimates from 2021-22 onwards for the average farm in the ‘Scottish Agriculture Greenhouse Gas Emissions and Nitrogen Use: 2023-2024’ publication. Results for 2021-22 onwards are not directly comparable to previous years. Previous years have not been revised as not all data are available. More information available under [Changes to methodology](#changes).
+
+Details about greenhouse gas (GHG) emissions and nitrogen use estimates are included here in line with the <a href = "https://ec.europa.eu/eurostat/web/quality/european-quality-standards/quality-assurance-framework" target ="_blank">European Statistical System (ESS) quality framework</a>. This covers areas of statistical:
+
+-   Relevance
+
+-   Accuracy and reliability
+
+-   Timeliness and punctuality
+
+-   Accessibility and clarity
+
+-   Coherence and comparability
+
+## An official statistics in development publication for Scotland
+
+These statistics are official statistics in development. Official statistics in development may be new or existing statistics, and will be tested with users, in line with the standards of trustworthiness, quality, and value in the Code of Practice for Statistics.
+
+We wish to involve users in our assessment of suitability and quality. If you use this data we would like to hear from you. Please give us your feedback in this short survey, or alternatively please get in touch with us at [agric.stats@gov.scot](mailto:agric.stats@gov.scot).
+
+## Developing these statistics
+
+Management practices, agricultural and environmental activities all influence emissions. Farms are complex businesses, taking part in a variety of activities.
+
+Estimates of whole-farm emissions are available as absolute gross emissions per hectare. This helps with comparing businesses of different sizes. 
+
+In previous releases, whole-farm emission intensity was reported as absolute gross emissions per kilogram of output. The 2023-24 publication replaces whole-farm emission intensity with new average farm emission intensity estimates for the primary product of beef, sheep, milk and cereals enterprises. These enterprise-level data will support users to make better distinctions between different activities on farm.
+
+Enterprise level emission intensity estimates are made from a small sub-sample of results and may be limited in scope for representing the June Agricultural Census population. As such, estimates are provided as unweighted sub-sample averages for the main enterprises of farm types in the Farm Business Survey. Emission intensity estimates for beef and sheep enterprises are provided for 2023-24 only. There is increased uncertainty in results for 2022-23 due to limitations in data collection under the Agrecalc Web methodology. 
+
+We are considering the presentation of these data in our future publications. We are very interested to hear your opinion about applying weighting to the farm level emission estimates. Please let us know your thoughts by filling in this quick <a href ="https://forms.office.com/e/2SCLV7aTJi" target ="_blank">survey</a>.  
+
+Scottish Government statistics are regulated by the Office for Statistics Regulation (OSR). OSR sets the standards of trustworthiness, quality and value in the <a href = "https://code.statisticsauthority.gov.uk/the-code/" target ="_blank">Code of Practice for Statistics</a> that all producers of official statistics should adhere to.
+
+<br></br>
+
+
+# Changes to farm-level estimates methodology in the 2023-24 publication {#changes}
+
+## Improvements to Agrecalc methodology
+
+Methodology improvements have been made for absolute emissions estimates for 2021-22 and onwards. This means that estimates from 2021-22 are not directly comparable with data from previous years. Previous years have not been revised as not all data are available.
+
+Farm GHG emissions are produced using the Agricultural Resource Efficiency Calculator (<a href ="https://www.agrecalc.com/" target ="_blank">Agrecalc</a>). From 2021-22 onwards, estimates were produced using Agrecalc Cloud, whereas earlier estimates were produced using a legacy version of Agrecalc Web. Agrecalc Cloud methodology changes include:
+
+-  Updates to models based on IPCC (2019) guidelines
+
+-  Using Global Feed LCA Institute (GFLI) database for feed emissions
+-  Using Fertiliser Europe database for fertiliser emissions
+-  New manure management and mitigation options
+
+Agrecalc have published more information about <a href = "https://www.agrecalc.com/home/insights/how-will-my-carbon-footprint-change-in-agrecalc-cloud/" target ="_blank">changes to the platform</a>.
+
+Methodology changes are expected to result in a shift in absolute emission estimates. Updates to methane conversion factor coefficients and coefficients for manure emissions used in Agrecalc Cloud, compared with those used in Agrecalc Web, have generally impacted farm type emission estimates in the following ways:  
+
+-  Agrecalc Cloud estimates for dairy, mixed, Less Favoured Area (LFA) cattle and lowland cattle and sheep farms, are generally smaller than previous Agrecalc Web estimates.
+
+-  Agrecalc Cloud estimates for LFA sheep and LFA cattle and sheep farms are generally larger than previous Agrecalc Web estimates.
+
+Limitations in data collection under the previous Agrecalc Web methodology may also result in smaller Agrecalc Cloud estimates for some farms, where transferred manure was not captured. Previously, manure spreading was accounted for but not attached to specific crops. Emissions from spreading stayed with the livestock. In Agrecalc Cloud, emissions from manure spreading are explicitly associated with crops. Older data migrated from Agrecalc Web does not map out where manure was spread, meaning it is not currently possible to account for spreading of home-produced manure for these reports.
+
+Agrecalc Cloud estimates for cereals and general cropping farms may be smaller than corresponding Agrecalc Web estimates. This is due to a database change to Fertiliser Europe, where the embedded emissions in fertiliser and lime are expected to be lower than previously reported.       
+
+## Improvements to calculation of farm-level averages
+
+Estimates for absolute emissions per hectare, nitrogen balance and NUE in the 2023-24 publication are produced using ReGenesees R package (svystatQ). This is the same package used for the FBS calibrating weighting method, calculating estimates and uncertainty for complex sample surveys. Previously estimates were produced using the Spatstat R package. This may result in very small differences to previously published results. This change aligns our estimates with the methodology used to produce 95% confidence intervals for the results.    
+<br></br>
+
+# Agricultural subsector estimates methodology {#subsector}
+
+Estimates of GHG emissions by agricultural subsector are created by allocating total GHG emissions, as reported in the <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2023/" target ="_blank">Scottish Greenhouse Gas Statistics 2023</a> to agricultural subsectors.
+
+The subsectors align more closely with agricultural enterprises and provide a different breakdown to the categories used in the Scottish Greenhouse Gas Statistics. Agriculture emission estimates are allocated to the following subsectors:
+
+-   suckler beef
+
+-   dairy beef
+
+-   dairy
+
+-   sheep
+
+-   arable
+
+-   other -- including pigs, other livestock, and non-agriculture.
+
+Table 6 in <a href = index.html#table6>the report</a> gives the proportions used to allocate emission sources to agricultural subsectors. This is based on a <a href ="https://www.gov.scot/publications/disaggregating-headline-smart-inventory-figures/" target ="_blank">methodology developed by SRUC</a>. 
+
+The subsector split of emissions are based on proportions from 2018 which are applied to the entire timeseries. This approach does not take into account year-on year changes in the underlying data. This is a known limitation that impacts the accuracy of subsector estimates. Results should be considered as indicative rather than definitive. 
+
+
+## Emission sources
+
+The possible sources of GHG emissions from agricultural activity are grouped from categories in the Scottish Greenhouse Gas statistics into:
+
+-   enteric fermentation
+
+-   manure management
+
+-   fuel combustion
+
+-   liming
+
+-   other emission sources - including urea application, and non-energy products from fuels and solvent use.
+
+Table 1 gives the groupings of IPCC and Common Reporting Table (CRT) emission source categories into these source categories.
+
+**Table 1: Allocation of IPCC code and Common Reporting Table (CRT) emission source categories to source categories in the Scottish agriculture GHG emissions and nitrogen use publication  **
+
+
+<button class="btn btn-primary" data-toggle="collapse" data-target="#Table7">
+  
+  Show/Hide data table
+
+</button>
+  
+::: {#Table7 .collapse}
+```{r table_7, echo = FALSE, results = 'markup'}
+knitr::kable(table_7) %>% kable_styling(font_size = 16,  html_font = 'Arial', bootstrap_options= 'responsive') %>% column_spec(1, bold = TRUE)
+```
+:::
+      
+<strong> Download data for this table </strong>
+      
+::: {style="margin-bottom: 20px;"}
+<a href = download/Allocation_of_sources.xlsx> <button class="btn pdf"> .xlsx </button> </a><a href = download/Allocation_of_sources.csv> <button class="btn pdf"> .csv </button></a>
+:::
+      
+<br></br>
+
+# The Farm Business Survey (FBS) {#the-farm-business-survey-fbs}
+
+More detailed methodology and quality information about data collected in the FBS and its headline measure of income, namely Farm Business Income (FBI), is available in <a href = "https://www.gov.scot/collections/scottish-farm-business-income-fbi-annual-estimates/" target ="_blank">Scottish farm business income (FBI)</a>.
+
+The FBS results are obtained from a sample of around 400 Scottish farms that are stratified by farm type and economic size.
+
+An important feature of the survey is the measurement of changes over time for particular types of farm. To achieve this, it is necessary to maintain farms in the sample surveyed over a number of years. The survey is effectively a panel survey with little change in the membership of the sample between years.
+
+Estimates from the survey are for accounting years. The survey is based on individual businesses’ accounting year ends which all centre on the same cropping period and on average roughly align with the financial accounting year. For example, 2023-24 data is for the 2023-24 accounting year and relates to the 2023 crop year.
+
+## Industry coverage and limitations for emission estimates
+
+The FBS is designed to provide good coverage of the majority of economic output from supported sectors of agriculture.
+
+The FBS is representative of around 10,300 farms in Scotland, which in 2023-24 is around 23% of all farms included in the June Agricultural Census. These farms cover 67% of Scotland's agricultural land, account for 47% of the Scottish farming labour force, and produce 75% of total standard output. 
+
+The survey is designed for coverage of commercial sized farms, and represents 95% of standard output from these farm types. The survey is restricted to farms with considerable economic activity (at least €25,000 of output, equivalent to approximately £20,000) that are not considered spare-time farms (have a Standard Labour Requirement (SLR) of more than 0.5).
+
+The survey does not include farms predominantly engaged in horticulture, poultry, egg production or pig production.
+
+Data from the June Agricultural Census are used to weight the farm business income estimates. A calibrated weighting method sums the following variables to equal the estimated population totals:
+
+-   type of farm
+
+-   tenure type of farm
+
+-   area of barley
+
+-   area of oats
+
+-   area of potatoes
+
+-   area of wheat
+
+-   rented area of land
+
+-   total area of farm
+
+-   number of dairy cows
+
+-   number of beef cows
+
+-   number of ewes
+
+## Classification of Farms
+
+The classification is based on detailed sub-types as defined in the <a href = "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014R1198&from=en" target ="_blank">European Commission (EC) farm typology</a>, which have been grouped together where required to give the types shown below.
+
+The classification is based on the relative importance of the various crop and livestock enterprises on each farm assessed in terms of standard output. The method of classifying each farm is to multiply the area of each crop (other than forage) and the average number of each category of livestock by the appropriate standard output, with the largest source of output determining the type of farm. The list below defines the main types that are reported in the FBS and groupings applied to present emissions and nitrogen use data.
+
+**LFA sheep** - Farms in less-favoured areas with more than two-thirds of their total standard output coming from sheep.
+
+**LFA cattle** - Farms in less-favoured areas with more than two-thirds of their total standard output coming from cattle.
+
+**LFA cattle and sheep** - Farms in less-favoured areas with more than two-thirds of their total standard output coming from sheep and beef cattle together.
+
+**Cereals** - Farms with more than two-thirds of their total standard output coming from cereals and oilseeds.
+
+**General cropping** - Other farms with more than two-thirds of their total standard output coming from all crops.
+
+**Dairy** - Farms with more than two-thirds of their total standard output coming from dairy cows.
+
+**Lowland cattle and sheep** - Farms NOT in less-favoured areas, with more than two-thirds of their total standard output coming from sheep and beef cattle.
+
+**Mixed** - Farms with no enterprise contributing more than two-thirds of their total standard output.
+
+<br></br>
+
+# Farm level GHG emission estimates methodology {#ghg-emissions}
+
+The 'Scottish agriculture greenhouse gas emissions and nitrogen use' publication reports on the following headline metrics of GHG emissions:
+
+-  Whole-farm GHG emissions per hectare (absolute gross emissions in tCO~2~e/ha)
+
+-  Enterprise GHG emission intensity (absolute gross emissions in CO~2~e per unit of product)
+
+Absolute gross emissions are emissions from a unit area of agricultural land (hectare) adjusted for forage quality. This accounts for large differences in rough grazing area and quality between farms.
+
+Emission intensity is the carbon footprint of a unit of product or output up to the farm gate. Enterprise emission intensities report the carbon footprint of the primary product of beef, sheep, milk and cereals enterprises. Enterprise results replace whole-farm emission intensity results from the 2023-24 publication onwards.
+
+For beef and sheep enterprises, emission intensities are calculated per kg of carcass deadweight (kg dwt). Milk emission intensities for dairy enterprises are calculated per kg of fat and protein corrected milk (FPC milk). Cereals emission intensities are calculated for total barley, wheat, oats and minor cereals enterprises (tonne crop).
+
+Results for beef and sheep enterprises are based on assumptions about typical average weights of animals. This can lead to some higher or lower estimates where the sale weights of animals are higher or lower than average. 
+
+Cereal emission intensities are based on the grouping of different cereal enterprises. Due to changes in the type of crop grown each year, some variation between yearly estimates may be attributable to changes in cereals composition. 
+
+Organic farms are included in farm level emission estimates. Organic farms tend to have different manure management, animal rearing, and fertiliser practices compared with conventional farms. This results in differences between typical emission profiles of organic and conventional farms. Therefore, some variation observed in average absolute emission and emission intensity estimates may be attributable to organic farms in the sample. Organic farms make up around 5% of the Farm Business Survey sample.
+
+Farms may be excluded from the sample based on uniqueness of activity and weighting. For example, farms may be excluded if an activity is very different from other farms in the sample, and if the weighting means this activity would be overrepresented in the results. While weighting aims to improve the representativeness of results, it is recognised that the weighting method has limitations when results are strongly impacted by management decisions.
+
+
+
+Data collected through the Farm Business Survey provide a consistent and high quality input data set about farm activities. GHG emissions are then estimated using a carbon footprint calculator tool. They do not account for any sequestration by woodland areas or soil. Transport of product or livestock off farm is not included.
+
+Different results may be obtained using different carbon calculators or different methods, for example using an inventory approach.
+
+The Agricultural Resource Efficiency Calculator <a href = "https://www.agrecalc.com/" target ="_blank"> Agrecalc</a> is used. This is a farm carbon footprint tool developed by the consulting division of Scotland's Rural College (SRUC). It can estimate greenhouse gas (GHG) emissions from agriculture and identify their main sources. It can also be used by farms to benchmark key performance indicators and simulate mitigation measures and what-if scenario for planning purposes.
+
+The three main greenhouse gases produced in agriculture are estimated by Agrecalc:
+
+-   carbon dioxide, produced by burning fossil fuels
+
+-   methane, a natural by-product of animal digestion
+
+-   nitrous oxide, released from soils following the application of nitrogen fertiliser (manufactured and organic) and soil disturbance.
+
+Emissions are calculated for the whole farm and per unit (kg) of product. All mainstream agricultural enterprises are included. This includes cattle, sheep, dairy, pigs, poultry, cereals, oilseeds, potatoes, vegetables, and fruits.
+
+Total emissions are presented in carbon dioxide equivalent (CO~2~e) units. This takes into account the different effects that the different gases have on climate change, known as their global warming potential (GWP). Over a 100-year period, methane's GWP is considered to be 28 times stronger than that of carbon dioxide, while nitrous oxide's GWP is considered to be 265 times stronger than carbon dioxide.
+
+Agrecalc is based on the life cycle assessment (LCA) framework for estimating emissions from products and processes. The LCA accounts for emissions up to when product leaves the farm. It uses the latest Intergovernmental Panel on Climate Change (IPCC) Tier I and Tier II guidelines as well as national figures from the UK National Greenhouse Gas Inventory in its calculations. It is PAS2050:2011 certified.
+
+The <a href ="https://www.ipcc.ch/report/2019-refinement-to-the-2006-ipcc-guidelines-for-national-greenhouse-gas-inventories/" target ="_blank"> IPCC methods for greenhouse gas reporting</a> are split into three tiers of increasing complexity and specificity. Tier I reporting standards use default figures published by the IPCC which provide a general estimate of greenhouse gas emissions, but likely miss important sources of variance. Tier II reporting standards are slightly more specific than Tier I, as they use national research to generate country-specific emission factors. Finally, Tier III reporting uses process-based models to predict emissions with the greatest accuracy and system-specificity.
+
+To balance model performance and data requirements, Agrecalc makes use of higher Tier methods for large emissions sources. Default methods are used where higher Tier methods would increase data requirements beyond what is generally available on a farm. They are also used for smaller emission sources, and for emission sources where more research is needed to improve the resolution of emission factors.
+
+In the next sections, a description of how IPCC methodology is used in each enterprise is provided.
+
+### Beef and dairy
+
+The beef and dairy models are based on IPCC Tier II guidelines. This Tier II calculation includes detailed modelling of the energy requirements of beef and dairy herds based on activity levels, growth rates, life stages, gender, and climate. Enteric methane emissions and emissions from manure deposited on grazing lands are also calculated using IPCC Tier II methods published in the most recent guidance.
+
+### Sheep
+
+The sheep model is also based on the latest IPCC Tier II guidelines. This Tier II calculation includes detailed modelling of the energy requirements of sheep flocks based on activity levels, growth rates, life stages, gender, and climate. Like the beef and dairy models, this model estimates emissions from enteric fermentation and manure deposited on grazing lands using IPCC Tier II methodology.
+
+### Pigs
+
+The pig model goes beyond IPCC reporting standards, incorporating a detailed energy balance model for pigs published by Food and Agriculture Organisation (FAO). This expansion upon standard methods allows the model to use Tier II reporting standards for pigs, improving the detail of the pig model outputs beyond that provided by standard greenhouse gas reporting for pigs.
+
+### Poultry
+
+The poultry model also goes beyond IPCC reporting standards, incorporating a detailed energy balance model for poultry published by FAO. The outputs of this model are in line with IPCC Tier II methods. This expansion upon standard methods allows the model to estimate emissions at a similar level of detail to our beef and dairy models.
+
+### Manure Management
+
+The manure management model estimates emissions related to storage and treatment of manures. The model uses Tier II methods to calculate methane emissions from manure, which uses the dietary characteristics of livestock to calculate methane emissions. For liquid storage systems, the model directly interacts with climate data to estimate methane emissions, in line with IPCC Tier II guidelines. The model also calculates nitrous oxide emissions from manures using Tier II methods, which incorporate information about the nitrogen content of livestock diets.
+
+### Arable Enterprises and Improved Grassland
+
+The arable farming model is based on IPCC Tier I and Tier II factors for cropland management. This includes Tier II factors for direct nitrous oxide emissions from organic and inorganic fertilisers, derived from the UK National Inventory. Tier I emission factors are utilised for indirect nitrous oxide emissions related to volatisation and leaching. Nitrous oxide emissions from crop residues are also calculated using IPCC Tier I methods.
+
+### Embedded Resource Emissions
+
+The carbon footprint model draws on various external databases to estimate emissions from imported feed, fuel, electricity, and fertiliser inputs. For emissions related to energy use, the tool uses figures published by DESNZ. For the embedded emissions of fertilisers, the tool uses Fertilisers Europe (2018) database. For emissions related to imported feed rations, the tool uses the Global Feed LCA Institute (GFLI) database.
+
+<br></br>
+
+# Farm level nitrogen use estimates methodology {#nitrogen}
+
+The 'Scottish agriculture greenhouse gas emissions and nitrogen use' publication reports on the following headline metrics of nitrogen use:
+
+-   Nitrogen balance (kg N surplus/ha)
+
+-   Nitrogen use efficiency (NUE, %)
+
+Nitrogen balance is the difference between total nitrogen input and ouput. A higher balance indicates less efficient use of nitrogen. It provides an estimate of the size of the nitrogen surplus not being captured in agricultural products that is potentially available for losses.
+
+NUE is the ratio of nitrogen outputs to inputs. It indicates the proportion of nitrogen used in the farm system. This measure allows for better comparison across farms. NUE values should always be interpreted in relation to nitrogen surpluses and nitrogen outputs.
+
+A higher NUE typically indicates a more efficient use of nitrogen but very high values may indicate unsustainable "soil mining". The best range of NUE values depends on the type of farming activity as well as environmental conditions, livestock types and feed types.
+
+Estimate methodology follows guidance from the <a href = "https://www.researchgate.net/publication/312554339_Nitrogen_Use_Efficiency_NUE_-_an_indicator_for_the_utilization_of_nitrogen_in_agriculture_and_food_systems_Prepared_by_the_EU_Nitrogen_Expert_Panel" target ="_blank">EU Nitrogen Expert Panel</a>  for assessing nitrogen at farm level.
+
+This method assumes standard quantities for the nitrogen content of inputs and outputs for each year. The amount of nitrogen is estimated for all farm inputs and outputs up to farm gate, where possible.
+
+Total nitrogen input is estimated as the nitrogen in operating resources and feed ( in kg N per hectare per year). It includes estimates for nitrogen in:
+
+-   fertiliser
+
+-   imported feed and fodder
+
+-   biological fixation from peas and beans
+
+-   atmospheric deposition
+
+-   seed and planting material
+
+-   bedding material
+
+-   imported manure
+
+-   irrigation water
+
+-   animal manure, compost and sewage sludge
+
+Limited information is available about the use of clover for biological fixation of nitrogen. As such, organic farms are excluded from estimates. Organic farms make up around 5% of the Farm Business Survey sample.
+
+Limited information is available about farm grown feed and fodder and no estimate is included.
+
+Seed quantity for the purpose of estimating a nitrogen input is calculated by assuming sowing rates follow best practice for crops.
+
+Limited information is available about type of fertiliser, farm stocks of slurry, farmyard manure and compost, or application methods. This limits the quality of the nitrogen input estimates and understanding of the potential for nitrogen leaching. Manure estimates are based on the average number of animals on farm over the year and no attempt is made to account for changes in manure stocks.
+
+Total nitrogen output is estimated as the nitrogen in produce exported from farm (kg N / farmed area (ha)) (kg N/ha/yr). It includes estimates for nitrogen in:
+
+-   crop products
+
+-   livestock sold
+
+-   livestock products
+
+The method does not take into account the changing status of nitrogen in soils over time.
+
+Crops products, including fodder, are included where these are for sale. There are occasionally large sales of fodder which result in high NUE estimates for some farms.
+
+<br></br>
+
+# Relevance
+
+Relevance is about making sure our statistics meet the needs of users.
+
+These data are designated as official statistics in development. They are newly developed statistics undergoing testing.
+
+Agriculture and food production rely on natural processes and consequently will always cause a degree of greenhouse gas emissions, the primary cause of global warming. A high proportion of Scottish emissions are from agriculture.
+
+## Agriculture sector and subsector estimates
+
+This latest publication includes national GHG emissions of agriculture, to give a broader picture of the agricultural sector.
+
+New subsector analysis assigns agricultural emissions to enterprise or activity type. This gives more detail about the emission sources within agriculture. Stakeholder engagement identified a need for the breakdown of agriculture emissions into relevant enterprises.
+
+## Farm level GHG emissions and nitrogen use estimates
+
+This report provides greenhouse gas emission estimates and nitrogen use estimates for the average Scottish farm over time. These data complement national level estimates and enterprise specific estimates by providing a view and timeseries of emissions and nitrogen use on farm.
+
+Nitrogen is a key driver of productivity in agriculture given its direct impact on yield. Nitrogen fertiliser is an expensive input and efficient use is linked to profitability. Nitrogen can also harm the environment and is linked to water pollution, poorer air quality, climate change and damage to natural ecosystems.
+
+The emission and nitrogen use indicators published in 'Scottish agriculture greenhouse gas emissions and nitrogen use' were selected following a <a href = "https://sefari.scot/environmental-indicators-in-farm-level-surveys-a-literature-review" target = "_blank">systematic literature review </a> of environmental indicators and metrics that are currently used in farm level surveys and <a href = "https://sefari.scot/environmental-indicators-in-farm-level-surveys-stakeholder-engagement" target = "_blank">user engagement</a> undertaken in 2023 and 2024.
+
+Findings from stakeholder engagement showed that the most common indicators found in our literature review (absolute emissions and emission intensity as well as nitrogen use efficiency and nitrogen surplus) also most commonly meet the needs of our users.
+
+Other indicators can be estimated from these data and may be available on demand and considered for future publications. User need was also identified for indicators that that cannot currently be produced as limited data is collected.
+
+The data are under development to continue to improve and understand data quality and ensure that analysis is fit for purpose.
+
+We wish to involve users in our assessment of suitability and quality. If you use this data we would like to hear from you, please get in touch with us at [agric.stats@gov.scot](mailto:agric.stats@gov.scot).
+
+<br></br>
+
+# Accuracy and reliability
+
+This section discusses how accurately and reliably these statistics portray reality.
+
+These data are designated as official statistics in development as they are still in development, with a potentially wider degree of uncertainty in the resulting estimates as the methods and processes are established and verified.
+
+## Scottish Greenhouse Gas Statistics
+
+Detail about revisions to the GHG Inventory and methodology are available at <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2023/pages/section-d--revisions-to-the-inventory-and-methodology/" target = "_blank">Scottish Greenhouse Gas Statistics 2023</a>.
+
+## Agriculture subsector estimates
+
+There are limitations to the agriculture subsector emissions estimates methodology. More information is included under [Agricultural subsector estimates methodology](#subsector)
+
+## June Agricultural Census area estimates
+
+Farm level emission estimates are weighted using the same method as farm business income, which relies on results from the June Agricultural Census. There may be limitations in applying a weighting methodology that was developed for economic outputs to emissions results. More information is under [The Farm Business Survey (FBS)](#the-farm-business-survey-fbs).
+
+Data quality and assurance measures for the June Agricultural Census are available at <a href = "https://www.gov.scot/collections/june-scottish-agricultural-census/" target = "_blank">Scottish Agricultural Census: results</a>.
+
+## The Farm Business Survey
+
+Data quality and assurance measures for the Farm Business Survey and its official statistical outputs are available at <a href = "https://www.gov.scot/collections/scottish-farm-business-income-fbi-annual-estimates/" target = "_blank">Scottish farm business income (FBI)</a>.
+
+As a sample survey, results are subject to a degree of uncertainty. More detailed breakdowns of the sample result in relatively low sample sizes and an increase in uncertainty. For example in representing overall national averages by farm type.
+
+## Farm level GHG emission and nitrogen use estimates
+
+To demonstrate the variability in the data the weighted average (median) result for absolute emissions and nitrogen use is presented along with 95% confidence intervals, upper and lower quartiles of the data. Results are not directly comparable to results published on farm income for the average (mean) farm.
+
+Average (median) estimates for emission intensities are not weighted. Due to small sample sizes, only median estimates are provided.  
+
+There are limitations to the farm level emissions estimate methodology. Different results may be obtained using different carbon calculators or different methods, for example using an inventory approach.  More information is included under [Farm level GHG emission estimates methodology](#ghg-emissions). 
+
+There are limitations to the farm level nitrogen estimate methodology. Nitrogen estimates are based on standard estimates of nitrogen content in all farm inputs and outputs where possible. Nitrogen estimates are not made for organic farms, which means a small proportion of the sample are excluded. More information is included under [Farm level nitrogen use estimates methodology](#nitrogen). 
+
+
+<br></br>
+
+# Timeliness and punctuality
+
+Timeliness is about releasing statistics in a timely and punctual manner.
+
+The 'Scottish agriculture greenhouse gas emissions and nitrogen use: 2023-2024' publication was first released on 10 June 2025 at <a href = "https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2023-24/" target ="_blank">Scottish agriculture greenhouse gas emissions and nitrogen use: 2023-24</a>.
+
+## Agriculture subsector estimates
+
+Agriculture emissions are reported in <a href="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2023/" target = "_blank">Scottish Greenhouse Gas Statistics 2023</a>, which was released on 10 June 2025. Subsector analysis of agriculture emissions cannot be published earlier than Scottish Greenhouse Gas Statistics. Both publications were released on the same day. 
+
+## Farm level GHG emissions and nitrogen use estimates
+
+The Farm Business Survey 2023-24 sample was impacted by Basis Period Reform (BPR). More information is available at: <a href = " https://www.gov.scot/publications/scottish-farm-business-income-annual-estimates-methodology/pages/changes-to-methodology/" target ="_blank">FBS 2023-24 Basis Period Reform</a>.
+
+Farms in the Farm Business Survey have accounting year-ends between November and May. Data collection for farms with May year-ends cannot begin until June. Data collection, fieldwork and processing takes several months, and the finalised dataset is passed to the Scottish Government in December.
+
+Economic results from the survey are released in March of the following year. This allows sufficient time for data processing, analysis and quality assurance, as well as compilation, preparation and dissemination of final results.
+
+Results on farm level emissions and nitrogen usage are processed after completion of the economic results that contribute to the Accredited Official Statistics Publication on Farm Business Income and cannot be released earlier than March of the year following the data collection period. 
+
+<br></br>
+
+# Accessibility and clarity
+
+Accessibility and clarity are about:
+
+-   the presentation of statistics in a clear and understandable form
+
+-   the release of statistics in a suitable and convenient manner
+
+-   availability and accessibility on an impartial basis with
+
+-   availability and accessibility of supporting metadata and guidance
+
+These statistics are published online by the Scottish Government in an accessible format (html).
+
+Data tables are made available in excel format to allow users to carry out further analysis. Charts in the report are available to download in excel and csv format. Farm-level datasets may be made available to recognised research organisations for research purposes agreed with the Scottish Government with appropriate security and disclosure control in place. To make a data request get in touch with us at [agric.stats@gov.scot](mailto:agric.stats@gov.scot).
+
+Methodological information and specific quality issues are included on these pages. Metadata appropriate for users to consider comparability of statistics over time is included with all data releases, for example as notes on tables. This metadata is regularly reviewed and updated as necessary with each publication or more frequently as needed.
+
+We aim to use modern and accessible means of dissemination and communication of statistics and are committed to continual improvement. More information about general accessibility is available under <a href = accessibility.html> Accessibility/a>
+
+<br></br>
+
+# Coherence and comparability
+
+This section covers how consistent these statistics are over time and how comparable they are with those of other regions and countries.
+
+## Agriculture subsector estimates
+
+Detail about revisions to the GHG Inventory and methodology are available at <a href = "https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2023/pages/section-d--revisions-to-the-inventory-and-methodology/" target = "_blank">Scottish Greenhouse Gas Statistics 2023 </a>.
+
+## Farm level GHG emissions and nitrogen use estimates
+
+Methodology improvements have been made for absolute farm-level GHG emission estimates from 2021-22 onwards. This means that results from 2019-20 and 2020-21 are not directly comparable with results from 2021-22 onwards. More information is included under [Changes to methodology](#changes). 
+
+Nitrogen use results are considered to be consistent and comparable over time. Results are available from 2019-20 to 2023-24. The methodology has been consistent over this time period.
+
+Trends for most farm types in the Farm Business survey are subject to annual sample variations, as a small number of farms join and leave the survey each year. Farms in the sample may also change their characteristics, and might move from being classified as one main farm type to another. More commentary is available in  <a href = "https://www.gov.scot/collections/scottish-farm-business-income-fbi-annual-estimates/" target ="_blank">Scottish farm business income (FBI)</a>.
+
+## Comparability between agriculture sector, subsector and farm-level estimates
+
+Emissions for the agriculture sector and subsectors are for the calendar year and are based on estimates of greenhouse gas (GHG) emissions for Scottish agriculture as reported in the <a href="https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2023/" target = "_blank">Scottish Greenhouse Gas Statistics 2023</a>. Agricultural subsectors align more closely with agricultural enterprises and provide a different breakdown to the categories used in the Scottish Greenhouse Gas Statistics.
+
+Nitrogen use estimates for the agriculture sector in 2022 are available in the <a href ="https://www.gov.scot/publications/scottish-nitrogen-balance-sheet-2022/" target ="_blank">Scottish Nitrogen Balance Sheet</a>.
+
+Average farm estimates do not cover the full agricultural industry and are not directly comparable with national estimates.
+
+Emission and nitrogen use estimates for the average farm are based on commercial sized farms in the Farm Business Survey. Average farm estimates are for the accounting year 2023-24 rather than the 2023 calendar year. Absolute emission and nitrogen use estimates include all enterprises on farm. Farms are complex businesses with multiple activities that contribute to GHG emissions. For example, cereal farms may have livestock and the scale of this secondary enterprise can vary. 
+
+Emission intensity estimates report emissions for the primary product of beef, sheep, milk and cereals enterprises. Estimates are not weighted to the June Agricultural Census population, representing the average carbon footprint of products from the Farm Business Survey sample. 
+
+National Scottish estimates use different methodologies that are not directly comparable to the methodology used to estimate farm-level results. Other sources of emissions and nitrogen use data may also use different methodologies. Methodological differences may include:
+
+-   different coefficients to estimate emissions and nitrogen content
+
+-   including or excluding different contributors and use, for example transport of livestock off farm,
+
+-   different methods of accounting for the transfer or life cycle of contributors in the system
+
+-   different industry coverage, for example whether all of meat production is included or results are based on a sub-sample
+
+-   different reporting periods
+
+Users interested in comparing results between different statistics and between different countries should evaluate the relevant methodologies of sources used. Different results may be obtained using different methods.
+
+<br></br>
+
+# Acknowledgements
+
+Thank you to all farmers who participate in the Farm Business Survey. We would like to express our thanks for the commitment and support of all the organisations who contribute to our data gathering exercise. With thanks especially to SAC Consulting who undertake the survey on our behalf. Without your goodwill and support these statistics would not be possible.
+
+<br></br>

@@ -1,0 +1,69 @@
+---
+title: "Accessibility"
+date: "10 June 2025"
+sgtemplates:
+  footer:
+    link:
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
+  header:
+    site_branding: "Scottish agriculture greenhouse gas emissions and nitrogen use:
+      2023-24"
+    toc:
+      sticky: no
+  navigation:
+    breadcrumb_trail:
+    - href: index.html
+      text: Home
+    - text: Accessibility
+    toc:
+      sticky: no
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This website is run by the Scottish Government. We want it to be accessible and usable for as many people as possible.
+
+This accessibility statement applies only to the <a href ="https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2023-24" target ="_blank">Scottish agriculture greenhouse gas emissions and nitrogen use: 2023-24</a> publication. It does not apply to any other content found on <a href ="https://data.gov.scot/" target ="_blank">data.gov.scot</a>.
+
+## Feedback
+
+<a href =feedback.html>Contact us</a> if you:
+
+-   Cannot access any part of this site or want to report an accessibility problem.
+
+-   Need information on this website in a different format. Such as accessible PDF, large print, easy read, audio recording or braille. We'll consider your request and get back to you as soon as we can.
+
+## Enforcement
+
+If you're not happy with how we respond to your feedback, contact the <a href ="https://www.equalityadvisoryservice.com/" target ="_blank">Equality Advisory and Support Service</a>. They are an independent advice service. They will advise you on what to do next.
+
+## Compliance
+
+Scottish Government is committed to making its websites accessible, in accordance with the <a href ="https://www.legislation.gov.uk/uksi/2018/952/regulation/4/made" target ="_blank">Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018</a>
+
+This accessibility statement applies to the the <a href ="https://data.gov.scot/scottish-agriculture-greenhouse-gas-emissions-nitrogen-use-2022-23/contact" target ="_blank">Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-23</a> webpages.
+
+### Compliance status
+
+We believe that this website is partially compliant with the regulations. This is based on a non-expert assessment using <a href ="https://www.w3.org/WAI/WCAG21/quickref" target ="_blank">WCAG 2.1 success criteria and techniques</a>.
+
+### Potentially non-accessible and non-compliant content
+
+The content listed below is compliant with the regulations, and yet may not be fully accessible:
+
+-   The charts may be difficult to explore in detail using the keyboard, screen readers and other assistive tools.
+
+The interactive charts on this website are produced by third-party software libraries 'Plotly' and 'Highcharts'. Interactivity of the charts fails WCAG 2.1 success criteria. However, the option to download the data displayed in the chart in csv or xlsx format is available. Body text of the report aims to ensure that the reader can access or interpret the main points of the charts. As such, we believe that fixing accessibility issues would be a <a href ="https://www.legislation.gov.uk/uksi/2018/952/regulation/7/made" target ="_blank">disproportionate burden</a> within the meaning of the accessibility regulations. We are investigating ways in which this content can be made accessible in a proportionate way.
+
+-   Some of the text is complex.
+
+## Preparation of statement
+
+This statement was prepared on 10 June 2025.
+
+<br></br>

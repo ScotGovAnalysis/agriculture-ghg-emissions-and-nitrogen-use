@@ -1,0 +1,58 @@
+---
+title: "Glossary"
+date: "10 June 2025"
+sgtemplates:
+  footer:
+    link:
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
+  header:
+    site_branding: "Scottish agriculture greenhouse gas emissions and nitrogen use: 2023-24"
+    toc:
+      sticky: false
+  navigation:
+    breadcrumb_trail:
+    - href: index.html
+      text: Home
+    - text: Glossary
+    toc:
+      sticky: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Absolute gross GHG emissions (tCO~2~e/ha):** measures the total gross GHG emissions from a unit area of agricultural land (hectare) adjusted for forage quality. This accounts for large differences in rough grazing area and quality between farms.
+
+**Carbon dioxide equivalent (CO~2~e):** provides an estimate of total GHG emissions taking into account the different effects that different gases have on climate change, known as their global warming potential (GWP).
+
+**Emission intensity (CO~2~e/kg product):** measures the carbon footprint of a unit of product up to the farm gate. It is calculated for a specific product.
+
+**Enterprise emission intensity (CO~2~e/kg product):** measures the carbon footprint of a unit of product up to the farm gate. It is calculated for the primary product from a specific enterprise (e.g. beef, sheep, dairy or cereals).
+
+**Enteric fermentation:** a digestive process whereby carbohydrates are broken down by microorganisms into simple molecules. Both ruminant animals (e.g. cattle and sheep), and some non-ruminant animals (e.g. swine and horses) produce methane, although ruminants are the largest source per unit of feed intake.
+
+**Farm type:** farms are classified based on how much of their standard output is from the crop and livestock enterprises on each farm. More information is available in <a href = methodology.html> Classification of Farms</a>.
+
+**Global warming potential (GWP):** estimates the relative climate change impact of different GHGs compared with carbon dioxide.
+
+**Less Favoured Area (LFA):** land where farming is more difficult due to natural constraints, such as hills and soil quality.
+
+**Liming:** a common agricultural practice where lime is applied to soils to raise pH, optimising plant growth through improved nutrient uptake. Maintaining optimum pH has multiple benefits including minimising fertiliser waste and associated diffuse pollution.
+
+**Manure management:** describes the methods used to capture, store, treat and use animal manure within a farm system. The choice of manure management techniques can significantly alter the GHG emissions and wider environmental impact of the manure.
+
+**Nitrogen balance (kg N surplus/ha):** the difference between total nitrogen input and output.
+
+**Nitrogen use efficiency (% N output / N input)**: the ratio of nitrogen outputs to inputs.
+
+**Non-energy products from fuels and solvent use:** These include lubricants, paraffin waxes, bitumen/asphalt, and solvents. Carbon dioxide is the major GHG released from the use of these products.
+
+**Standard Labour Requirement (SLR):** represents the approximate average labour requirement for a livestock or crop enterprise. The annual hours of a full-time worker is 1900 hours.
+
+**Standard output:** estimated worth of crops and livestock.
+
+**Urea application:** Urea-based fertilisers are applied to soils to improve the availability of nitrogen for plants. However increased nitrogen also impacts soil microbial activity, resulting in increased nitrous oxide emissions. Excess urea may leach into the environment causing diffuse pollution or volatilize into ammonia.

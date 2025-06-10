@@ -1,0 +1,32 @@
+---
+title: "Contact Information"
+date: "10 June 2025"
+sgtemplates:
+  footer:
+    link:
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
+  header:
+    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2023-24"
+    toc:
+      sticky: false
+  navigation:
+    breadcrumb_trail:
+    - href: index.html
+      text: Home
+    - text: Contact Information
+    toc:
+      sticky: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+-   Email: [agric.stats\@gov.scot](mailto:agric.stats@gov.scot)
+
+-   Phone: 0300 244 4000 (Scottish Government central enquiry unit)
+
+-   Scottish Government [general enquiries](https://www.gov.scot/about/contact-information/)

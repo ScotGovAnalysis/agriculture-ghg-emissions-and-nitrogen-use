@@ -1,0 +1,700 @@
+---
+title: "Scottish agriculture greenhouse gas emissions and nitrogen use: 2022-2023"
+author: no
+published: '27 June 2024'
+
+sgtemplates:
+  datatables: 
+    features: 
+      info: yes
+      ordering: yes
+      paging: yes
+      searching: no
+  footer:
+    link:
+    # - href: privacy.html
+    #   text: Privacy
+    # - href: cookies.html
+    #   text: Cookies
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
+  header:
+    site_branding: "Scottish agriculture greenhouse gas and nitrogen use: 2022-23"
+  metadata:
+    label: "Publication - Statistics"
+  navigation:
+    breadcrumb_trail:
+    - href: "index.html"
+      text: Home
+    - href: "report.html"
+      text: Main report
+    # - href: "data.html"
+    #   text: Download the data
+    # - href: "methodology.html"
+    #   text: Methodology
+    
+    
+    toc:
+      sticky: yes
+output: 
+  html_document: 
+    keep_md: yes
+    self_contained : yes
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+source("scripts/national_charts.R")
+source("scripts/CN_analysis_build.R")
+
+```
+
+This report includes:
+
+-   Estimates of greenhouse gas emissions for Scottish agriculture as reported in the [Scottish Greenhouse Gas (GHG) Statistics 2022](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/)
+
+-   Estimates of greenhouse gas emissions by agricultural subsector, based on [analysis by Scotland's Rural College (SRUC)](https://www.gov.scot/publications/disaggregating-headline-smart-inventory-figures/).
+
+-   Subsector estimates break-down total greenhouse gas emissions by subsector rather than by source. This differs from the presentation in the Scottish Greenhouse Gas Statistics, where emissions sources are not fully allocated to agricultural subsectors. For example, mobile machinery emissions are allocated to each subsector in this report, whilst they were previously reported in total.
+
+-   Emission and nitrogen use estimates for the average farm based on commercial sized farms in the Farm Business Survey. Farms are complex businesses with multiple activities that contribute to GHG emissions. For example, cereal farms may have livestock and the scale of this secondary activity can vary.
+
+# Key Points
+
+-   In 2022, greenhouse gas emissions from Scottish agriculture were at their lowest levels since the baseline period in 1990. Total emissions from agriculture in 2022 were 7.7 million tonnes of carbon dioxide equivalent (MtCO~2~e). This is a decrease of 3% (0.3 MtCO~2~e) compared with 2021.
+
+-   Falling emissions from arable~~,~~ dairy and suckler beef subsectors drove the year-on-year decrease in greenhouse gas emissions from agriculture in 2022. Arable and suckler beef emissions both fell by 0.1 MtCO~2~e from the previous year.
+
+-   The suckler beef subsector is the largest contributor to net agriculture emissions. In 2022 emissions were 3.2 MtCO~2~e, 41% of agriculture emissions. Suckler beef emissions fell by 0.6 MtCO~2~e from 1990 to 2022 - the largest absolute reduction across the agriculture subsectors. This follows the trend of declining cattle numbers over the same period.
+
+-   Emissions from arable farming increased by 14% from 1990 to 2022. Arable farming accounts for the majority of emissions from liming and fuel combustion.
+
+# Introduction
+
+## What you need to know
+
+This report provides greenhouse gas (GHG) emissions and nitrogen use estimates for agriculture at sectoral level, subsectoral level, and for average Scottish farms by farm type. Methodology differences mean average farm estimates are not directly comparable with national estimates.
+
+It is important to note that agriculture and food production rely on natural processes that will always cause a degree of greenhouse gas emissions.
+
+## About greenhouse gas emissions in agriculture
+
+There are three main greenhouse gases produced in agriculture. These are carbon dioxide, methane, and nitrous oxide. Total emissions are presented in carbon dioxide equivalent (CO2-e) units. This takes into account the different effects that the different gases have on climate change, known as their global warming potential (GWP). Over a 100-year period, methane's GWP is considered to be 28 times stronger than that of carbon dioxide, while nitrous oxide's GWP is considered to be 265 times stronger than carbon dioxide.
+
+## About the national greenhouse gas estimates for agriculture and agricultural subsectors
+
+The data source for the national estimates is the [Scottish Greenhouse Gas Statistics 2022](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022/). Emissions are allocated by sector and type of gas.
+
+Subsector analysis breaks down each sector into enterprise or activity type. This gives more detail about the emission sources within each sector. For Agriculture, the X reported in the Scottish Greenhouse Gas Statistics are:
+
+-   Agricultural combustion
+
+-   Agricultural soils
+
+-   Livestock
+
+-   Other agriculture -- including lubricants and crop combustion
+
+This report provides emission estimates for the following subsectors:
+
+-   suckler beef
+
+-   dairy beef
+
+-   dairy
+
+-   sheep
+
+-   arable
+
+-   other -- including pigs, other livestock and non-agriculture.
+
+The emission sources are allocated to agricultural subsectors in proportions that are given in [table 1]. Proportions are based on [research by SRUC](https://www.gov.scot/publications/disaggregating-headline-smart-inventory-figures/) from 2021 and have been applied to the entire timeseries.
+
+#### Table 1
+
+Further information about the data sources and methods are avaliable in the Methodology [LINK].
+
+## About nitrogen in agriculture
+
+Nitrogen is an essential nutrient for plant growth. Nitrogen supplied by fertiliser, soil and other sources are consumed in harvested crops and animal products. However, excess nitrogen can also be lost to the wider environment. Losses of nitrogen to the environment can have harmful effects on, for example, climate change, biodiversity, air quality and water quality.
+
+## About national nitrogen use estimates
+
+National results for agriculture nitrogen use efficiency are available in the [Scottish Nitrogen Balance Sheet](https://www.gov.scot/publications/scottish-nitrogen-balance-sheet-2021/).
+
+Note that the data are for 2021 and are not comparable with the whole-farm average nitrogen use estimates in this report.
+
+## About the average whole-farm GHG emissions and nitrogen use estimates
+
+Average whole-farm estimates complement the national results and enterprise specific estimates by providing a view and timeseries of emissions and nitrogen use on real farms. Farms are complex businesses with multiple enterprises that contribute to GHG emissions. For example, cereal farms may have livestock and the scale of this secondary enterprise can vary.
+
+Data do not cover the full agricultural industry and are not comparable with national estimates.
+
+This analysis is based on a survey of around 400 commercial farms (whose standard output exceeds around £20,000 per year). The sample excludes farm types not in receipt of support payments (such as pigs, poultry and horticulture). The survey sample is weighted using results from the 2022 June Agricultural Census. Results are shown for the average (median) farm and as such are not directly comparable to results published on farm income.
+
+On-farm gross emissions are estimated using a life cycle assessment (LCA) based carbon calculator ([Agrecalc](https://www.agrecalc.com/)). They do not account for any sequestration by woodland areas or soil. Nitrogen estimates are based on standard estimates of nitrogen content in all farm inputs and outputs where possible. Nitrogen estimates are not included for organic farms, which means a small proportion of the sample are excluded.
+
+These data are designated as official statistics in development. They are newly developed statistics undergoing testing. More information is available in the Methodology [LINK]
+
+## Measuring whole-farm greenhouse gas emissions
+
+Greenhouse gas (GHG) emissions are measured by:
+
+-   Absolute gross GHG emissions (tonnes CO2 equivalent per hectare)
+
+-   Emissions intensity (kg CO2 equivalent per kg of output)
+
+These indicators measure GHG emissions from farm production activities. They do not account for any sequestration by woodland areas or soil.
+
+Absolute gross emissions measures the GHG emissions from a unit area of agriculture land (hectare).
+
+Emissions intensity measures the carbon footprint of a unit of product up to the farm gate. It includes all types of agricultural products produced on the farm.
+
+Data collected through the Farm Business Survey provide a consistent and high-quality input data set about farm activities. GHG emissions are then estimated using a carbon footprint calculator tool ([Agrecalc](https://www.agrecalc.com/)). It is based on the life cycle assessment (LCA) framework for estimating emissions from products and processes. The LCA accounts for emissions up to when product leaves the farm. The tool uses the latest IPCC Tier I and Tier II as well as national figures from the UK National Greenhouse Gas Inventory in its calculations. It is PAS2050:2011 certified. Different results may be obtained using different carbon calculators or different methods, for example using an inventory approach.
+
+## Measuring whole-farm nitrogen use
+
+Nitrogen use is measured by:
+
+-   Nitrogen balance (kg N surplus per hectare)
+
+-   Nitrogen use efficiency NUE (% N output / N input)
+
+Nitrogen balance is the difference between total nitrogen input and output. A higher balance indicates less efficient use of nitrogen. It provides an estimate of the size of the nitrogen surplus not being captured in agricultural products that is potentially available for losses.
+
+Nitrogen use efficiency (NUE) is the ratio of nitrogen outputs to inputs. It indicates the proportion of nitrogen used in the farm system. This measure allows for better comparison across farms. NUE values should always be interpreted in relation to nitrogen surpluses and nitrogen outputs.
+
+A higher NUE typically indicates a more efficient use of nitrogen but very high values may indicate unsustainable "soil mining". The best range of NUE values depends on the type of farming activity as well as environmental conditions, livestock types and feed types.
+
+Nitrogen estimates are based on standard estimates of nitrogen content in farm inputs and outputs. The amount of nitrogen is estimated for all farm inputs and outputs up to farm gate, where possible. Limited information is available for some inputs and outputs.
+
+## An Official Statistics in Development Publication for Scotland
+
+These statistics are official statistics in development. Official statistics in development may be new or existing statistics, and will be tested with users, in line with the standards of trustworthiness, quality, and value in the [Code of Practice for Statistics](https://code.statisticsauthority.gov.uk/the-code/).
+
+Scottish Government statistics are regulated by the Office for Statistics Regulation (OSR). OSR sets the standards of trustworthiness, quality and value in the [Code of Practice for Statistics](https://code.statisticsauthority.gov.uk/the-code/) that all producers of official statistics should adhere to.
+
+# Agriculture sector greenhouse gas emissions
+
+Greenhouse gas emissions from Scottish agriculture were 7.7 million tonnes of carbon dioxide equivalent (MtCO~2~e) in 2022. This is the lowest value since the baseline period in 1990, a decrease of 12% or 1.0 MtCO~2~e over this period. Compared with the previous year, total agriculture emissions in 2022 fell by 3% from 8.0 MtCO~2~e in 2021.
+
+A fall in emissions from arable, dairy and suckler beef subsectors drove the decrease in total agriculture emissions in 2022. Both arable and suckler beef emissions fell by 0.1 MtCO~2~e from the previous year. Emissions from dairy beef also fell by 0.05 MtCO~2~e.
+
+#### Figure 1: Greenhouse gas emissions from agriculture at lowest levels
+
+Total and agriculture greenhouse gas emissions in Scotland, 1990 to 2022
+
+```{r fig1, echo = FALSE}
+fig1
+
+```
+
+Prior to the decline of 2022, greenhouse gas emissions from Scottish agriculture were relatively stable. From 2017 to 2021 emissions were 7.9 MtCO~2~e and rose or fell by 0.1 MtCO~2~e on average. Since 2000, agriculture emissions have remained below figures recorded in 1990 (8.8 MtCO~2~e).
+
+More results for national GHG emissions, including for Agriculture are available in the [Scottish Greenhouse Gas Statistics](https://www.gov.scot/publications/scottish-greenhouse-gas-statistics-2022).
+
+# Agriculture sub-sector greenhouse gas emissions
+
+The suckler beef subsector has the largest share of Scottish agriculture emissions from 1990 to 2022. However, it has also reduced total agriculture emissions by the greatest amount compared with all other subsectors. From 1990 to 2022 suckler beef emissions have fallen by 0.6 MtCO~2~e. This has been driven by the decline in the number of cattle in Scotland over the same period. Cattle numbers have fallen from 2.1 million in 1990 to 1.7 million in 2022, a decrease of 20%.
+
+Emissions from arable farming in Scotland have increased by 14% from 1990 to 2022.
+
+#### Figure 2: Suckler beef subsector has the largest share of Scottish agriculture greenhouse gas emissions
+
+Agriculture greenhouse gas emissions in Scotland, by subsector, 2022
+
+```{r fig2, echo = FALSE}
+fig2
+
+
+```
+
+## Sources of agriculture greenhouse gas emissions
+
+The possible sources of greenhouse gas emissions from agricultural activity are grouped as the following:
+
+-   **enteric fermentation** - a digestive process whereby carbohydrates are broken down by microorganisms into simple molecules. Both ruminant animals (e.g. cattle and sheep), and some non-ruminant animals (e.g. swine and horses) produce methane, although ruminants are the largest source per unit of feed intake
+
+-   **manure management** - methods used to store or treat manure. These methods influence emission rates of methane. Liquid manure decomposes anaerobically and releases a large amount of methane. Solid manure decomposes aerobically and produces little to no methane.
+
+-   **agricultural soils**
+
+-   **fuel combustion** - including emissions from static and mobile machinery
+
+-   **liming** - a soil management technique where lime (e.g. calcium carbonate) is applied to acidic soils. Liming neutralizes soil acidity and increases fertility for improved plant growth. By altering soil pH, liming also influences net soil GHG emissions by microbial and non-microbial soil activity.
+
+-   **other sources (including urea application, and non-energy products from fuels and solvent use)**. Urea-based fertilizers are applied to soils to improve the availability of nitrogen for plants. However increased nitrogen also impacts soil microbial activity, resulting in increased nitrous oxide emissions. Excess urea may leach into the environment or volatilize into ammonia as pollution. Non-energy products from fuels and solvent use include lubricants, paraffin waxes, bitumen/asphalt, and solvents. Carbon dioxide is the major greenhouse gas released from the use of these products.
+
+The emission sources in this publication are groupings of categories in the Scottish Greenhouse Gas statistics. More information about how the emission sources have been grouped is available in the Methodology [LINK].
+
+Some of these emission sources cut across several agriculture subsectors. For example, both dairy and arable farmers will produce emissions from the process of fuel combustion.
+
+As reported in the Scottish Greenhouse Gas Statistics, enteric fermentation was the largest source of greenhouse gas emissions from agricultural activity in Scotland in 2022. Emissions from enteric fermentation were 4.0 MtCO~2~e, or just over half (52%) of total emissions from Scottish agriculture.
+
+Looking at emission sources by subsector, just over half (52%) of emissions from enteric fermentation were produced by the suckler beef. Other major sources of emissions from agriculture include manure management which is mostly associated with livestock, and fuel combustion which is mostly associated with arable farming.
+
+#### Figure 3: Enteric fermentation is the largest source of agriculture emissions
+
+Agriculture greenhouse gas emissions in Scotland, by subsector and emission source, 2022
+
+```{r fig3, echo = FALSE}
+fig3
+
+```
+
+Whilst the largest source of agriculture emissions in 2022, enteric fermentation emissions have reduced by the largest amount. From 1990 and 2022, emissions fell by 0.8 MtCO~2~e (17%). The primary producers of emissions from enteric fermentation are cattle and sheep. Over this period, the number of cattle and sheep in Scotland reduced by 20% and 33%, respectively.
+
+Emissions from liming and fuel combustion have both increased from 1990 to 2022 by a combined 0.4 MtCO~2~e. Arable farming accounts for most emissions from liming and fuel combustion.
+
+# Farm-level greenhouse gas emissions
+
+## Farm-level gross GHG emissions {.tabset}
+
+-   Short commentary - include note of methdology change for 2022, comment on average farm 2022 results.
+
+-   Interactive charts: Bar chart with panel to select different farm types. Time series Optional line chart -- plot median -- add plots of other farm types to chart.
+
+### Average farm
+
+**Average farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+ 
+```{r fig5a, echo = FALSE, fig.height= 6}
+fig5a
+
+```
+
+
+### Average cereal farm
+
+**Average cereal farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5b, echo = FALSE, fig.height= 6}
+fig5b
+
+```
+
+
+### Average general cropping farm
+
+**Average general farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5c, echo = FALSE, fig.height= 6}
+fig5c
+
+```
+
+
+### Average dairy farm
+
+**Average dairy farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5d, echo = FALSE, fig.height= 6}
+fig5d
+
+```
+
+
+### Average specialist sheep (LFA)
+
+**Average specialist sheep LFA (less favoured area) farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5e, echo = FALSE, fig.height= 6}
+fig5e
+
+```
+
+
+### Average specialist cattle (LFA)
+
+**Average specialist cattle LFA farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5f, echo = FALSE, fig.height= 6}
+fig5f
+
+```
+
+### Average cattle and sheep (LFA)
+
+**Average cattle and sheep LFA farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5g, echo = FALSE, fig.height= 6}
+fig5g
+
+```
+
+
+### Average lowland cattle and sheep
+
+**Average lowland cattle and sheep farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5h, echo = FALSE, fig.height= 6}
+fig5h
+
+```
+
+### Average mixed farm
+
+**Average mixed farm absolute GHG emissions per hectare, 2019-20 to 2022-23**
+
+```{r fig5i, echo = FALSE, fig.height= 6}
+fig5i
+
+```
+
+
+## Farm level emissions intensity {.tabset}
+### Average farm
+
+**Average farm emissions intensity from GHG, 2019-20 to 2022-23**
+ 
+```{r fig6a, echo = FALSE, fig.height= 6}
+fig6a
+
+```
+
+
+### Average cereal farm
+
+**Average cereal farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6b, echo = FALSE, fig.height= 6}
+fig6b
+
+```
+
+
+### Average general cropping farm
+
+**Average general cropping farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6c, echo = FALSE, fig.height= 6}
+fig6c
+
+```
+
+
+### Average dairy farm
+
+**Average dairy farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6d, echo = FALSE, fig.height= 6}
+fig6d
+
+```
+
+
+### Average specialist sheep (LFA)
+
+**Average specialist sheep LFA (less favoured area) farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6e, echo = FALSE, fig.height= 6}
+fig6e
+
+```
+
+
+### Average specialist cattle (LFA)
+
+**Average specialist cattle LFA farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6f, echo = FALSE, fig.height= 6}
+fig6f
+
+```
+
+### Average cattle and sheep (LFA)
+
+**Average cattle and sheep LFA farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6g, echo = FALSE, fig.height= 6}
+fig6g
+
+```
+
+
+### Average lowland cattle and sheep
+
+**Average lowland cattle and sheep farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6h, echo = FALSE, fig.height= 6}
+fig6h
+
+```
+
+### Average mixed farm
+
+**Average mixed farm emissions intensity from GHG, 2019-20 to 2022-23**
+
+```{r fig6i, echo = FALSE, fig.height= 6}
+fig6i
+
+```
+
+
+
+# Agriculture nitrogen use efficiency?
+
+Link to N balance sheet and comment on latest data (2020 for now).
+
+# Farm-level nitrogen use
+
+## Farm-level nitrogen balance {.tabset}
+
+### Average farm
+
+**Average farm nitrogen balance, 2019-20 to 2022-23**
+ 
+```{r fig7a, echo = FALSE, fig.height= 6}
+fig7a
+
+```
+
+
+### Average cereal farm
+
+**Average cereal farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7b, echo = FALSE, fig.height= 6}
+fig7b
+
+```
+
+
+### Average general cropping farm
+
+**Average general cropping farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7c, echo = FALSE, fig.height= 6}
+fig7c
+
+```
+
+
+### Average dairy farm
+
+**Average dairy farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7d, echo = FALSE, fig.height= 6}
+fig7d
+
+```
+
+
+### Average specialist sheep (LFA)
+
+**Average specialist sheep LFA (less favoured area) farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7e, echo = FALSE, fig.height= 6}
+fig7e
+
+```
+
+
+### Average specialist cattle (LFA)
+
+**Average specialist cattle LFA farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7f, echo = FALSE, fig.height= 6}
+fig7f
+
+```
+
+### Average cattle and sheep (LFA)
+
+**Average cattle and sheep LFA farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7g, echo = FALSE, fig.height= 6}
+fig7g
+
+```
+
+
+### Average lowland cattle and sheep
+
+**Average lowland cattle and sheep farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7h, echo = FALSE, fig.height= 6}
+fig7h
+
+```
+
+### Average mixed farm
+
+**Average mixed farm nitrogen balance, 2019-20 to 2022-23**
+
+```{r fig7i, echo = FALSE, fig.height= 6}
+fig7i
+
+```
+
+
+
+## Farm-level nitrogen use efficiency {.tabset}
+
+### Average farm
+
+**Average farm nitrogen use efficiency, 2019-20 to 2022-23**
+ 
+```{r fig8a, echo = FALSE, fig.height= 6}
+fig8a
+
+```
+
+
+### Average cereal farm
+
+**Average cereal farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8b, echo = FALSE, fig.height= 6}
+fig8b
+
+```
+
+
+### Average general cropping farm
+
+**Average general cropping farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8c, echo = FALSE, fig.height= 6}
+fig8c
+
+```
+
+
+### Average dairy farm
+
+**Average dairy farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8d, echo = FALSE, fig.height= 6}
+fig8d
+
+```
+
+
+
+### Average specialist sheep (LFA)
+
+**Average specialist sheep LFA (less favoured area) farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8e, echo = FALSE, fig.height= 6}
+fig8e
+
+```
+
+
+### Average specialist cattle (LFA)
+
+**Average specialist cattle LFA farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8f, echo = FALSE, fig.height= 6}
+fig8f
+
+```
+
+### Average cattle and sheep (LFA)
+
+**Average cattle and sheep LFA farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8g, echo = FALSE, fig.height= 6}
+fig8g
+
+```
+
+
+### Average lowland cattle and sheep
+
+**Average lowland cattle and sheep farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8h, echo = FALSE, fig.height= 6}
+fig8h
+
+```
+
+### Average mixed farm
+
+**Average mixed farm nitrogen use efficiency, 2019-20 to 2022-23**
+
+```{r fig8i, echo = FALSE, fig.height= 6}
+fig8i
+
+```
+
+
+
+# Glossary
+
+# Data and Methodology
+
+# Tell us what you think
+
+We are always interested to hear from our users about how our statistics are used, and how they can be improved.
+
+## Feedback survey
+
+We'd appreciate it if you would complete our short feedback survey on this publication.
+
+## Enquiries
+
+For enquiries about this publication please contact:
+
+[Name(s) of lead statistician(s)]
+
+[Department name]
+
+E-mail: [e-mail address]
+
+Telephone: [Phone number]
+
+For general enquiries about Scottish Government statistics please contact:
+
+Office of the Chief Statistician
+
+e-mail: statistics.enquiries\@gov.scot
+
+## Join our mailing list
+
+If you would like to receive notification about statistical publications, or find out about consultations on our statistics please join the [ScotStat mailing list](http://www.gov.scot/scotstat).
+
+## Future publications
+
+Details of future publications can be found on our [forthcoming publications](https://www.gov.scot/publications/official-statistics-forthcoming-publications/) page.
+
+You can embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Mathematics (MathJax)
+
+This template uses MathJax to render mathematical notation in-browser.
+
+Use dollar signs as your delimiter for maths. A single dollar sign renders your maths inline.
+
+$c^2 = a^2 + b^2$
+
+Two dollar signs center-aligns your maths.
+
+$$ax^2 + bx + c = 0$$
+
+Complex mathematics is supported, too.
+
+$$\mathbf{P}((X,Y) \in B) = \iint\limits_{(x,y) \in B} f_{X,Y}(x,y) \,dx \,dy$$
+
+## DataTables
+
+Support for [DataTables](https://www.datatables.net/) is included. DataTables allows for the creation of advanced tables with greater user interaction.
+
+```{r kable, echo = FALSE}
+knitr::kable(
+  x = iris,
+  format = "html",
+  caption = "An example table, generated using the Kable library.",
+  caption.short = "A short caption."
+)
+```

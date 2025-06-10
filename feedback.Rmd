@@ -1,0 +1,70 @@
+---
+title: "Tell us what you think"
+sgtemplates:
+  footer:
+    link:
+    - href: accessibility.html
+      text: Accessibility
+    - href: contact.html
+      text: Contact
+  header:
+    site_branding: "Scottish agriculture greenhouse gas emissions and nitrogen use:
+      2023-24"
+    toc:
+      sticky: false
+  navigation:
+    breadcrumb_trail:
+    - href: index.html
+      text: Home
+    - text: Feedback
+    toc:
+      sticky: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We are always interested to hear from our users about how our statistics are used, and how they can be improved.
+
+These data are designated as official statistics in development. There is a wider degree of uncertainty in the resulting estimates as the methods and processes are established and verified.
+
+We wish to involve users in our assessment of suitability and quality. If you use this data, we would like to hear from you. Please get in touch using one of the methods below.
+
+Scottish Government will continue to engage with data users through our regular Show and Tell events to gather feedback on the use of this data and with topic experts who have identified where this data is being used.
+
+## Feedback survey
+
+We'd appreciate it if you would complete our short <a href ="https://forms.office.com/e/2SCLV7aTJi" target ="_blank">feedback survey</a>
+
+
+## Enquiries
+
+For enquiries about this publication please contact:
+
+Jackie Massaya
+
+<p>
+
+Rural and Environmental Science and Analytical Services Statistics
+
+e-mail: [agric.stats\@gov.scot](mailto:agric.stats@gov.scot){.email}
+
+</p>
+
+For general enquiries about Scottish Government statistics please contact:
+
+<p>
+
+Office of the Chief Statistician
+
+e-mail: [statistics.enquiries\@gov.scot](mailto:statistics.enquiries@gov.scot){.email}
+
+</p>
+
+
+## Join our mailing list
+
+If you would like to receive notification about statistical publications, or find out about consultations on our statistics please join the <a href ="https://scot.us20.list-manage.com/subscribe?u=04ac66a77bddcaae40a67c4ba&id=0bb948a047" target ="_blank">ScotStat mailing list</a>
+
+<br></br>
